@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Styling in Perspex | Perspex Website</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Styling in Perspex | Perspex Website">
+    <meta name="generator" content="docfx 1.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content">
+        
+        <div class="sidenav">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/docs/spec/styles.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="styling-in-perspex">Styling in Perspex</h1>
+              
+<p>The main difference between Perspex and existing XAML toolkits such as WPF and
+UWP is in styling. Styling in Perspex uses a CSS-like system that aims to be
+more powerful and flexible than existing XAML styling systems. For convenience
+for the rest of this document we&#39;ll refer to existing XAML toolkit&#39;s styling as
+&quot;WPF styling&quot; as that&#39;s where it originated.</p>
+<h2 id="basics">Basics</h2>
+<ul>
+<li>Styles are defined on the <code>Control.Styles</code> collection (as opposed to in
+<code>ResourceDictionaries</code> in WPF).</li>
+<li>Styles have a <code>Selector</code> and a collection of <code>Setter</code>s</li>
+<li>Selector works like a CSS selector.</li>
+<li>Setters function like WPF&#39;s setters.</li>
+<li>Styles are applied to a control and all its descendants, depending on whether
+the selector matches.</li>
+</ul>
+<h2 id="simple-example">Simple example</h2>
+<p>Make all <code>Button</code>s in a <code>StackPanel</code> have a blue <code>Background</code>:</p>
+<pre><code>&lt;StackPanel&gt;
+  &lt;StackPanel.Styles&gt;
+    &lt;Style Selector=&quot;Button&quot;&gt;
+      &lt;Setter Property=&quot;Button.Background&quot; Value=&quot;Blue&quot;/&gt;
+    &lt;/Style&gt;
+  &lt;/StackPanel.Styles&gt;
+  &lt;Button&gt;I will have a blue background.&lt;/Button&gt;
+&lt;/StackPanel&gt;
+</code></pre><p>This is very similar to WPF, except <code>TargetType</code> is replaced by <code>Selector</code>.</p>
+<p><em>Note that currently (as of Alpha 2) you <strong>always</strong> need to specify the fully
+qualified property name (i.e. <code>Button.Background</code> instead of simply
+<code>Background</code>). This restriction will be lifted in future.</em></p>
+<h2 id="style-classes">Style Classes</h2>
+<p>As in CSS, controls can be given <em>style classes</em> which can be used in selectors:</p>
+<pre><code>&lt;StackPanel&gt;
+  &lt;StackPanel.Styles&gt;
+    &lt;Style Selector=&quot;Button.blue&quot;&gt;
+      &lt;Setter Property=&quot;Button.Background&quot; Value=&quot;Blue&quot;/&gt;
+    &lt;/Style&gt;
+  &lt;/StackPanel.Styles&gt;
+  &lt;Button Classes=&quot;blue&quot;&gt;I will have a blue background.&lt;/Button&gt;
+  &lt;Button&gt;I will not.&lt;/Button&gt;
+&lt;/StackPanel&gt;
+</code></pre><h2 id="pseudoclasses">Pseudoclasses</h2>
+<p>Also as in CSS, controls can have pseudoclasses; these are classes that are
+defined by the control itself rather than by the user. Pseudoclasses start
+with a <code>:</code> character.</p>
+<p>One example of a pseudoclass is the <code>:pointerover</code>
+pseudoclass (<code>:hover</code> in CSS - we may change to that in future).</p>
+<p>Pseudoclasses provide the functionality of <code>Triggers</code> in WPF and
+<code>VisualStateManager</code> in UWP:</p>
+<pre><code>&lt;StackPanel&gt;
+  &lt;StackPanel.Styles&gt;
+    &lt;Style Selector=&quot;Button:pointerover&quot;&gt;
+      &lt;Setter Property=&quot;Button.Foreground&quot; Value=&quot;Red&quot;/&gt;
+    &lt;/Style&gt;
+  &lt;/StackPanel.Styles&gt;
+  &lt;Button&gt;I will have red text when hovered.&lt;/Button&gt;
+&lt;/StackPanel&gt;
+</code></pre><p>Other pseudoclasses include <code>:focus</code>, <code>:disabled</code>, <code>:pressed</code> for buttons,
+<code>:checked</code> for checkboxes etc.</p>
+<h2 id="named-controls">Named Controls</h2>
+<p>Named controls can be selected using <code>#</code> as in CSS, e.g. <code>Button#Name</code>.</p>
+<h2 id="children">Children</h2>
+<p>As with CSS, you can select children and descendants:</p>
+<ul>
+<li><code>StackPanel &gt; Button#Foo</code> selects a <code>Button</code> named <code>&quot;Foo&quot;</code> that is the child
+of a <code>StackPanel</code>.</li>
+<li><code>StackPanel Button.foo</code> selects all <code>Button</code>s with the <code>foo</code> class that are
+descendants of a <code>StackPanel</code>.</li>
+</ul>
+<h2 id="templates">Templates</h2>
+<p>You can select controls in the template of a lookless control by using the
+<code>/template/</code> selector, so <code>Button /template/ Border#outline</code> selects <code>Border</code>
+controls named <code>&quot;outline&quot;</code> in the template of a <code>Button</code>.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

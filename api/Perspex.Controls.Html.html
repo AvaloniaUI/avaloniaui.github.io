@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Perspex.Controls.Html Namespace | Perspex Website</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Perspex.Controls.Html Namespace | Perspex Website">
+    <meta name="generator" content="docfx 1.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content">
+        
+        <div class="sidenav">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlRendererRoutedEventArgs.cs/#L8" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <h1 id="Perspex_Controls_Html" data-uid="Perspex.Controls.Html">Namespace Perspex.Controls.Html
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="markdown level0 remarks"></div>
+                <h3 id="classes">Classes</h3>
+                  <h4><a class="xref" href="Perspex.Controls.Html.HtmlControl.html#Perspex_Controls_Html_HtmlControl">HtmlControl</a></h4>
+                  <section><p>Provides HTML rendering using the text property.<br>
+Perspex control that will render html content in it&#39;s client rectangle.<br>
+The control will handle mouse and keyboard events on it to support html text selection, copy-paste and mouse clicks.<br><para>
+The major differential to use HtmlPanel or HtmlLabel is size and scrollbars.<br>
+If the size of the control depends on the html content the HtmlLabel should be used.<br>
+If the size is set by some kind of layout then HtmlPanel is more suitable, also shows scrollbars if the html contents is larger than the control client rectangle.<br></para><para><h4>LinkClicked event:</h4>
+Raised when the user clicks on a link in the html.<br>
+Allows canceling the execution of the link.
+</para><para><h4>StylesheetLoad event:</h4>
+Raised when a stylesheet is about to be loaded by file path or URI by link element.<br>
+This event allows to provide the stylesheet manually or provide new source (file or uri) to load from.<br>
+If no alternative data is provided the original source will be used.<br></para><para><h4>ImageLoad event:</h4>
+Raised when an image is about to be loaded by file path or URI.<br>
+This event allows to provide the image manually, if not handled the image will be loaded from file or download from URI.
+</para><para><h4>RenderError event:</h4>
+Raised when an error occurred during html rendering.<br></para></p>
+</section>
+                  <h4><a class="xref" href="Perspex.Controls.Html.HtmlLabel.html#Perspex_Controls_Html_HtmlLabel">HtmlLabel</a></h4>
+                  <section><p>Provides HTML rendering using the text property.<br>
+WPF control that will render html content in it&#39;s client rectangle.<br>
+Using <see cref="!:AutoSize"></see> and <see cref="!:AutoSizeHeightOnly"></see> client can control how the html content effects the
+size of the label. Either case scrollbars are never shown and html content outside of client bounds will be clipped.
+MaxWidth/MaxHeight and MinWidth/MinHeight with AutoSize can limit the max/min size of the control<br>
+The control will handle mouse and keyboard events on it to support html text selection, copy-paste and mouse clicks.<br></p>
+</section>
+                  <h4><a class="xref" href="Perspex.Controls.Html.HtmlRendererRoutedEventArgs`1.html#Perspex_Controls_Html_HtmlRendererRoutedEventArgs_1">HtmlRendererRoutedEventArgs</a>&lt;T&gt;</h4>
+                  <section></section>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

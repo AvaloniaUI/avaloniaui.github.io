@@ -1,0 +1,547 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ReactiveCommand&lt;T&gt; Class | Perspex Website</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="ReactiveCommand&lt;T&gt; Class | Perspex Website">
+    <meta name="generator" content="docfx 1.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content">
+        
+        <div class="sidenav">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_ReactiveCommand_1.md&amp;value=---%0Auid%3A%20ReactiveUI.ReactiveCommand%601%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/ReactiveCommand.cs/#L282" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <h1 id="ReactiveUI_ReactiveCommand_1" data-uid="ReactiveUI.ReactiveCommand`1">Class ReactiveCommand&lt;T&gt;</h1>
+              <div class="markdown level0 summary"><p>This class represents a Command that can optionally do a background task.
+The results of the background task (or a signal that the Command has been
+invoked) are delivered by Subscribing to the command itself, since
+ReactiveCommand is itself an Observable. The results of individual
+invocations can be retrieved via the ExecuteAsync method.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">ReactiveCommand&lt;T&gt;</span></div>
+              </div>
+              <h6><strong>Namespace</strong>:ReactiveUI</h6>
+              <h6><strong>Assembly</strong>:Perspex.ReactiveUI.dll</h6>
+              <h5 id="ReactiveUI_ReactiveCommand_1_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class ReactiveCommand&lt;T&gt; : IReactiveCommand&lt;T&gt;, IObservable&lt;T&gt;, IReactiveCommand, IHandleObservableErrors, ICommand, IDisposable, IEnableLogger</code></pre>
+              </div>
+              <h3 id="constructors">Constructors</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_ReactiveCommand_1__ctor_System_IObservable_System_Boolean__System_Func_System_Object_System_IObservable__0___System_Reactive_Concurrency_IScheduler_.md&amp;value=---%0Auid%3A%20ReactiveUI.ReactiveCommand%601.%23ctor(System.IObservable%7BSystem.Boolean%7D%2CSystem.Func%7BSystem.Object%2CSystem.IObservable%7B%600%7D%7D%2CSystem.Reactive.Concurrency.IScheduler)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/ReactiveCommand.cs/#L323">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_ReactiveCommand_1__ctor_System_IObservable_System_Boolean__System_Func_System_Object_System_IObservable__0___System_Reactive_Concurrency_IScheduler_" data-uid="ReactiveUI.ReactiveCommand`1.#ctor(System.IObservable{System.Boolean},System.Func{System.Object,System.IObservable{`0}},System.Reactive.Concurrency.IScheduler)">ReactiveCommand(IObservable&lt;Boolean&gt;, Func&lt;Object, IObservable&lt;T&gt;&gt;, IScheduler)</h4>
+              <div class="markdown level1 summary"><p>Don&#39;t use this, use ReactiveCommand.CreateXYZ instead</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ReactiveCommand(IObservable&lt;bool&gt; canExecute, Func&lt;object, IObservable&lt;T&gt;&gt; executeAsync, IScheduler scheduler = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td><em>canExecute</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Object</span>, <span class="xref">System.IObservable</span>&lt;T&gt;&gt;</td>
+                    <td><em>executeAsync</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reactive.Concurrency.IScheduler</span></td>
+                    <td><em>scheduler</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_ReactiveCommand_1_CanExecuteObservable.md&amp;value=---%0Auid%3A%20ReactiveUI.ReactiveCommand%601.CanExecuteObservable%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/ReactiveCommand.cs/#L420">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_ReactiveCommand_1_CanExecuteObservable" data-uid="ReactiveUI.ReactiveCommand`1.CanExecuteObservable">CanExecuteObservable</h4>
+              <div class="markdown level1 summary"><p>Returns a BehaviorSubject (i.e. an Observable which is guaranteed to
+return at least one value immediately) representing the CanExecute
+state.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IObservable&lt;bool&gt; CanExecuteObservable { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_ReactiveCommand_1_IsExecuting.md&amp;value=---%0Auid%3A%20ReactiveUI.ReactiveCommand%601.IsExecuting%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/ReactiveCommand.cs/#L438">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_ReactiveCommand_1_IsExecuting" data-uid="ReactiveUI.ReactiveCommand`1.IsExecuting">IsExecuting</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IObservable&lt;bool&gt; IsExecuting { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_ReactiveCommand_1_ThrownExceptions.md&amp;value=---%0Auid%3A%20ReactiveUI.ReactiveCommand%601.ThrownExceptions%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/ReactiveCommand.cs/#L413">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_ReactiveCommand_1_ThrownExceptions" data-uid="ReactiveUI.ReactiveCommand`1.ThrownExceptions">ThrownExceptions</h4>
+              <div class="markdown level1 summary"><p>Fires whenever an exception would normally terminate ReactiveUI
+internal state.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IObservable&lt;Exception&gt; ThrownExceptions { get; protected set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Exception</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_ReactiveCommand_1_CanExecute_System_Object_.md&amp;value=---%0Auid%3A%20ReactiveUI.ReactiveCommand%601.CanExecute(System.Object)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/ReactiveCommand.cs/#L447">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_ReactiveCommand_1_CanExecute_System_Object_" data-uid="ReactiveUI.ReactiveCommand`1.CanExecute(System.Object)">CanExecute(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool CanExecute(object parameter)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>parameter</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_ReactiveCommand_1_Dispose.md&amp;value=---%0Auid%3A%20ReactiveUI.ReactiveCommand%601.Dispose%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/ReactiveCommand.cs/#L462">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_ReactiveCommand_1_Dispose" data-uid="ReactiveUI.ReactiveCommand`1.Dispose">Dispose()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void Dispose()</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_ReactiveCommand_1_Execute_System_Object_.md&amp;value=---%0Auid%3A%20ReactiveUI.ReactiveCommand%601.Execute(System.Object)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/ReactiveCommand.cs/#L457">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_ReactiveCommand_1_Execute_System_Object_" data-uid="ReactiveUI.ReactiveCommand`1.Execute(System.Object)">Execute(Object)</h4>
+              <div class="markdown level1 summary"><p>Executes a Command. Note that the command will be executed, irrespective of the current value
+of the command&#39;s canExecute observable.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Execute(object parameter)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>parameter</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_ReactiveCommand_1_ExecuteAsync_System_Object_.md&amp;value=---%0Auid%3A%20ReactiveUI.ReactiveCommand%601.ExecuteAsync(System.Object)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/ReactiveCommand.cs/#L363">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_ReactiveCommand_1_ExecuteAsync_System_Object_" data-uid="ReactiveUI.ReactiveCommand`1.ExecuteAsync(System.Object)">ExecuteAsync(Object)</h4>
+              <div class="markdown level1 summary"><p>Executes a Command and returns the result asynchronously. This method
+makes it <em>much</em> easier to test ReactiveCommand, as well as create
+ReactiveCommands who invoke inferior commands and wait on their results.</p>
+<p>Note that you <strong>must</strong> Subscribe to the Observable returned by
+ExecuteAsync or else nothing will happen (i.e. ExecuteAsync is lazy)</p>
+<p>Note also that the command will be executed, irrespective of the current value
+of the command&#39;s canExecute observable.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IObservable&lt;T&gt; ExecuteAsync(object parameter = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>parameter</em></td>
+                    <td><p>Don&#39;t use this.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;T&gt;</td>
+                    <td><p>An Observable representing a single invocation of the Command.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_ReactiveCommand_1_ExecuteAsyncTask_System_Object_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20ReactiveUI.ReactiveCommand%601.ExecuteAsyncTask(System.Object%2CSystem.Threading.CancellationToken)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/ReactiveCommand.cs/#L403">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_ReactiveCommand_1_ExecuteAsyncTask_System_Object_System_Threading_CancellationToken_" data-uid="ReactiveUI.ReactiveCommand`1.ExecuteAsyncTask(System.Object,System.Threading.CancellationToken)">ExecuteAsyncTask(Object, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Executes a Command and returns the result as a Task. This method
+makes it <em>much</em> easier to test ReactiveCommand, as well as create
+ReactiveCommands who invoke inferior commands and wait on their results.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Task&lt;T&gt; ExecuteAsyncTask(object parameter = null, CancellationToken ct = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>parameter</em></td>
+                    <td><p>Don&#39;t use this.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>ct</em></td>
+                    <td><p>An optional token that can cancel the operation, if
+the operation supports it.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+                    <td><p>A Task representing a single invocation of the Command.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_ReactiveCommand_1_raiseCanExecuteChanged_System_EventArgs_.md&amp;value=---%0Auid%3A%20ReactiveUI.ReactiveCommand%601.raiseCanExecuteChanged(System.EventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/ReactiveCommand.cs/#L304">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_ReactiveCommand_1_raiseCanExecuteChanged_System_EventArgs_" data-uid="ReactiveUI.ReactiveCommand`1.raiseCanExecuteChanged(System.EventArgs)">raiseCanExecuteChanged(EventArgs)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void raiseCanExecuteChanged(EventArgs args)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.EventArgs</span></td>
+                    <td><em>args</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_ReactiveCommand_1_Subscribe_System_IObserver__0__.md&amp;value=---%0Auid%3A%20ReactiveUI.ReactiveCommand%601.Subscribe(System.IObserver%7B%600%7D)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/ReactiveCommand.cs/#L442">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_ReactiveCommand_1_Subscribe_System_IObserver__0__" data-uid="ReactiveUI.ReactiveCommand`1.Subscribe(System.IObserver{`0})">Subscribe(IObserver&lt;T&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IDisposable Subscribe(IObserver&lt;T&gt; observer)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObserver</span>&lt;T&gt;</td>
+                    <td><em>observer</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IDisposable</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="events">Events</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_ReactiveCommand_1_CanExecuteChanged.md&amp;value=---%0Auid%3A%20ReactiveUI.ReactiveCommand%601.CanExecuteChanged%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/ReactiveCommand.cs/#L295">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_ReactiveCommand_1_CanExecuteChanged" data-uid="ReactiveUI.ReactiveCommand`1.CanExecuteChanged">CanExecuteChanged</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event EventHandler CanExecuteChanged</code></pre>
+              </div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

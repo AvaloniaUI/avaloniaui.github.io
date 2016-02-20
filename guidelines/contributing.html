@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Contributing | Perspex Website</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Contributing | Perspex Website">
+    <meta name="generator" content="docfx 1.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content">
+        
+        <div class="sidenav">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/docs/guidelines/contributing.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="contributing">Contributing</h1>
+              
+<h2 id="before-you-start">Before You Start</h2>
+<p>Drop into our <a href="https://gitter.im/Perspex/Perspex">gitter chat room</a> and let us know what you&#39;re thinking of doing. We might be able to give you guidance or let you know if someone else is already working on the feature.</p>
+<h2 id="style">Style</h2>
+<p>The codebase uses <a href="https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/coding-style.md">.net core</a> coding style. </p>
+<p>Try to keep lines of code around 100 characters in length or less, though this is not a hard limit.
+If you&#39;re a few characters over then don&#39;t worry too much. </p>
+<p><strong>DO NOT USE #REGIONS</strong> full stop.</p>
+<h2 id="pull-requests">Pull requests</h2>
+<p>A single pull request should be submitted for each change. If you&#39;re making more than one change,
+please submit separate pull requests for each change for easy review. Rebase your changes to make 
+sense, so a history that looks like:</p>
+<ul>
+<li>Add class A</li>
+<li>Feature A didn&#39;t set Foo when Bar was set</li>
+<li>Fix spacing</li>
+<li>Add class B</li>
+<li>Sort using statements</li>
+</ul>
+<p>Should be rebased to read:</p>
+<ul>
+<li>Add class A</li>
+<li>Add class B</li>
+</ul>
+<p>Again, this makes review much easier.</p>
+<p>Please try not to submit pull requests that don&#39;t add new features (e.g. moving stuff around) 
+unless you see something that is obviously wrong or that could be written in a more terse or 
+idiomatic style. It takes time to review each pull request - time that I&#39;d prefer to spend writing 
+new features!</p>
+<p>Prefer terseness to verbosity but don&#39;t try to be too clever.</p>
+<h2 id="tests">Tests</h2>
+<p>There are two types of tests currently in the codebase; unit tests and render tests.</p>
+<p>Unit tests should be contained in a class name that mirrors the class being tested with the suffix
+-Tests, e.g.</p>
+<pre><code>Perspex.Controls.UnitTests.Presenters.TextPresenterTests
+</code></pre><p>Where Perspex.Controls.UnitTests is the name of the project.</p>
+<p>Unit test methods should be named in a sentence style, separated by underscores, that describes in
+English what the test is testing, e.g.</p>
+<pre><code>void Calling_Foo_Should_Increment_Bar()
+</code></pre><p>Render tests should describe what the produced image is:</p>
+<pre><code>void Rectangle_2px_Stroke_Filled()
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

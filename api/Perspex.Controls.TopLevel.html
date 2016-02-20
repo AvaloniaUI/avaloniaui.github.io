@@ -1,0 +1,1014 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>TopLevel Class | Perspex Website</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="TopLevel Class | Perspex Website">
+    <meta name="generator" content="docfx 1.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content">
+        
+        <div class="sidenav">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L27" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <h1 id="Perspex_Controls_TopLevel" data-uid="Perspex.Controls.TopLevel">Class TopLevel</h1>
+              <div class="markdown level0 summary"><p>Base class for top-level windows.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><a class="xref" href="Perspex.PerspexObject.html#Perspex_PerspexObject">PerspexObject</a></div>
+                  <div class="level2"><a class="xref" href="Perspex.Animation.Animatable.html#Perspex_Animation_Animatable">Animatable</a></div>
+                  <div class="level3"><a class="xref" href="Perspex.Visual.html#Perspex_Visual">Visual</a></div>
+                  <div class="level4"><a class="xref" href="Perspex.Layout.Layoutable.html#Perspex_Layout_Layoutable">Layoutable</a></div>
+                  <div class="level5"><a class="xref" href="Perspex.Interactivity.Interactive.html#Perspex_Interactivity_Interactive">Interactive</a></div>
+                  <div class="level6"><a class="xref" href="Perspex.Input.InputElement.html#Perspex_Input_InputElement">InputElement</a></div>
+                  <div class="level7"><a class="xref" href="Perspex.Controls.Control.html#Perspex_Controls_Control">Control</a></div>
+                  <div class="level8"><a class="xref" href="Perspex.Controls.Primitives.TemplatedControl.html#Perspex_Controls_Primitives_TemplatedControl">TemplatedControl</a></div>
+                  <div class="level9"><a class="xref" href="Perspex.Controls.ContentControl.html#Perspex_Controls_ContentControl">ContentControl</a></div>
+                  <div class="level10"><span class="xref">TopLevel</span></div>
+              </div>
+              <h6><strong>Namespace</strong>:Perspex.Controls</h6>
+              <h6><strong>Assembly</strong>:Perspex.Controls.dll</h6>
+              <h5 id="Perspex_Controls_TopLevel_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public abstract class TopLevel : ContentControl, INotifyPropertyChanged, ISetLogicalParent, IContentControl, IControl, ILogical, IStyleable, INamed, IContentPresenterHost, ITemplatedControl, IPerspexObject, IInputRoot, IInputElement, IInteractive, ILayoutRoot, ILayoutable, IVisual, IRenderRoot, ICloseable, IStyleRoot, IStyleHost</code></pre>
+              </div>
+              <h5 id="Perspex_Controls_TopLevel_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>This class acts as a base for top level windows such as <a class="xref" href="Perspex.Controls.Window.html#Perspex_Controls_Window">Window</a> and</p>
+<p><a class="xref" href="Perspex.Controls.Primitives.PopupRoot.html#Perspex_Controls_Primitives_PopupRoot">PopupRoot</a>. It handles scheduling layout, styling and rendering as well as
+tracking the window <a class="xref" href="Perspex.Controls.TopLevel.html#Perspex_Controls_TopLevel_ClientSize">ClientSize</a> and <a class="xref" href="Perspex.Controls.TopLevel.html#Perspex_Controls_TopLevel_IsActive">IsActive</a> state.</p>
+</div>
+              <h3 id="constructors">Constructors</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel__ctor_Perspex_Platform_ITopLevelImpl_.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.%23ctor(Perspex.Platform.ITopLevelImpl)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L66">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel__ctor_Perspex_Platform_ITopLevelImpl_" data-uid="Perspex.Controls.TopLevel.#ctor(Perspex.Platform.ITopLevelImpl)">TopLevel(ITopLevelImpl)</h4>
+              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Perspex.Controls.TopLevel.html#Perspex_Controls_TopLevel">TopLevel</a> class.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TopLevel(ITopLevelImpl impl)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Platform.ITopLevelImpl.html#Perspex_Platform_ITopLevelImpl">ITopLevelImpl</a></td>
+                    <td><em>impl</em></td>
+                    <td><p>The platform-specific window implementation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel__ctor_Perspex_Platform_ITopLevelImpl_Perspex_IPerspexDependencyResolver_.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.%23ctor(Perspex.Platform.ITopLevelImpl%2CPerspex.IPerspexDependencyResolver)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L78">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel__ctor_Perspex_Platform_ITopLevelImpl_Perspex_IPerspexDependencyResolver_" data-uid="Perspex.Controls.TopLevel.#ctor(Perspex.Platform.ITopLevelImpl,Perspex.IPerspexDependencyResolver)">TopLevel(ITopLevelImpl, IPerspexDependencyResolver)</h4>
+              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Perspex.Controls.TopLevel.html#Perspex_Controls_TopLevel">TopLevel</a> class.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TopLevel(ITopLevelImpl impl, IPerspexDependencyResolver dependencyResolver)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Platform.ITopLevelImpl.html#Perspex_Platform_ITopLevelImpl">ITopLevelImpl</a></td>
+                    <td><em>impl</em></td>
+                    <td><p>The platform-specific window implementation.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Perspex.IPerspexDependencyResolver.html#Perspex_IPerspexDependencyResolver">IPerspexDependencyResolver</a></td>
+                    <td><em>dependencyResolver</em></td>
+                    <td><p>The dependency resolver to use. If null the default dependency resolver will be used.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="fields">Fields</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_ClientSizeProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.ClientSizeProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L32">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_ClientSizeProperty" data-uid="Perspex.Controls.TopLevel.ClientSizeProperty">ClientSizeProperty</h4>
+              <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Controls.TopLevel.html#Perspex_Controls_TopLevel_ClientSize">ClientSize</a> property.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly DirectProperty&lt;TopLevel, Size&gt; ClientSizeProperty</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_IsActiveProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.IsActiveProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L38">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_IsActiveProperty" data-uid="Perspex.Controls.TopLevel.IsActiveProperty">IsActiveProperty</h4>
+              <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Controls.TopLevel.html#Perspex_Controls_TopLevel_IsActive">IsActive</a> property.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly DirectProperty&lt;TopLevel, bool&gt; IsActiveProperty</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_PointerOverElementProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.PointerOverElementProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L44">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_PointerOverElementProperty" data-uid="Perspex.Controls.TopLevel.PointerOverElementProperty">PointerOverElementProperty</h4>
+              <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Input.IInputRoot.html#Perspex_Input_IInputRoot_PointerOverElement">PointerOverElement</a> property.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly StyledProperty&lt;IInputElement&gt; PointerOverElementProperty</code></pre>
+              </div>
+              <h3 id="properties">Properties</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_AutoSizing.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.AutoSizing%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L214">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_AutoSizing" data-uid="Perspex.Controls.TopLevel.AutoSizing">AutoSizing</h4>
+              <div class="markdown level1 summary"><p>Whether an auto-size operation is in progress.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected bool AutoSizing { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_ClientSize.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.ClientSize%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L135">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_ClientSize" data-uid="Perspex.Controls.TopLevel.ClientSize">ClientSize</h4>
+              <div class="markdown level1 summary"><p>Gets or sets the client size of the window.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Size ClientSize { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Size.html#Perspex_Size">Size</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_IsActive.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.IsActive%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L144">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_IsActive" data-uid="Perspex.Controls.TopLevel.IsActive">IsActive</h4>
+              <div class="markdown level1 summary"><p>Gets a value that indicates whether the window is active.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_Perspex_Input_IInputRoot_AccessKeyHandler.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.Perspex%23Input%23IInputRoot%23AccessKeyHandler%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L175">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_Perspex_Input_IInputRoot_AccessKeyHandler" data-uid="Perspex.Controls.TopLevel.Perspex#Input#IInputRoot#AccessKeyHandler">IInputRoot.AccessKeyHandler</h4>
+              <div class="markdown level1 summary"><p>Gets the access key handler for the window.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IAccessKeyHandler IInputRoot.AccessKeyHandler { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Input.IAccessKeyHandler.html#Perspex_Input_IAccessKeyHandler">IAccessKeyHandler</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_Perspex_Input_IInputRoot_KeyboardNavigationHandler.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.Perspex%23Input%23IInputRoot%23KeyboardNavigationHandler%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L180">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_Perspex_Input_IInputRoot_KeyboardNavigationHandler" data-uid="Perspex.Controls.TopLevel.Perspex#Input#IInputRoot#KeyboardNavigationHandler">IInputRoot.KeyboardNavigationHandler</h4>
+              <div class="markdown level1 summary"><p>Gets or sets the keyboard navigation handler for the window.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IKeyboardNavigationHandler IInputRoot.KeyboardNavigationHandler { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Input.IKeyboardNavigationHandler.html#Perspex_Input_IKeyboardNavigationHandler">IKeyboardNavigationHandler</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_Perspex_Input_IInputRoot_PointerOverElement.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.Perspex%23Input%23IInputRoot%23PointerOverElement%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L185">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_Perspex_Input_IInputRoot_PointerOverElement" data-uid="Perspex.Controls.TopLevel.Perspex#Input#IInputRoot#PointerOverElement">IInputRoot.PointerOverElement</h4>
+              <div class="markdown level1 summary"><p>Gets or sets the input element that the pointer is currently over.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IInputElement IInputRoot.PointerOverElement { get; set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Input.IInputElement.html#Perspex_Input_IInputElement">IInputElement</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_Perspex_Input_IInputRoot_ShowAccessKeys.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.Perspex%23Input%23IInputRoot%23ShowAccessKeys%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L194">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_Perspex_Input_IInputRoot_ShowAccessKeys" data-uid="Perspex.Controls.TopLevel.Perspex#Input#IInputRoot#ShowAccessKeys">IInputRoot.ShowAccessKeys</h4>
+              <div class="markdown level1 summary"><p>Gets or sets a value indicating whether access keys are shown in the window.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">bool IInputRoot.ShowAccessKeys { get; set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_Perspex_Layout_ILayoutRoot_LayoutScaling.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.Perspex%23Layout%23ILayoutRoot%23LayoutScaling%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L204">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_Perspex_Layout_ILayoutRoot_LayoutScaling" data-uid="Perspex.Controls.TopLevel.Perspex#Layout#ILayoutRoot#LayoutScaling">ILayoutRoot.LayoutScaling</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">double ILayoutRoot.LayoutScaling { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_Perspex_Layout_ILayoutRoot_MaxClientSize.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.Perspex%23Layout%23ILayoutRoot%23MaxClientSize%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L201">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_Perspex_Layout_ILayoutRoot_MaxClientSize" data-uid="Perspex.Controls.TopLevel.Perspex#Layout#ILayoutRoot#MaxClientSize">ILayoutRoot.MaxClientSize</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">Size ILayoutRoot.MaxClientSize { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Size.html#Perspex_Size">Size</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_Perspex_Rendering_IRenderRoot_RenderQueueManager.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.Perspex%23Rendering%23IRenderRoot%23RenderQueueManager%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L170">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_Perspex_Rendering_IRenderRoot_RenderQueueManager" data-uid="Perspex.Controls.TopLevel.Perspex#Rendering#IRenderRoot#RenderQueueManager">IRenderRoot.RenderQueueManager</h4>
+              <div class="markdown level1 summary"><p>Gets the window render manager.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IRenderQueueManager IRenderRoot.RenderQueueManager { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Rendering.IRenderQueueManager.html#Perspex_Rendering_IRenderQueueManager">IRenderQueueManager</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_Perspex_Styling_IStyleHost_StylingParent.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.Perspex%23Styling%23IStyleHost%23StylingParent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L206">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_Perspex_Styling_IStyleHost_StylingParent" data-uid="Perspex.Controls.TopLevel.Perspex#Styling#IStyleHost#StylingParent">IStyleHost.StylingParent</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IStyleHost IStyleHost.StylingParent { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Styling.IStyleHost.html#Perspex_Styling_IStyleHost">IStyleHost</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_PlatformImpl.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.PlatformImpl%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L162">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_PlatformImpl" data-uid="Perspex.Controls.TopLevel.PlatformImpl">PlatformImpl</h4>
+              <div class="markdown level1 summary"><p>Gets the platform-specific window implementation.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ITopLevelImpl PlatformImpl { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Platform.ITopLevelImpl.html#Perspex_Platform_ITopLevelImpl">ITopLevelImpl</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_Position.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.Position%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L153">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_Position" data-uid="Perspex.Controls.TopLevel.Position">Position</h4>
+              <div class="markdown level1 summary"><p>Gets or sets the window position in screen coordinates.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Point Position { get; set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Point.html#Perspex_Point">Point</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_Activate.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.Activate%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L235">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_Activate" data-uid="Perspex.Controls.TopLevel.Activate">Activate()</h4>
+              <div class="markdown level1 summary"><p>Activates the window.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Activate()</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_ArrangeOverride_Perspex_Size_.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.ArrangeOverride(Perspex.Size)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L260">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_ArrangeOverride_Perspex_Size_" data-uid="Perspex.Controls.TopLevel.ArrangeOverride(Perspex.Size)">ArrangeOverride(Size)</h4>
+              <div class="markdown level1 summary"><p>Carries out the arrange pass of the window.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override Size ArrangeOverride(Size finalSize)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Size.html#Perspex_Size">Size</a></td>
+                    <td><em>finalSize</em></td>
+                    <td><p>The final window size.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Size.html#Perspex_Size">Size</a></td>
+                    <td><p>The <em>finalSize</em> parameter unchanged.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_BeginAutoSizing.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.BeginAutoSizing%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L249">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_BeginAutoSizing" data-uid="Perspex.Controls.TopLevel.BeginAutoSizing">BeginAutoSizing()</h4>
+              <div class="markdown level1 summary"><p>Begins an auto-resize operation.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Perspex_Controls_TopLevel_BeginAutoSizing_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>When an auto-resize operation is in progress any resize events received will not be
+cause the new size to be written to the <a class="xref" href="Perspex.Layout.Layoutable.html#Perspex_Layout_Layoutable_Width">Width</a> and</p>
+<p><a class="xref" href="Perspex.Layout.Layoutable.html#Perspex_Layout_Layoutable_Height">Height</a> properties.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected IDisposable BeginAutoSizing()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IDisposable</span></td>
+                    <td><p>A disposable used to finish the operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_BeginMoveDrag.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.BeginMoveDrag%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L374">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_BeginMoveDrag" data-uid="Perspex.Controls.TopLevel.BeginMoveDrag">BeginMoveDrag()</h4>
+              <div class="markdown level1 summary"><p>Starts moving a window with left button being held. Should be called from left mouse button press event handler</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void BeginMoveDrag()</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_BeginResizeDrag_Perspex_Controls_WindowEdge_.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.BeginResizeDrag(Perspex.Controls.WindowEdge)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L380">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_BeginResizeDrag_Perspex_Controls_WindowEdge_" data-uid="Perspex.Controls.TopLevel.BeginResizeDrag(Perspex.Controls.WindowEdge)">BeginResizeDrag(WindowEdge)</h4>
+              <div class="markdown level1 summary"><p>Starts resizing a window. This function is used if an application has window resizing controls.
+Should be called from left mouse button press event handler</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void BeginResizeDrag(WindowEdge edge)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Controls.WindowEdge.html#Perspex_Controls_WindowEdge">WindowEdge</a></td>
+                    <td><em>edge</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_HandleResized_Perspex_Size_.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.HandleResized(Perspex.Size)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L274">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_HandleResized_Perspex_Size_" data-uid="Perspex.Controls.TopLevel.HandleResized(Perspex.Size)">HandleResized(Size)</h4>
+              <div class="markdown level1 summary"><p>Handles a resize notification from <a class="xref" href="Perspex.Platform.ITopLevelImpl.html#Perspex_Platform_ITopLevelImpl_Resized">Resized</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void HandleResized(Size clientSize)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Size.html#Perspex_Size">Size</a></td>
+                    <td><em>clientSize</em></td>
+                    <td><p>The new client size.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_HandleScalingChanged_System_Double_.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.HandleScalingChanged(System.Double)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L292">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_HandleScalingChanged_System_Double_" data-uid="Perspex.Controls.TopLevel.HandleScalingChanged(System.Double)">HandleScalingChanged(Double)</h4>
+              <div class="markdown level1 summary"><p>Handles a window scaling change notification from</p>
+<p><a class="xref" href="Perspex.Platform.ITopLevelImpl.html#Perspex_Platform_ITopLevelImpl_ScalingChanged">ScalingChanged</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void HandleScalingChanged(double scaling)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td><em>scaling</em></td>
+                    <td><p>The window scaling.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_OnAttachedToVisualTree_Perspex_VisualTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.OnAttachedToVisualTree(Perspex.VisualTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L301">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_OnAttachedToVisualTree_Perspex_VisualTreeAttachmentEventArgs_" data-uid="Perspex.Controls.TopLevel.OnAttachedToVisualTree(Perspex.VisualTreeAttachmentEventArgs)">OnAttachedToVisualTree(VisualTreeAttachmentEventArgs)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.VisualTreeAttachmentEventArgs.html#Perspex_VisualTreeAttachmentEventArgs">VisualTreeAttachmentEventArgs</a></td>
+                    <td><em>e</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_Perspex_Rendering_IRenderRoot_PointToClient_Perspex_Point_.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.Perspex%23Rendering%23IRenderRoot%23PointToClient(Perspex.Point)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L221">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_Perspex_Rendering_IRenderRoot_PointToClient_Perspex_Point_" data-uid="Perspex.Controls.TopLevel.Perspex#Rendering#IRenderRoot#PointToClient(Perspex.Point)">IRenderRoot.PointToClient(Point)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">Point IRenderRoot.PointToClient(Point p)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Point.html#Perspex_Point">Point</a></td>
+                    <td><em>p</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Point.html#Perspex_Point">Point</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_Perspex_Rendering_IRenderRoot_PointToScreen_Perspex_Point_.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.Perspex%23Rendering%23IRenderRoot%23PointToScreen(Perspex.Point)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L227">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_Perspex_Rendering_IRenderRoot_PointToScreen_Perspex_Point_" data-uid="Perspex.Controls.TopLevel.Perspex#Rendering#IRenderRoot#PointToScreen(Perspex.Point)">IRenderRoot.PointToScreen(Point)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">Point IRenderRoot.PointToScreen(Point p)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Point.html#Perspex_Point">Point</a></td>
+                    <td><em>p</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Point.html#Perspex_Point">Point</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="events">Events</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_Activated.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.Activated%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L120">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_Activated" data-uid="Perspex.Controls.TopLevel.Activated">Activated</h4>
+              <div class="markdown level1 summary"><p>Fired when the window is activated.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event EventHandler Activated</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_Closed.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.Closed%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L125">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_Closed" data-uid="Perspex.Controls.TopLevel.Closed">Closed</h4>
+              <div class="markdown level1 summary"><p>Fired when the window is closed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event EventHandler Closed</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_TopLevel_Deactivated.md&amp;value=---%0Auid%3A%20Perspex.Controls.TopLevel.Deactivated%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Controls/TopLevel.cs/#L130">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_TopLevel_Deactivated" data-uid="Perspex.Controls.TopLevel.Deactivated">Deactivated</h4>
+              <div class="markdown level1 summary"><p>Fired when the window is deactivated.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event EventHandler Deactivated</code></pre>
+              </div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

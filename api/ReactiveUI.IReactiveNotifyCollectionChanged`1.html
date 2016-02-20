@@ -1,0 +1,508 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>IReactiveNotifyCollectionChanged&lt;T&gt; Interface | Perspex Website</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="IReactiveNotifyCollectionChanged&lt;T&gt; Interface | Perspex Website">
+    <meta name="generator" content="docfx 1.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content">
+        
+        <div class="sidenav">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_IReactiveNotifyCollectionChanged_1.md&amp;value=---%0Auid%3A%20ReactiveUI.IReactiveNotifyCollectionChanged%601%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/Interfaces.cs/#L258" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <h1 id="ReactiveUI_IReactiveNotifyCollectionChanged_1" data-uid="ReactiveUI.IReactiveNotifyCollectionChanged`1">Interface IReactiveNotifyCollectionChanged&lt;T&gt;</h1>
+              <div class="markdown level0 summary"><p>IReactiveNotifyCollectionChanged of T provides notifications when the contents
+of collection are changed (items are added/removed/moved).</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <h6><strong>Namespace</strong>:ReactiveUI</h6>
+              <h6><strong>Assembly</strong>:Perspex.ReactiveUI.dll</h6>
+              <h5 id="ReactiveUI_IReactiveNotifyCollectionChanged_1_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public interface IReactiveNotifyCollectionChanged&lt;out T&gt;</code></pre>
+              </div>
+              <h3 id="properties">Properties</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_IReactiveNotifyCollectionChanged_1_BeforeItemsAdded.md&amp;value=---%0Auid%3A%20ReactiveUI.IReactiveNotifyCollectionChanged%601.BeforeItemsAdded%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/Interfaces.cs/#L270">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_IReactiveNotifyCollectionChanged_1_BeforeItemsAdded" data-uid="ReactiveUI.IReactiveNotifyCollectionChanged`1.BeforeItemsAdded">BeforeItemsAdded</h4>
+              <div class="markdown level1 summary"><p>Fires before an item is going to be added to the collection.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IObservable&lt;T&gt; BeforeItemsAdded { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;T&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_IReactiveNotifyCollectionChanged_1_BeforeItemsMoved.md&amp;value=---%0Auid%3A%20ReactiveUI.IReactiveNotifyCollectionChanged%601.BeforeItemsMoved%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/Interfaces.cs/#L289">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_IReactiveNotifyCollectionChanged_1_BeforeItemsMoved" data-uid="ReactiveUI.IReactiveNotifyCollectionChanged`1.BeforeItemsMoved">BeforeItemsMoved</h4>
+              <div class="markdown level1 summary"><p>Fires before an items moves from one position in the collection to
+another, providing the item(s) to be moved as well as source and destination
+indices.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IObservable&lt;IMoveInfo&lt;T&gt;&gt; BeforeItemsMoved { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;<a class="xref" href="ReactiveUI.IMoveInfo`1.html#ReactiveUI_IMoveInfo_1">IMoveInfo</a>&lt;T&gt;&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_IReactiveNotifyCollectionChanged_1_BeforeItemsRemoved.md&amp;value=---%0Auid%3A%20ReactiveUI.IReactiveNotifyCollectionChanged%601.BeforeItemsRemoved%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/Interfaces.cs/#L282">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_IReactiveNotifyCollectionChanged_1_BeforeItemsRemoved" data-uid="ReactiveUI.IReactiveNotifyCollectionChanged`1.BeforeItemsRemoved">BeforeItemsRemoved</h4>
+              <div class="markdown level1 summary"><p>Fires before an item will be removed from a collection, providing
+the item that will be removed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IObservable&lt;T&gt; BeforeItemsRemoved { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;T&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_IReactiveNotifyCollectionChanged_1_Changed.md&amp;value=---%0Auid%3A%20ReactiveUI.IReactiveNotifyCollectionChanged%601.Changed%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/Interfaces.cs/#L308">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_IReactiveNotifyCollectionChanged_1_Changed" data-uid="ReactiveUI.IReactiveNotifyCollectionChanged`1.Changed">Changed</h4>
+              <div class="markdown level1 summary"><p>This Observable is equivalent to the NotifyCollectionChanged event,
+and fires after the collection is changed</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IObservable&lt;NotifyCollectionChangedEventArgs&gt; Changed { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Collections.Specialized.NotifyCollectionChangedEventArgs</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_IReactiveNotifyCollectionChanged_1_Changing.md&amp;value=---%0Auid%3A%20ReactiveUI.IReactiveNotifyCollectionChanged%601.Changing%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/Interfaces.cs/#L302">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_IReactiveNotifyCollectionChanged_1_Changing" data-uid="ReactiveUI.IReactiveNotifyCollectionChanged`1.Changing">Changing</h4>
+              <div class="markdown level1 summary"><p>This Observable is equivalent to the NotifyCollectionChanged event,
+but fires before the collection is changed</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IObservable&lt;NotifyCollectionChangedEventArgs&gt; Changing { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Collections.Specialized.NotifyCollectionChangedEventArgs</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_IReactiveNotifyCollectionChanged_1_CountChanged.md&amp;value=---%0Auid%3A%20ReactiveUI.IReactiveNotifyCollectionChanged%601.CountChanged%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/Interfaces.cs/#L318">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_IReactiveNotifyCollectionChanged_1_CountChanged" data-uid="ReactiveUI.IReactiveNotifyCollectionChanged`1.CountChanged">CountChanged</h4>
+              <div class="markdown level1 summary"><p>Fires when the collection count changes, regardless of reason</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IObservable&lt;int&gt; CountChanged { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_IReactiveNotifyCollectionChanged_1_CountChanging.md&amp;value=---%0Auid%3A%20ReactiveUI.IReactiveNotifyCollectionChanged%601.CountChanging%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/Interfaces.cs/#L313">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_IReactiveNotifyCollectionChanged_1_CountChanging" data-uid="ReactiveUI.IReactiveNotifyCollectionChanged`1.CountChanging">CountChanging</h4>
+              <div class="markdown level1 summary"><p>Fires when the collection count changes, regardless of reason</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IObservable&lt;int&gt; CountChanging { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_IReactiveNotifyCollectionChanged_1_IsEmptyChanged.md&amp;value=---%0Auid%3A%20ReactiveUI.IReactiveNotifyCollectionChanged%601.IsEmptyChanged%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/Interfaces.cs/#L320">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_IReactiveNotifyCollectionChanged_1_IsEmptyChanged" data-uid="ReactiveUI.IReactiveNotifyCollectionChanged`1.IsEmptyChanged">IsEmptyChanged</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IObservable&lt;bool&gt; IsEmptyChanged { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_IReactiveNotifyCollectionChanged_1_ItemsAdded.md&amp;value=---%0Auid%3A%20ReactiveUI.IReactiveNotifyCollectionChanged%601.ItemsAdded%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/Interfaces.cs/#L265">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_IReactiveNotifyCollectionChanged_1_ItemsAdded" data-uid="ReactiveUI.IReactiveNotifyCollectionChanged`1.ItemsAdded">ItemsAdded</h4>
+              <div class="markdown level1 summary"><p>Fires when items are added to the collection, once per item added.
+Functions that add multiple items such AddRange should fire this
+multiple times. The object provided is the item that was added.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IObservable&lt;T&gt; ItemsAdded { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;T&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_IReactiveNotifyCollectionChanged_1_ItemsMoved.md&amp;value=---%0Auid%3A%20ReactiveUI.IReactiveNotifyCollectionChanged%601.ItemsMoved%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/Interfaces.cs/#L296">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_IReactiveNotifyCollectionChanged_1_ItemsMoved" data-uid="ReactiveUI.IReactiveNotifyCollectionChanged`1.ItemsMoved">ItemsMoved</h4>
+              <div class="markdown level1 summary"><p>Fires once one or more items moves from one position in the collection to
+another, providing the item(s) that was moved as well as source and destination
+indices.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IObservable&lt;IMoveInfo&lt;T&gt;&gt; ItemsMoved { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;<a class="xref" href="ReactiveUI.IMoveInfo`1.html#ReactiveUI_IMoveInfo_1">IMoveInfo</a>&lt;T&gt;&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_IReactiveNotifyCollectionChanged_1_ItemsRemoved.md&amp;value=---%0Auid%3A%20ReactiveUI.IReactiveNotifyCollectionChanged%601.ItemsRemoved%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/Interfaces.cs/#L276">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_IReactiveNotifyCollectionChanged_1_ItemsRemoved" data-uid="ReactiveUI.IReactiveNotifyCollectionChanged`1.ItemsRemoved">ItemsRemoved</h4>
+              <div class="markdown level1 summary"><p>Fires once an item has been removed from a collection, providing the
+item that was removed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IObservable&lt;T&gt; ItemsRemoved { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;T&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_IReactiveNotifyCollectionChanged_1_ShouldReset.md&amp;value=---%0Auid%3A%20ReactiveUI.IReactiveNotifyCollectionChanged%601.ShouldReset%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/Interfaces.cs/#L330">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_IReactiveNotifyCollectionChanged_1_ShouldReset" data-uid="ReactiveUI.IReactiveNotifyCollectionChanged`1.ShouldReset">ShouldReset</h4>
+              <div class="markdown level1 summary"><p>This Observable is fired when a ShouldReset fires on the collection. This
+means that you should forget your previous knowledge of the state
+of the collection and reread it.</p>
+<p>This does <em>not</em> mean Clear, and if you interpret it as such, you are
+Doing It Wrong.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IObservable&lt;Unit&gt; ShouldReset { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Reactive.Unit</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=ReactiveUI_IReactiveNotifyCollectionChanged_1_SuppressChangeNotifications.md&amp;value=---%0Auid%3A%20ReactiveUI.IReactiveNotifyCollectionChanged%601.SuppressChangeNotifications%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.ReactiveUI/src/ReactiveUI/Interfaces.cs/#L332">View Source</a>
+              </span>
+              <h4 id="ReactiveUI_IReactiveNotifyCollectionChanged_1_SuppressChangeNotifications" data-uid="ReactiveUI.IReactiveNotifyCollectionChanged`1.SuppressChangeNotifications">SuppressChangeNotifications()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IDisposable SuppressChangeNotifications()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IDisposable</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

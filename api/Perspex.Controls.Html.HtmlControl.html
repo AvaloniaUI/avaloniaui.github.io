@@ -1,0 +1,1411 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>HtmlControl Class | Perspex Website</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="HtmlControl Class | Perspex Website">
+    <meta name="generator" content="docfx 1.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content">
+        
+        <div class="sidenav">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L58" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <h1 id="Perspex_Controls_Html_HtmlControl" data-uid="Perspex.Controls.Html.HtmlControl">Class HtmlControl</h1>
+              <div class="markdown level0 summary"><p>Provides HTML rendering using the text property.<br>
+Perspex control that will render html content in it&#39;s client rectangle.<br>
+The control will handle mouse and keyboard events on it to support html text selection, copy-paste and mouse clicks.<br><para>
+The major differential to use HtmlPanel or HtmlLabel is size and scrollbars.<br>
+If the size of the control depends on the html content the HtmlLabel should be used.<br>
+If the size is set by some kind of layout then HtmlPanel is more suitable, also shows scrollbars if the html contents is larger than the control client rectangle.<br></para><para><h4>LinkClicked event:</h4>
+Raised when the user clicks on a link in the html.<br>
+Allows canceling the execution of the link.
+</para><para><h4>StylesheetLoad event:</h4>
+Raised when a stylesheet is about to be loaded by file path or URI by link element.<br>
+This event allows to provide the stylesheet manually or provide new source (file or uri) to load from.<br>
+If no alternative data is provided the original source will be used.<br></para><para><h4>ImageLoad event:</h4>
+Raised when an image is about to be loaded by file path or URI.<br>
+This event allows to provide the image manually, if not handled the image will be loaded from file or download from URI.
+</para><para><h4>RenderError event:</h4>
+Raised when an error occurred during html rendering.<br></para></p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><a class="xref" href="Perspex.PerspexObject.html#Perspex_PerspexObject">PerspexObject</a></div>
+                  <div class="level2"><a class="xref" href="Perspex.Animation.Animatable.html#Perspex_Animation_Animatable">Animatable</a></div>
+                  <div class="level3"><a class="xref" href="Perspex.Visual.html#Perspex_Visual">Visual</a></div>
+                  <div class="level4"><a class="xref" href="Perspex.Layout.Layoutable.html#Perspex_Layout_Layoutable">Layoutable</a></div>
+                  <div class="level5"><a class="xref" href="Perspex.Interactivity.Interactive.html#Perspex_Interactivity_Interactive">Interactive</a></div>
+                  <div class="level6"><a class="xref" href="Perspex.Input.InputElement.html#Perspex_Input_InputElement">InputElement</a></div>
+                  <div class="level7"><a class="xref" href="Perspex.Controls.Control.html#Perspex_Controls_Control">Control</a></div>
+                  <div class="level8"><span class="xref">HtmlControl</span></div>
+              </div>
+              <h6><strong>Namespace</strong>:Perspex.Controls.Html</h6>
+              <h6><strong>Assembly</strong>:Perspex.HtmlRenderer.dll</h6>
+              <h5 id="Perspex_Controls_Html_HtmlControl_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class HtmlControl : Control, INotifyPropertyChanged, IControl, ILogical, ILayoutable, IInputElement, IInteractive, IVisual, IStyleable, IPerspexObject, INamed, IStyleHost, ISetLogicalParent</code></pre>
+              </div>
+              <h3 id="constructors">Constructors</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl__ctor.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.%23ctor%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L123">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl__ctor" data-uid="Perspex.Controls.Html.HtmlControl.#ctor">HtmlControl()</h4>
+              <div class="markdown level1 summary"><p>Creates a new HtmlPanel and sets a basic css for it&#39;s styling.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected HtmlControl()</code></pre>
+              </div>
+              <h3 id="fields">Fields</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl__baseCssData.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl._baseCssData%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L68">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl__baseCssData" data-uid="Perspex.Controls.Html.HtmlControl._baseCssData">_baseCssData</h4>
+              <div class="markdown level1 summary"><p>the base stylesheet data used in the control</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected CssData _baseCssData</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl__htmlContainer.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl._htmlContainer%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L63">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl__htmlContainer" data-uid="Perspex.Controls.Html.HtmlControl._htmlContainer">_htmlContainer</h4>
+              <div class="markdown level1 summary"><p>Underline html container instance.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected readonly HtmlContainer _htmlContainer</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl__lastScrollOffset.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl._lastScrollOffset%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L73">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl__lastScrollOffset" data-uid="Perspex.Controls.Html.HtmlControl._lastScrollOffset">_lastScrollOffset</h4>
+              <div class="markdown level1 summary"><p>The last position of the scrollbars to know if it has changed to update mouse</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected Point _lastScrollOffset</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_AvoidImagesLateLoadingProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.AvoidImagesLateLoadingProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L75">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_AvoidImagesLateLoadingProperty" data-uid="Perspex.Controls.Html.HtmlControl.AvoidImagesLateLoadingProperty">AvoidImagesLateLoadingProperty</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly PerspexProperty AvoidImagesLateLoadingProperty</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_BackgroundProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.BackgroundProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L88">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_BackgroundProperty" data-uid="Perspex.Controls.Html.HtmlControl.BackgroundProperty">BackgroundProperty</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly StyledProperty&lt;Brush&gt; BackgroundProperty</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_BaseStylesheetProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.BaseStylesheetProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L82">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_BaseStylesheetProperty" data-uid="Perspex.Controls.Html.HtmlControl.BaseStylesheetProperty">BaseStylesheetProperty</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly PerspexProperty BaseStylesheetProperty</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_BorderBrushProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.BorderBrushProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L94">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_BorderBrushProperty" data-uid="Perspex.Controls.Html.HtmlControl.BorderBrushProperty">BorderBrushProperty</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly PerspexProperty BorderBrushProperty</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_BorderThicknessProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.BorderThicknessProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L91">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_BorderThicknessProperty" data-uid="Perspex.Controls.Html.HtmlControl.BorderThicknessProperty">BorderThicknessProperty</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly PerspexProperty BorderThicknessProperty</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_ImageLoadEvent.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.ImageLoadEvent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L111">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_ImageLoadEvent" data-uid="Perspex.Controls.Html.HtmlControl.ImageLoadEvent">ImageLoadEvent</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly RoutedEvent ImageLoadEvent</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_IsContextMenuEnabledProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.IsContextMenuEnabledProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L79">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_IsContextMenuEnabledProperty" data-uid="Perspex.Controls.Html.HtmlControl.IsContextMenuEnabledProperty">IsContextMenuEnabledProperty</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly PerspexProperty IsContextMenuEnabledProperty</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_IsSelectionEnabledProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.IsSelectionEnabledProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L77">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_IsSelectionEnabledProperty" data-uid="Perspex.Controls.Html.HtmlControl.IsSelectionEnabledProperty">IsSelectionEnabledProperty</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly PerspexProperty IsSelectionEnabledProperty</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_LinkClickedEvent.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.LinkClickedEvent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L102">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_LinkClickedEvent" data-uid="Perspex.Controls.Html.HtmlControl.LinkClickedEvent">LinkClickedEvent</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly RoutedEvent LinkClickedEvent</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_LoadCompleteEvent.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.LoadCompleteEvent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L100">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_LoadCompleteEvent" data-uid="Perspex.Controls.Html.HtmlControl.LoadCompleteEvent">LoadCompleteEvent</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly RoutedEvent LoadCompleteEvent</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_PaddingProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.PaddingProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L97">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_PaddingProperty" data-uid="Perspex.Controls.Html.HtmlControl.PaddingProperty">PaddingProperty</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly PerspexProperty PaddingProperty</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_RefreshEvent.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.RefreshEvent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L106">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_RefreshEvent" data-uid="Perspex.Controls.Html.HtmlControl.RefreshEvent">RefreshEvent</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly RoutedEvent RefreshEvent</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_RenderErrorEvent.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.RenderErrorEvent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L104">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_RenderErrorEvent" data-uid="Perspex.Controls.Html.HtmlControl.RenderErrorEvent">RenderErrorEvent</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly RoutedEvent RenderErrorEvent</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_StylesheetLoadEvent.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.StylesheetLoadEvent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L108">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_StylesheetLoadEvent" data-uid="Perspex.Controls.Html.HtmlControl.StylesheetLoadEvent">StylesheetLoadEvent</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly RoutedEvent StylesheetLoadEvent</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_TextProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.TextProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L85">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_TextProperty" data-uid="Perspex.Controls.Html.HtmlControl.TextProperty">TextProperty</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly PerspexProperty TextProperty</code></pre>
+              </div>
+              <h3 id="properties">Properties</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_AvoidImagesLateLoading.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.AvoidImagesLateLoading%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L200">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_AvoidImagesLateLoading" data-uid="Perspex.Controls.Html.HtmlControl.AvoidImagesLateLoading">AvoidImagesLateLoading</h4>
+              <div class="markdown level1 summary"><p>Gets or sets a value indicating if image loading only when visible should be avoided (default - false).<br>
+True - images are loaded as soon as the html is parsed.<br>
+False - images that are not visible because of scroll location are not loaded until they are scrolled to.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Perspex_Controls_Html_HtmlControl_AvoidImagesLateLoading_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Images late loading improve performance if the page contains image outside the visible scroll area, especially if there is large
+amount of images, as all image loading is delayed (downloading and loading into memory).<br>
+Late image loading may effect the layout and actual size as image without set size will not have actual size until they are loaded
+resulting in layout change during user scroll.<br>
+Early image loading may also effect the layout if image without known size above the current scroll location are loaded as they
+will push the html elements down.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool AvoidImagesLateLoading { get; set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_Background.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.Background%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L270">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_Background" data-uid="Perspex.Controls.Html.HtmlControl.Background">Background</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Brush Background { get; set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Media.Brush.html#Perspex_Media_Brush">Brush</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_BaseStylesheet.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.BaseStylesheet%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L234">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_BaseStylesheet" data-uid="Perspex.Controls.Html.HtmlControl.BaseStylesheet">BaseStylesheet</h4>
+              <div class="markdown level1 summary"><p>Set base stylesheet to be used by html rendered in the panel.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string BaseStylesheet { get; set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_BorderBrush.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.BorderBrush%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L258">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_BorderBrush" data-uid="Perspex.Controls.Html.HtmlControl.BorderBrush">BorderBrush</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Brush BorderBrush { get; set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Media.Brush.html#Perspex_Media_Brush">Brush</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_BorderThickness.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.BorderThickness%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L252">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_BorderThickness" data-uid="Perspex.Controls.Html.HtmlControl.BorderThickness">BorderThickness</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Thickness BorderThickness { get; set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Thickness.html#Perspex_Thickness">Thickness</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_IsContextMenuEnabled.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.IsContextMenuEnabled%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L223">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_IsContextMenuEnabled" data-uid="Perspex.Controls.Html.HtmlControl.IsContextMenuEnabled">IsContextMenuEnabled</h4>
+              <div class="markdown level1 summary"><p>Is the build-in context menu enabled and will be shown on mouse right click (default - true)</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsContextMenuEnabled { get; set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_IsSelectionEnabled.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.IsSelectionEnabled%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L212">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_IsSelectionEnabled" data-uid="Perspex.Controls.Html.HtmlControl.IsSelectionEnabled">IsSelectionEnabled</h4>
+              <div class="markdown level1 summary"><p>Is content selection is enabled for the rendered html (default - true).<br>
+If set to &#39;false&#39; the rendered html will be static only with ability to click on links.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsSelectionEnabled { get; set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_Padding.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.Padding%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L264">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_Padding" data-uid="Perspex.Controls.Html.HtmlControl.Padding">Padding</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Thickness Padding { get; set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Thickness.html#Perspex_Thickness">Thickness</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_SelectedHtml.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.SelectedHtml%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L288">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_SelectedHtml" data-uid="Perspex.Controls.Html.HtmlControl.SelectedHtml">SelectedHtml</h4>
+              <div class="markdown level1 summary"><p>Copy the currently selected html segment with style.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string SelectedHtml { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_SelectedText.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.SelectedText%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L279">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_SelectedText" data-uid="Perspex.Controls.Html.HtmlControl.SelectedText">SelectedText</h4>
+              <div class="markdown level1 summary"><p>Get the currently selected text segment in the html.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string SelectedText { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_Text.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.Text%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L245">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_Text" data-uid="Perspex.Controls.Html.HtmlControl.Text">Text</h4>
+              <div class="markdown level1 summary"><p>Gets or sets the text of this panel</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string Text { get; set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_ClearSelection.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.ClearSelection%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L318">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_ClearSelection" data-uid="Perspex.Controls.Html.HtmlControl.ClearSelection">ClearSelection()</h4>
+              <div class="markdown level1 summary"><p>Clear the current selection.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ClearSelection()</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_GetElementRectangle_System_String_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.GetElementRectangle(System.String)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L310">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_GetElementRectangle_System_String_" data-uid="Perspex.Controls.Html.HtmlControl.GetElementRectangle(System.String)">GetElementRectangle(String)</h4>
+              <div class="markdown level1 summary"><p>Get the rectangle of html element as calculated by html layout.<br>
+Element if found by id (id attribute on the html element).<br>
+Note: to get the screen rectangle you need to adjust by the hosting control.<br></p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Rect? GetElementRectangle(string elementId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>elementId</em></td>
+                    <td><p>the id of the element to get its rectangle</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Perspex.Rect.html#Perspex_Rect">Rect</a>&gt;</td>
+                    <td><p>the rectangle of the element or null if not found</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_GetHtml.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.GetHtml%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L298">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_GetHtml" data-uid="Perspex.Controls.Html.HtmlControl.GetHtml">GetHtml()</h4>
+              <div class="markdown level1 summary"><p>Get html from the current DOM tree with inline style.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string GetHtml()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><p>generated html</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_HtmlHeight_Perspex_Size_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.HtmlHeight(Perspex.Size)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L504">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_HtmlHeight_Perspex_Size_" data-uid="Perspex.Controls.Html.HtmlControl.HtmlHeight(Perspex.Size)">HtmlHeight(Size)</h4>
+              <div class="markdown level1 summary"><p>Get the width the HTML has to render in (not including vertical scroll iff it is visible)</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual double HtmlHeight(Size size)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Size.html#Perspex_Size">Size</a></td>
+                    <td><em>size</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_HtmlWidth_Perspex_Size_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.HtmlWidth(Perspex.Size)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L496">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_HtmlWidth_Perspex_Size_" data-uid="Perspex.Controls.Html.HtmlControl.HtmlWidth(Perspex.Size)">HtmlWidth(Size)</h4>
+              <div class="markdown level1 summary"><p>Get the width the HTML has to render in (not including vertical scroll iff it is visible)</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual double HtmlWidth(Size size)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Size.html#Perspex_Size">Size</a></td>
+                    <td><em>size</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_InvokeMouseMove.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.InvokeMouseMove%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L512">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_InvokeMouseMove" data-uid="Perspex.Controls.Html.HtmlControl.InvokeMouseMove">InvokeMouseMove()</h4>
+              <div class="markdown level1 summary"><p>call mouse move to handle paint after scroll or html change affecting mouse cursor.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void InvokeMouseMove()</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_OnImageLoad_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlImageLoadEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.OnImageLoad(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlImageLoadEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L481">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_OnImageLoad_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlImageLoadEventArgs_" data-uid="Perspex.Controls.Html.HtmlControl.OnImageLoad(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlImageLoadEventArgs)">OnImageLoad(HtmlImageLoadEventArgs)</h4>
+              <div class="markdown level1 summary"><p>Propagate the image load event from root container.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void OnImageLoad(HtmlImageLoadEventArgs e)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="TheArtOfDev.HtmlRenderer.Core.Entities.HtmlImageLoadEventArgs.html#TheArtOfDev_HtmlRenderer_Core_Entities_HtmlImageLoadEventArgs">HtmlImageLoadEventArgs</a></td>
+                    <td><em>e</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_OnKeyDown_Perspex_Input_KeyEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.OnKeyDown(Perspex.Input.KeyEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L439">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_OnKeyDown_Perspex_Input_KeyEventArgs_" data-uid="Perspex.Controls.Html.HtmlControl.OnKeyDown(Perspex.Input.KeyEventArgs)">OnKeyDown(KeyEventArgs)</h4>
+              <div class="markdown level1 summary"><p>Handle key down event for selection, copy and scrollbars handling.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override void OnKeyDown(KeyEventArgs e)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Input.KeyEventArgs.html#Perspex_Input_KeyEventArgs">KeyEventArgs</a></td>
+                    <td><em>e</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_OnLinkClicked_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlLinkClickedEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.OnLinkClicked(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlLinkClickedEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L466">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_OnLinkClicked_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlLinkClickedEventArgs_" data-uid="Perspex.Controls.Html.HtmlControl.OnLinkClicked(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlLinkClickedEventArgs)">OnLinkClicked(HtmlLinkClickedEventArgs)</h4>
+              <div class="markdown level1 summary"><p>Propagate the LinkClicked event from root container.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void OnLinkClicked(HtmlLinkClickedEventArgs e)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="TheArtOfDev.HtmlRenderer.Core.Entities.HtmlLinkClickedEventArgs.html#TheArtOfDev_HtmlRenderer_Core_Entities_HtmlLinkClickedEventArgs">HtmlLinkClickedEventArgs</a></td>
+                    <td><em>e</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_OnLoadComplete_System_EventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.OnLoadComplete(System.EventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L461">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_OnLoadComplete_System_EventArgs_" data-uid="Perspex.Controls.Html.HtmlControl.OnLoadComplete(System.EventArgs)">OnLoadComplete(EventArgs)</h4>
+              <div class="markdown level1 summary"><p>Propagate the LoadComplete event from root container.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void OnLoadComplete(EventArgs e)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.EventArgs</span></td>
+                    <td><em>e</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_OnPointerLeave_Perspex_Input_PointerEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.OnPointerLeave(Perspex.Input.PointerEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L394">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_OnPointerLeave_Perspex_Input_PointerEventArgs_" data-uid="Perspex.Controls.Html.HtmlControl.OnPointerLeave(Perspex.Input.PointerEventArgs)">OnPointerLeave(PointerEventArgs)</h4>
+              <div class="markdown level1 summary"><p>Handle mouse leave to handle cursor change.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override void OnPointerLeave(PointerEventArgs e)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Input.PointerEventArgs.html#Perspex_Input_PointerEventArgs">PointerEventArgs</a></td>
+                    <td><em>e</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_OnPointerMoved_Perspex_Input_PointerEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.OnPointerMoved(Perspex.Input.PointerEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L385">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_OnPointerMoved_Perspex_Input_PointerEventArgs_" data-uid="Perspex.Controls.Html.HtmlControl.OnPointerMoved(Perspex.Input.PointerEventArgs)">OnPointerMoved(PointerEventArgs)</h4>
+              <div class="markdown level1 summary"><p>Handle mouse move to handle hover cursor and text selection.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override void OnPointerMoved(PointerEventArgs e)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Input.PointerEventArgs.html#Perspex_Input_PointerEventArgs">PointerEventArgs</a></td>
+                    <td><em>e</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_OnPointerPressed_Perspex_Input_PointerPressedEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.OnPointerPressed(Perspex.Input.PointerPressedEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L404">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_OnPointerPressed_Perspex_Input_PointerPressedEventArgs_" data-uid="Perspex.Controls.Html.HtmlControl.OnPointerPressed(Perspex.Input.PointerPressedEventArgs)">OnPointerPressed(PointerPressedEventArgs)</h4>
+              <div class="markdown level1 summary"><p>Handle mouse down to handle selection.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override void OnPointerPressed(PointerPressedEventArgs e)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Input.PointerPressedEventArgs.html#Perspex_Input_PointerPressedEventArgs">PointerPressedEventArgs</a></td>
+                    <td><em>e</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_OnPointerReleased_Perspex_Input_PointerEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.OnPointerReleased(Perspex.Input.PointerEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L416">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_OnPointerReleased_Perspex_Input_PointerEventArgs_" data-uid="Perspex.Controls.Html.HtmlControl.OnPointerReleased(Perspex.Input.PointerEventArgs)">OnPointerReleased(PointerEventArgs)</h4>
+              <div class="markdown level1 summary"><p>Handle mouse up to handle selection and link click.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override void OnPointerReleased(PointerEventArgs e)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Input.PointerEventArgs.html#Perspex_Input_PointerEventArgs">PointerEventArgs</a></td>
+                    <td><em>e</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_OnRefresh_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlRefreshEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.OnRefresh(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlRefreshEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L486">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_OnRefresh_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlRefreshEventArgs_" data-uid="Perspex.Controls.Html.HtmlControl.OnRefresh(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlRefreshEventArgs)">OnRefresh(HtmlRefreshEventArgs)</h4>
+              <div class="markdown level1 summary"><p>Handle html renderer invalidate and re-layout as requested.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void OnRefresh(HtmlRefreshEventArgs e)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="TheArtOfDev.HtmlRenderer.Core.Entities.HtmlRefreshEventArgs.html#TheArtOfDev_HtmlRenderer_Core_Entities_HtmlRefreshEventArgs">HtmlRefreshEventArgs</a></td>
+                    <td><em>e</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_OnRenderError_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlRenderErrorEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.OnRenderError(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlRenderErrorEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L471">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_OnRenderError_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlRenderErrorEventArgs_" data-uid="Perspex.Controls.Html.HtmlControl.OnRenderError(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlRenderErrorEventArgs)">OnRenderError(HtmlRenderErrorEventArgs)</h4>
+              <div class="markdown level1 summary"><p>Propagate the Render Error event from root container.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void OnRenderError(HtmlRenderErrorEventArgs e)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="TheArtOfDev.HtmlRenderer.Core.Entities.HtmlRenderErrorEventArgs.html#TheArtOfDev_HtmlRenderer_Core_Entities_HtmlRenderErrorEventArgs">HtmlRenderErrorEventArgs</a></td>
+                    <td><em>e</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_OnStylesheetLoad_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlStylesheetLoadEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.OnStylesheetLoad(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlStylesheetLoadEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L476">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_OnStylesheetLoad_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlStylesheetLoadEventArgs_" data-uid="Perspex.Controls.Html.HtmlControl.OnStylesheetLoad(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlStylesheetLoadEventArgs)">OnStylesheetLoad(HtmlStylesheetLoadEventArgs)</h4>
+              <div class="markdown level1 summary"><p>Propagate the stylesheet load event from root container.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void OnStylesheetLoad(HtmlStylesheetLoadEventArgs e)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="TheArtOfDev.HtmlRenderer.Core.Entities.HtmlStylesheetLoadEventArgs.html#TheArtOfDev_HtmlRenderer_Core_Entities_HtmlStylesheetLoadEventArgs">HtmlStylesheetLoadEventArgs</a></td>
+                    <td><em>e</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_Render_Perspex_Media_DrawingContext_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.Render(Perspex.Media.DrawingContext)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L330">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_Render_Perspex_Media_DrawingContext_" data-uid="Perspex.Controls.Html.HtmlControl.Render(Perspex.Media.DrawingContext)">Render(DrawingContext)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void Render(DrawingContext context)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Media.DrawingContext.html#Perspex_Media_DrawingContext">DrawingContext</a></td>
+                    <td><em>context</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="events">Events</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_ImageLoad.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.ImageLoad%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L181">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_ImageLoad" data-uid="Perspex.Controls.Html.HtmlControl.ImageLoad">ImageLoad</h4>
+              <div class="markdown level1 summary"><p>Raised when an image is about to be loaded by file path or URI.<br>
+This event allows to provide the image manually, if not handled the image will be loaded from file or download from URI.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event EventHandler&lt;HtmlRendererRoutedEventArgs&lt;HtmlImageLoadEventArgs&gt;&gt; ImageLoad</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_LinkClicked.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.LinkClicked%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L151">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_LinkClicked" data-uid="Perspex.Controls.Html.HtmlControl.LinkClicked">LinkClicked</h4>
+              <div class="markdown level1 summary"><p>Raised when the user clicks on a link in the html.<br>
+Allows canceling the execution of the link.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event EventHandler&lt;HtmlRendererRoutedEventArgs&lt;HtmlLinkClickedEventArgs&gt;&gt; LinkClicked</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_LoadComplete.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.LoadComplete%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L141">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_LoadComplete" data-uid="Perspex.Controls.Html.HtmlControl.LoadComplete">LoadComplete</h4>
+              <div class="markdown level1 summary"><p>Raised when the set html document has been fully loaded.<br>
+Allows manipulation of the html dom, scroll position, etc.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event EventHandler&lt;HtmlRendererRoutedEventArgs&lt;EventArgs&gt;&gt; LoadComplete</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_RenderError.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.RenderError%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L160">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_RenderError" data-uid="Perspex.Controls.Html.HtmlControl.RenderError">RenderError</h4>
+              <div class="markdown level1 summary"><p>Raised when an error occurred during html rendering.<br></p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event EventHandler&lt;HtmlRendererRoutedEventArgs&lt;HtmlRenderErrorEventArgs&gt;&gt; RenderError</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Controls_Html_HtmlControl_StylesheetLoad.md&amp;value=---%0Auid%3A%20Perspex.Controls.Html.HtmlControl.StylesheetLoad%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.HtmlRenderer/HtmlControl.cs/#L171">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Html_HtmlControl_StylesheetLoad" data-uid="Perspex.Controls.Html.HtmlControl.StylesheetLoad">StylesheetLoad</h4>
+              <div class="markdown level1 summary"><p>Raised when a stylesheet is about to be loaded by file path or URI by link element.<br>
+This event allows to provide the stylesheet manually or provide new source (file or uri) to load from.<br>
+If no alternative data is provided the original source will be used.<br></p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event EventHandler&lt;HtmlRendererRoutedEventArgs&lt;HtmlStylesheetLoadEventArgs&gt;&gt; StylesheetLoad</code></pre>
+              </div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

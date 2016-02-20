@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Working with Properties | Perspex Website</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Working with Properties | Perspex Website">
+    <meta name="generator" content="docfx 1.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content">
+        
+        <div class="sidenav">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/docs/spec/working-with-properties.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="working-with-properties">Working with Properties</h1>
+              
+<p>Perspex controls expose their properties as standard CLR properties, so for
+reading and writing values there&#39;s no surprises:</p>
+<pre><code class="lang-c#">    // Create a TextBlock and set its Text property.
+    var textBlock = new TextBlock();
+    textBlock.Text = &quot;Hello World!&quot;;
+</code></pre>
+<p>However there&#39;s a lot more you can do with properties such as subscribing to
+changes on the property, and binding.</p>
+<h1 id="subscribing-to-changes-to-a-property">Subscribing to Changes to a Property</h1>
+<p>You can subscribe to changes on a property by calling the <code>GetObservable</code>
+method. This returns an <code>IObservable&lt;T&gt;</code> which can be used to listen for changes
+to the property:</p>
+<pre><code class="lang-c#">    var textBlock = new TextBlock();
+    var text = textBlock.GetObservable(TextBlock.TextProperty);
+</code></pre>
+<p>Each property that can be subscribed to has a static readonly field called
+<code>[PropertyName]Property</code> which is passed to <code>GetObservable</code> in order to
+subscribe to the property&#39;s changes.</p>
+<p><code>IObservable</code> (part of Reactive Extensions, or rx for short) is out of scope
+for this guide, but here&#39;s an example which uses the returned observable to
+print a message with the changing property values to the console:</p>
+<pre><code class="lang-c#">    var textBlock = new TextBlock();
+    var text = textBlock.GetObservable(TextBlock.TextProperty);
+    text.Subscribe(value =&gt; Console.WriteLine(value + &quot; Changed&quot;));
+</code></pre>
+<p>When the returned observable is subscribed, it will return the current value
+of the property immediately and then push a new value each time the property
+changes. If you don&#39;t want the current value, you can use the rx <code>Skip</code>
+operator:</p>
+<pre><code class="lang-c#">    var text = textBlock.GetObservable(TextBlock.TextProperty).Skip(1);
+</code></pre>
+<h1 id="binding-a-property">Binding a property</h1>
+<p>Observables don&#39;t just go one way! You can also use them to bind properties.
+For example here we create two <code>TextBlock</code>s and bind the second&#39;s <code>Text</code>
+property to the first:</p>
+<pre><code class="lang-c#">  var textBlock1 = new TextBlock();
+  var textBlock2 = new TextBlock();
+
+  // Get an observable for the first text block&#39;s Text property.
+  var source = textBlock1.GetObservable(TextBlock.TextProperty);
+
+  // And bind it to the second.
+  textBlock2.Bind(TextBlock.TextProperty, source);
+
+  // Changes to the first TextBlock&#39;s Text property will now be propagated
+  // to the second.
+  textBlock1.Text = &quot;Goodbye Cruel World&quot;;
+
+  // Prints &quot;Goodbye Cruel World&quot;
+  Console.WriteLine(textBlock2.Text);
+</code></pre>
+<h1 id="subscribing-to-a-property-on-any-object">Subscribing to a Property on Any Object</h1>
+<p>The <code>GetObservable</code> method returns an observable that tracks changes to a
+property on a single instance. However, if you&#39;re writing a control you may
+want to implement an <code>OnPropertyChanged</code> method. In WPF this is done by passing
+a static <code>PropertyChangedCallback</code> to the <code>DependencyProperty</code> registration
+method, but in Perspex it&#39;s slightly different (and hopefully easier!)</p>
+<p>The field which defines the property is derived from <code>PerspexProperty</code> and this
+has a <code>Changed</code> observable which is fired every time the property changes on
+<em>any</em> object. In addition there is an <code>AddClassHandler</code> extension method which
+can automatically route the event to a method on your control.</p>
+<p>For example if you want to listen to changes to your control&#39;s <code>Foo</code> property
+you&#39;d do it like this:</p>
+<pre><code class="lang-c#">    static MyControl()
+    {
+        FooProperty.Changed.AddClassHandler&lt;MyControl&gt;(x =&gt; x.FooChanged);
+    }
+
+    private void FooChanged(PerspexPropertyChangedEventArgs e)
+    {
+        // The &#39;e&#39; parameter describes what&#39;s changed.
+    }
+</code></pre>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

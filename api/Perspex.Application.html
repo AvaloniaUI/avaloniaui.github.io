@@ -1,0 +1,499 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Application Class | Perspex Website</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Application Class | Perspex Website">
+    <meta name="generator" content="docfx 1.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content">
+        
+        <div class="sidenav">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Application.md&amp;value=---%0Auid%3A%20Perspex.Application%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Application/Application.cs/#L35" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <h1 id="Perspex_Application" data-uid="Perspex.Application">Class Application</h1>
+              <div class="markdown level0 summary"><p>Encapsulates a Perspex application.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">Application</span></div>
+              </div>
+              <h6><strong>Namespace</strong>:Perspex</h6>
+              <h6><strong>Assembly</strong>:Perspex.Application.dll</h6>
+              <h5 id="Perspex_Application_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class Application : IGlobalDataTemplates, IGlobalStyles, IStyleRoot, IStyleHost</code></pre>
+              </div>
+              <h5 id="Perspex_Application_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>The <a class="xref" href="Perspex.Application.html#Perspex_Application">Application</a> class encapsulates Perspex application-specific
+functionality, including:</p>
+<ul>
+<li>A global set of <a class="xref" href="Perspex.Application.html#Perspex_Application_DataTemplates">DataTemplates</a>.</li>
+<li>A global set of <a class="xref" href="Perspex.Application.html#Perspex_Application_Styles">Styles</a>.</li>
+<li>A <a class="xref" href="Perspex.Application.html#Perspex_Application_FocusManager">FocusManager</a>.</li>
+<li>An <a class="xref" href="Perspex.Application.html#Perspex_Application_InputManager">InputManager</a>.</li>
+<li>Loads and initializes rendering and windowing subsystems with
+<a class="xref" href="Perspex.Application.html#Perspex_Application_InitializeSubsystems_System_Int32_">InitializeSubsystems(Int32)</a> and <a class="xref" href="Perspex.Application.html#Perspex_Application_InitializeSubsystem_System_String_">InitializeSubsystem(String)</a>.</li>
+<li>Registers services needed by the rest of Perspex in the <a class="xref" href="Perspex.Application.html#Perspex_Application_RegisterServices">RegisterServices()</a>
+method.</li>
+<li>Tracks the lifetime of the application.</li>
+</ul>
+</div>
+              <h3 id="constructors">Constructors</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Application__ctor.md&amp;value=---%0Auid%3A%20Perspex.Application.%23ctor%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Application/Application.cs/#L55">View Source</a>
+              </span>
+              <h4 id="Perspex_Application__ctor" data-uid="Perspex.Application.#ctor">Application()</h4>
+              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Perspex.Application.html#Perspex_Application">Application</a> class.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Application()</code></pre>
+              </div>
+              <h3 id="properties">Properties</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Application_Clipboard.md&amp;value=---%0Auid%3A%20Perspex.Application.Clipboard%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Application/Application.cs/#L115">View Source</a>
+              </span>
+              <h4 id="Perspex_Application_Clipboard" data-uid="Perspex.Application.Clipboard">Clipboard</h4>
+              <div class="markdown level1 summary"><p>Gets the application clipboard.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IClipboard Clipboard { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Input.Platform.IClipboard.html#Perspex_Input_Platform_IClipboard">IClipboard</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Application_Current.md&amp;value=---%0Auid%3A%20Perspex.Application.Current%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Application/Application.cs/#L71">View Source</a>
+              </span>
+              <h4 id="Perspex_Application_Current" data-uid="Perspex.Application.Current">Current</h4>
+              <div class="markdown level1 summary"><p>Gets the current instance of the <a class="xref" href="Perspex.Application.html#Perspex_Application">Application</a> class.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Application Current { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Application.html#Perspex_Application">Application</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Application_DataTemplates.md&amp;value=---%0Auid%3A%20Perspex.Application.DataTemplates%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Application/Application.cs/#L82">View Source</a>
+              </span>
+              <h4 id="Perspex_Application_DataTemplates" data-uid="Perspex.Application.DataTemplates">DataTemplates</h4>
+              <div class="markdown level1 summary"><p>Gets or sets the application&#39;s global data templates.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DataTemplates DataTemplates { get; set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Controls.Templates.DataTemplates.html#Perspex_Controls_Templates_DataTemplates">DataTemplates</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Application_FocusManager.md&amp;value=---%0Auid%3A%20Perspex.Application.FocusManager%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Application/Application.cs/#L94">View Source</a>
+              </span>
+              <h4 id="Perspex_Application_FocusManager" data-uid="Perspex.Application.FocusManager">FocusManager</h4>
+              <div class="markdown level1 summary"><p>Gets the application&#39;s focus manager.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IFocusManager FocusManager { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Input.IFocusManager.html#Perspex_Input_IFocusManager">IFocusManager</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Application_InputManager.md&amp;value=---%0Auid%3A%20Perspex.Application.InputManager%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Application/Application.cs/#L106">View Source</a>
+              </span>
+              <h4 id="Perspex_Application_InputManager" data-uid="Perspex.Application.InputManager">InputManager</h4>
+              <div class="markdown level1 summary"><p>Gets the application&#39;s input manager.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public InputManager InputManager { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Input.InputManager.html#Perspex_Input_InputManager">InputManager</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Application_Perspex_Styling_IStyleHost_StylingParent.md&amp;value=---%0Auid%3A%20Perspex.Application.Perspex%23Styling%23IStyleHost%23StylingParent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Application/Application.cs/#L135">View Source</a>
+              </span>
+              <h4 id="Perspex_Application_Perspex_Styling_IStyleHost_StylingParent" data-uid="Perspex.Application.Perspex#Styling#IStyleHost#StylingParent">IStyleHost.StylingParent</h4>
+              <div class="markdown level1 summary"><p>Gets the styling parent of the application, which is null.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IStyleHost IStyleHost.StylingParent { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Styling.IStyleHost.html#Perspex_Styling_IStyleHost">IStyleHost</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Application_Styles.md&amp;value=---%0Auid%3A%20Perspex.Application.Styles%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Application/Application.cs/#L126">View Source</a>
+              </span>
+              <h4 id="Perspex_Application_Styles" data-uid="Perspex.Application.Styles">Styles</h4>
+              <div class="markdown level1 summary"><p>Gets the application&#39;s global styles.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Perspex_Application_Styles_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Global styles apply to all windows in the application.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Styles Styles { get; protected set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Styling.Styles.html#Perspex_Styling_Styles">Styles</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Application_InitializeSubsystem_System_String_.md&amp;value=---%0Auid%3A%20Perspex.Application.InitializeSubsystem(System.String)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Application/Application.cs/#L200">View Source</a>
+              </span>
+              <h4 id="Perspex_Application_InitializeSubsystem_System_String_" data-uid="Perspex.Application.InitializeSubsystem(System.String)">InitializeSubsystem(String)</h4>
+              <div class="markdown level1 summary"><p>Initializes the rendering or windowing subsystem defined by the specified assemblt.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected static void InitializeSubsystem(string assemblyName)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>assemblyName</em></td>
+                    <td><p>The name of the assembly.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Application_InitializeSubsystems_System_Int32_.md&amp;value=---%0Auid%3A%20Perspex.Application.InitializeSubsystems(System.Int32)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Application/Application.cs/#L178">View Source</a>
+              </span>
+              <h4 id="Perspex_Application_InitializeSubsystems_System_Int32_" data-uid="Perspex.Application.InitializeSubsystems(System.Int32)">InitializeSubsystems(Int32)</h4>
+              <div class="markdown level1 summary"><p>Initializes the rendering and windowing subsystems according to platform.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected void InitializeSubsystems(int platformID)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>platformID</em></td>
+                    <td><p>The value of Environment.OSVersion.Platform.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Application_RegisterPlatformCallback_System_Action_.md&amp;value=---%0Auid%3A%20Perspex.Application.RegisterPlatformCallback(System.Action)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Application/Application.cs/#L137">View Source</a>
+              </span>
+              <h4 id="Perspex_Application_RegisterPlatformCallback_System_Action_" data-uid="Perspex.Application.RegisterPlatformCallback(System.Action)">RegisterPlatformCallback(Action)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static void RegisterPlatformCallback(Action cb)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Action</span></td>
+                    <td><em>cb</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Application_RegisterServices.md&amp;value=---%0Auid%3A%20Perspex.Application.RegisterServices%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Application/Application.cs/#L156">View Source</a>
+              </span>
+              <h4 id="Perspex_Application_RegisterServices" data-uid="Perspex.Application.RegisterServices">RegisterServices()</h4>
+              <div class="markdown level1 summary"><p>Register&#39;s the services needed by Perspex.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void RegisterServices()</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Application_Run_Perspex_Input_ICloseable_.md&amp;value=---%0Auid%3A%20Perspex.Application.Run(Perspex.Input.ICloseable)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Application/Application.cs/#L146">View Source</a>
+              </span>
+              <h4 id="Perspex_Application_Run_Perspex_Input_ICloseable_" data-uid="Perspex.Application.Run(Perspex.Input.ICloseable)">Run(ICloseable)</h4>
+              <div class="markdown level1 summary"><p>Runs the application&#39;s main loop until the <a class="xref" href="Perspex.Input.ICloseable.html#Perspex_Input_ICloseable">ICloseable</a> is closed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Run(ICloseable closable)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Input.ICloseable.html#Perspex_Input_ICloseable">ICloseable</a></td>
+                    <td><em>closable</em></td>
+                    <td><p>The closable to track</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

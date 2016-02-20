@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ILayoutManager Interface | Perspex Website</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="ILayoutManager Interface | Perspex Website">
+    <meta name="generator" content="docfx 1.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content">
+        
+        <div class="sidenav">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Layout_ILayoutManager.md&amp;value=---%0Auid%3A%20Perspex.Layout.ILayoutManager%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Layout/ILayoutManager.cs/#L12" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <h1 id="Perspex_Layout_ILayoutManager" data-uid="Perspex.Layout.ILayoutManager">Interface ILayoutManager</h1>
+              <div class="markdown level0 summary"><p>Manages measuring and arranging of controls.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <h6><strong>Namespace</strong>:Perspex.Layout</h6>
+              <h6><strong>Assembly</strong>:Perspex.Layout.dll</h6>
+              <h5 id="Perspex_Layout_ILayoutManager_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public interface ILayoutManager</code></pre>
+              </div>
+              <h3 id="methods">Methods</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Layout_ILayoutManager_ExecuteInitialLayoutPass_Perspex_Layout_ILayoutRoot_.md&amp;value=---%0Auid%3A%20Perspex.Layout.ILayoutManager.ExecuteInitialLayoutPass(Perspex.Layout.ILayoutRoot)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Layout/ILayoutManager.cs/#L43">View Source</a>
+              </span>
+              <h4 id="Perspex_Layout_ILayoutManager_ExecuteInitialLayoutPass_Perspex_Layout_ILayoutRoot_" data-uid="Perspex.Layout.ILayoutManager.ExecuteInitialLayoutPass(Perspex.Layout.ILayoutRoot)">ExecuteInitialLayoutPass(ILayoutRoot)</h4>
+              <div class="markdown level1 summary"><p>Executes the initial layout pass on a layout root.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Perspex_Layout_ILayoutManager_ExecuteInitialLayoutPass_Perspex_Layout_ILayoutRoot__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>You should not usually need to call this method explictly, the layout root will call
+it to carry out the initial layout of the control.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void ExecuteInitialLayoutPass(ILayoutRoot root)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Layout.ILayoutRoot.html#Perspex_Layout_ILayoutRoot">ILayoutRoot</a></td>
+                    <td><em>root</em></td>
+                    <td><p>The control to lay out.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Layout_ILayoutManager_ExecuteLayoutPass.md&amp;value=---%0Auid%3A%20Perspex.Layout.ILayoutManager.ExecuteLayoutPass%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Layout/ILayoutManager.cs/#L33">View Source</a>
+              </span>
+              <h4 id="Perspex_Layout_ILayoutManager_ExecuteLayoutPass" data-uid="Perspex.Layout.ILayoutManager.ExecuteLayoutPass">ExecuteLayoutPass()</h4>
+              <div class="markdown level1 summary"><p>Executes a layout pass.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Perspex_Layout_ILayoutManager_ExecuteLayoutPass_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>You should not usually need to call this method explictly, the layout manager will
+schedule layout passes itself.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void ExecuteLayoutPass()</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Layout_ILayoutManager_InvalidateArrange_Perspex_Layout_ILayoutable_.md&amp;value=---%0Auid%3A%20Perspex.Layout.ILayoutManager.InvalidateArrange(Perspex.Layout.ILayoutable)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Layout/ILayoutManager.cs/#L24">View Source</a>
+              </span>
+              <h4 id="Perspex_Layout_ILayoutManager_InvalidateArrange_Perspex_Layout_ILayoutable_" data-uid="Perspex.Layout.ILayoutManager.InvalidateArrange(Perspex.Layout.ILayoutable)">InvalidateArrange(ILayoutable)</h4>
+              <div class="markdown level1 summary"><p>Notifies the layout manager that a control requires an arrange.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void InvalidateArrange(ILayoutable control)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Layout.ILayoutable.html#Perspex_Layout_ILayoutable">ILayoutable</a></td>
+                    <td><em>control</em></td>
+                    <td><p>The control.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/wieslawsoltes-DocFX/docs/apispec/new?filename=Perspex_Layout_ILayoutManager_InvalidateMeasure_Perspex_Layout_ILayoutable_.md&amp;value=---%0Auid%3A%20Perspex.Layout.ILayoutManager.InvalidateMeasure(Perspex.Layout.ILayoutable)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/wieslawsoltes-DocFX/src/Perspex.Layout/ILayoutManager.cs/#L18">View Source</a>
+              </span>
+              <h4 id="Perspex_Layout_ILayoutManager_InvalidateMeasure_Perspex_Layout_ILayoutable_" data-uid="Perspex.Layout.ILayoutManager.InvalidateMeasure(Perspex.Layout.ILayoutable)">InvalidateMeasure(ILayoutable)</h4>
+              <div class="markdown level1 summary"><p>Notifies the layout manager that a control requires a measure.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void InvalidateMeasure(ILayoutable control)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Layout.ILayoutable.html#Perspex_Layout_ILayoutable">ILayoutable</a></td>
+                    <td><em>control</em></td>
+                    <td><p>The control.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
