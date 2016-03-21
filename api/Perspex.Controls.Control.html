@@ -60,7 +60,7 @@
             <article class="content wrap" id="_content">
               
               <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
-              <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L33" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L35" class="btn btn-primary pull-right mobile-hide">View Source</a>
               <h1 id="Perspex_Controls_Control" data-uid="Perspex.Controls.Control">Class Control</h1>
               <div class="markdown level0 summary"><p>Base class for Perspex controls.</p>
 </div>
@@ -80,7 +80,7 @@
               <h6><strong>Assembly</strong>:Perspex.Controls.dll</h6>
               <h5 id="Perspex_Controls_Control_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class Control : InputElement, INotifyPropertyChanged, IControl, ILogical, ILayoutable, IInputElement, IInteractive, IVisual, IStyleable, IPerspexObject, INamed, IStyleHost, ISetLogicalParent</code></pre>
+                <pre><code class="lang-csharp hljs">public class Control : InputElement, IPerspexObjectDebug, INotifyPropertyChanged, IControl, ILogical, ILayoutable, IInputElement, IInteractive, IVisual, IStyleable, IPerspexObject, IStyleHost, INamed, ISetLogicalParent, ISupportInitialize</code></pre>
               </div>
               <h5 id="Perspex_Controls_Control_remarks"><strong>Remarks</strong></h5>
               <div class="markdown level0 remarks"><p>The control class extends <a class="xref" href="Perspex.Input.InputElement.html#Perspex_Input_InputElement">InputElement</a> and adds the following features:</p>
@@ -89,7 +89,7 @@
 <li>A <a class="xref" href="Perspex.Controls.Control.html#Perspex_Controls_Control_Tag">Tag</a> property to allow user-defined data to be attached to the control.</li>
 <li>A collection of class strings for custom styling.</li>
 <li>Implements <a class="xref" href="Perspex.Styling.IStyleable.html#Perspex_Styling_IStyleable">IStyleable</a> to allow styling to work on the control.</li>
-<li>Implements <a class="xref" href="Perspex.ILogical.html#Perspex_ILogical">ILogical</a> to form part of a logical tree.</li>
+<li>Implements <a class="xref" href="Perspex.LogicalTree.ILogical.html#Perspex_LogicalTree_ILogical">ILogical</a> to form part of a logical tree.</li>
 </ul>
 </div>
               <h3 id="constructors">Constructors</h3>
@@ -98,7 +98,7 @@
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control__ctor.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.%23ctor%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L104">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L115">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control__ctor" data-uid="Perspex.Controls.Control.#ctor">Control()</h4>
               <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Perspex.Controls.Control.html#Perspex_Controls_Control">Control</a> class.</p>
@@ -114,7 +114,7 @@
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_ContextMenuProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.ContextMenuProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L71">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L79">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_ContextMenuProperty" data-uid="Perspex.Controls.Control.ContextMenuProperty">ContextMenuProperty</h4>
               <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Controls.Control.html#Perspex_Controls_Control_ContextMenu">ContextMenu</a> property.</p>
@@ -129,7 +129,7 @@
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_DataContextProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.DataContextProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L38">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L40">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_DataContextProperty" data-uid="Perspex.Controls.Control.DataContextProperty">DataContextProperty</h4>
               <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Controls.Control.html#Perspex_Controls_Control_DataContext">DataContext</a> property.</p>
@@ -144,7 +144,7 @@
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_FocusAdornerProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.FocusAdornerProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L47">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L49">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_FocusAdornerProperty" data-uid="Perspex.Controls.Control.FocusAdornerProperty">FocusAdornerProperty</h4>
               <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Controls.Control.html#Perspex_Controls_Control_FocusAdorner">FocusAdorner</a> property.</p>
@@ -156,10 +156,25 @@
               </div>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_NameProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.NameProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L55">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Control_NameProperty" data-uid="Perspex.Controls.Control.NameProperty">NameProperty</h4>
+              <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Controls.Control.html#Perspex_Controls_Control_Name">Name</a> property.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static readonly DirectProperty&lt;Control, string&gt; NameProperty</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_ParentProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.ParentProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L53">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L61">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_ParentProperty" data-uid="Perspex.Controls.Control.ParentProperty">ParentProperty</h4>
               <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Controls.Control.html#Perspex_Controls_Control_Parent">Parent</a> property.</p>
@@ -174,7 +189,7 @@
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_RequestBringIntoViewEvent.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.RequestBringIntoViewEvent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L77">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L85">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_RequestBringIntoViewEvent" data-uid="Perspex.Controls.Control.RequestBringIntoViewEvent">RequestBringIntoViewEvent</h4>
               <div class="markdown level1 summary"><p>Event raised when an element wishes to be scrolled into view.</p>
@@ -189,7 +204,7 @@
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_TagProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.TagProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L59">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L67">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_TagProperty" data-uid="Perspex.Controls.Control.TagProperty">TagProperty</h4>
               <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Controls.Control.html#Perspex_Controls_Control_Tag">Tag</a> property.</p>
@@ -204,7 +219,7 @@
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_TemplatedParentProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.TemplatedParentProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L65">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L73">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_TemplatedParentProperty" data-uid="Perspex.Controls.Control.TemplatedParentProperty">TemplatedParentProperty</h4>
               <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Controls.Control.html#Perspex_Controls_Control_TemplatedParent">TemplatedParent</a> property.</p>
@@ -220,7 +235,7 @@
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Classes.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Classes%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L143">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L184">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_Classes" data-uid="Perspex.Controls.Control.Classes">Classes</h4>
               <div class="markdown level1 summary"><p>Gets or sets the control&#39;s classes.</p>
@@ -261,7 +276,7 @@ collection.
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_ContextMenu.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.ContextMenu%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L216">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L257">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_ContextMenu" data-uid="Perspex.Controls.Control.ContextMenu">ContextMenu</h4>
               <div class="markdown level1 summary"><p>Gets or sets a context menu to the control.</p>
@@ -291,7 +306,7 @@ collection.
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_DataContext.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.DataContext%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L166">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L207">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_DataContext" data-uid="Perspex.Controls.Control.DataContext">DataContext</h4>
               <div class="markdown level1 summary"><p>Gets or sets the control&#39;s data context.</p>
@@ -325,7 +340,7 @@ be used for data binding.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_DataTemplates.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.DataTemplates%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L188">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L229">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_DataTemplates" data-uid="Perspex.Controls.Control.DataTemplates">DataTemplates</h4>
               <div class="markdown level1 summary"><p>Gets or sets the data templates for the control.</p>
@@ -359,7 +374,7 @@ children.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_FocusAdorner.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.FocusAdorner%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L175">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L216">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_FocusAdorner" data-uid="Perspex.Controls.Control.FocusAdorner">FocusAdorner</h4>
               <div class="markdown level1 summary"><p>Gets or sets the control&#39;s focus adorner.</p>
@@ -389,7 +404,7 @@ children.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_IsDataContextChanging.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.IsDataContextChanging%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L279">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L348">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_IsDataContextChanging" data-uid="Perspex.Controls.Control.IsDataContextChanging">IsDataContextChanging</h4>
               <div class="markdown level1 summary"><p>Gets a value which indicates whether a change to the <a class="xref" href="Perspex.Controls.Control.html#Perspex_Controls_Control_DataContext">DataContext</a> is in
@@ -420,7 +435,7 @@ the process of being notified.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_LogicalChildren.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.LogicalChildren%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L288">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L357">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_LogicalChildren" data-uid="Perspex.Controls.Control.LogicalChildren">LogicalChildren</h4>
               <div class="markdown level1 summary"><p>Gets the control&#39;s logical children.</p>
@@ -440,7 +455,41 @@ the process of being notified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.Collections.IPerspexList`1.html#Perspex_Collections_IPerspexList_1">IPerspexList</a>&lt;<a class="xref" href="Perspex.ILogical.html#Perspex_ILogical">ILogical</a>&gt;</td>
+                    <td><a class="xref" href="Perspex.Collections.IPerspexList`1.html#Perspex_Collections_IPerspexList_1">IPerspexList</a>&lt;<a class="xref" href="Perspex.LogicalTree.ILogical.html#Perspex_LogicalTree_ILogical">ILogical</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Name.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Name%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L146">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Control_Name" data-uid="Perspex.Controls.Control.Name">Name</h4>
+              <div class="markdown level1 summary"><p>Gets or sets the name of the control.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Perspex_Controls_Control_Name_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>An element&#39;s name is used to uniquely identify a control within the control&#39;s name
+scope. Once the element is added to a logical tree, its name cannot be changed.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -450,7 +499,7 @@ the process of being notified.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Parent.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Parent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L211">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L252">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_Parent" data-uid="Perspex.Controls.Control.Parent">Parent</h4>
               <div class="markdown level1 summary"><p>Gets the control&#39;s logical parent.</p>
@@ -477,12 +526,12 @@ the process of being notified.</p>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Perspex_ILogical_IsAttachedToLogicalTree.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Perspex%23ILogical%23IsAttachedToLogicalTree%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Perspex_LogicalTree_ILogical_IsAttachedToLogicalTree.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Perspex%23LogicalTree%23ILogical%23IsAttachedToLogicalTree%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L243">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L284">View Source</a>
               </span>
-              <h4 id="Perspex_Controls_Control_Perspex_ILogical_IsAttachedToLogicalTree" data-uid="Perspex.Controls.Control.Perspex#ILogical#IsAttachedToLogicalTree">ILogical.IsAttachedToLogicalTree</h4>
+              <h4 id="Perspex_Controls_Control_Perspex_LogicalTree_ILogical_IsAttachedToLogicalTree" data-uid="Perspex.Controls.Control.Perspex#LogicalTree#ILogical#IsAttachedToLogicalTree">ILogical.IsAttachedToLogicalTree</h4>
               <div class="markdown level1 summary"><p>Gets a value indicating whether the element is attached to a rooted logical tree.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -507,12 +556,12 @@ the process of being notified.</p>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Perspex_ILogical_LogicalChildren.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Perspex%23ILogical%23LogicalChildren%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Perspex_LogicalTree_ILogical_LogicalChildren.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Perspex%23LogicalTree%23ILogical%23LogicalChildren%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L253">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L294">View Source</a>
               </span>
-              <h4 id="Perspex_Controls_Control_Perspex_ILogical_LogicalChildren" data-uid="Perspex.Controls.Control.Perspex#ILogical#LogicalChildren">ILogical.LogicalChildren</h4>
+              <h4 id="Perspex_Controls_Control_Perspex_LogicalTree_ILogical_LogicalChildren" data-uid="Perspex.Controls.Control.Perspex#LogicalTree#ILogical#LogicalChildren">ILogical.LogicalChildren</h4>
               <div class="markdown level1 summary"><p>Gets the control&#39;s logical children.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -530,19 +579,19 @@ the process of being notified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.Collections.IPerspexReadOnlyList`1.html#Perspex_Collections_IPerspexReadOnlyList_1">IPerspexReadOnlyList</a>&lt;<a class="xref" href="Perspex.ILogical.html#Perspex_ILogical">ILogical</a>&gt;</td>
+                    <td><a class="xref" href="Perspex.Collections.IPerspexReadOnlyList`1.html#Perspex_Collections_IPerspexReadOnlyList_1">IPerspexReadOnlyList</a>&lt;<a class="xref" href="Perspex.LogicalTree.ILogical.html#Perspex_LogicalTree_ILogical">ILogical</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Perspex_ILogical_LogicalParent.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Perspex%23ILogical%23LogicalParent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Perspex_LogicalTree_ILogical_LogicalParent.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Perspex%23LogicalTree%23ILogical%23LogicalParent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L248">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L289">View Source</a>
               </span>
-              <h4 id="Perspex_Controls_Control_Perspex_ILogical_LogicalParent" data-uid="Perspex.Controls.Control.Perspex#ILogical#LogicalParent">ILogical.LogicalParent</h4>
+              <h4 id="Perspex_Controls_Control_Perspex_LogicalTree_ILogical_LogicalParent" data-uid="Perspex.Controls.Control.Perspex#LogicalTree#ILogical#LogicalParent">ILogical.LogicalParent</h4>
               <div class="markdown level1 summary"><p>Gets the control&#39;s logical parent.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -560,7 +609,7 @@ the process of being notified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.ILogical.html#Perspex_ILogical">ILogical</a></td>
+                    <td><a class="xref" href="Perspex.LogicalTree.ILogical.html#Perspex_LogicalTree_ILogical">ILogical</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -570,7 +619,7 @@ the process of being notified.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Perspex_Styling_IStyleable_Classes.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Perspex%23Styling%23IStyleable%23Classes%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L256">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L297">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_Perspex_Styling_IStyleable_Classes" data-uid="Perspex.Controls.Control.Perspex#Styling#IStyleable#Classes">IStyleable.Classes</h4>
               <div class="markdown level1 summary"></div>
@@ -599,14 +648,14 @@ the process of being notified.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Perspex_Styling_IStyleable_StyleDetach.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Perspex%23Styling%23IStyleable%23StyleDetach%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L270">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L311">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_Perspex_Styling_IStyleable_StyleDetach" data-uid="Perspex.Controls.Control.Perspex#Styling#IStyleable#StyleDetach">IStyleable.StyleDetach</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">IObservable&lt;Unit&gt; IStyleable.StyleDetach { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">IObservable&lt;IStyleable&gt; IStyleable.StyleDetach { get; }</code></pre>
               </div>
               <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -618,7 +667,7 @@ the process of being notified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Reactive.Unit</span>&gt;</td>
+                    <td><span class="xref">System.IObservable</span>&lt;<a class="xref" href="Perspex.Styling.IStyleable.html#Perspex_Styling_IStyleable">IStyleable</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -628,7 +677,7 @@ the process of being notified.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Perspex_Styling_IStyleable_StyleKey.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Perspex%23Styling%23IStyleable%23StyleKey%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L267">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L308">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_Perspex_Styling_IStyleable_StyleKey" data-uid="Perspex.Controls.Control.Perspex#Styling#IStyleable#StyleKey">IStyleable.StyleKey</h4>
               <div class="markdown level1 summary"><p>Gets the type by which the control is styled.</p>
@@ -664,7 +713,7 @@ Button.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Perspex_Styling_IStyleHost_StylingParent.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Perspex%23Styling%23IStyleHost%23StylingParent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L273">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L314">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_Perspex_Styling_IStyleHost_StylingParent" data-uid="Perspex.Controls.Control.Perspex#Styling#IStyleHost#StylingParent">IStyleHost.StylingParent</h4>
               <div class="markdown level1 summary"></div>
@@ -693,7 +742,7 @@ Button.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_PseudoClasses.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.PseudoClasses%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L309">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L378">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_PseudoClasses" data-uid="Perspex.Controls.Control.PseudoClasses">PseudoClasses</h4>
               <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Perspex.Controls.Control.html#Perspex_Controls_Control_Classes">Classes</a> collection in a form that allows adding and removing
@@ -724,7 +773,7 @@ pseudoclasses.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Styles.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Styles%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L202">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L243">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_Styles" data-uid="Perspex.Controls.Control.Styles">Styles</h4>
               <div class="markdown level1 summary"><p>Gets or sets the styles for the control.</p>
@@ -759,7 +808,7 @@ itself and its children.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Tag.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Tag%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L225">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L266">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_Tag" data-uid="Perspex.Controls.Control.Tag">Tag</h4>
               <div class="markdown level1 summary"><p>Gets or sets a user-defined object attached to the control.</p>
@@ -789,7 +838,7 @@ itself and its children.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_TemplatedParent.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.TemplatedParent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L234">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L275">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_TemplatedParent" data-uid="Perspex.Controls.Control.TemplatedParent">TemplatedParent</h4>
               <div class="markdown level1 summary"><p>Gets the control whose lookless template this control is part of.</p>
@@ -820,7 +869,7 @@ itself and its children.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_GetTemplateFocusTarget.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.GetTemplateFocusTarget%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L399">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L478">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_GetTemplateFocusTarget" data-uid="Perspex.Controls.Control.GetTemplateFocusTarget">GetTemplateFocusTarget()</h4>
               <div class="markdown level1 summary"><p>Gets the element that recieves the focus adorner.</p>
@@ -848,16 +897,16 @@ itself and its children.</p>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_OnAttachedToLogicalTree_Perspex_Controls_LogicalTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.OnAttachedToLogicalTree(Perspex.Controls.LogicalTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_OnAttachedToLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.OnAttachedToLogicalTree(Perspex.LogicalTree.LogicalTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L412">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L491">View Source</a>
               </span>
-              <h4 id="Perspex_Controls_Control_OnAttachedToLogicalTree_Perspex_Controls_LogicalTreeAttachmentEventArgs_" data-uid="Perspex.Controls.Control.OnAttachedToLogicalTree(Perspex.Controls.LogicalTreeAttachmentEventArgs)">OnAttachedToLogicalTree(LogicalTreeAttachmentEventArgs)</h4>
+              <h4 id="Perspex_Controls_Control_OnAttachedToLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs_" data-uid="Perspex.Controls.Control.OnAttachedToLogicalTree(Perspex.LogicalTree.LogicalTreeAttachmentEventArgs)">OnAttachedToLogicalTree(LogicalTreeAttachmentEventArgs)</h4>
               <div class="markdown level1 summary"><p>Called when the control is added to a logical tree.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Perspex_Controls_Control_OnAttachedToLogicalTree_Perspex_Controls_LogicalTreeAttachmentEventArgs__remarks">Remarks</h5>
+              <h5 id="Perspex_Controls_Control_OnAttachedToLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>It is vital that if you override this method you call the base implementation;
 failing to do so will cause numerous features to not work as expected.</p>
 </div>
@@ -876,7 +925,7 @@ failing to do so will cause numerous features to not work as expected.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.Controls.LogicalTreeAttachmentEventArgs.html#Perspex_Controls_LogicalTreeAttachmentEventArgs">LogicalTreeAttachmentEventArgs</a></td>
+                    <td><a class="xref" href="Perspex.LogicalTree.LogicalTreeAttachmentEventArgs.html#Perspex_LogicalTree_LogicalTreeAttachmentEventArgs">LogicalTreeAttachmentEventArgs</a></td>
                     <td><em>e</em></td>
                     <td><p>The event args.</p>
 </td>
@@ -888,7 +937,7 @@ failing to do so will cause numerous features to not work as expected.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_OnDataContextChanged.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.OnDataContextChanged%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L528">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L609">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_OnDataContextChanged" data-uid="Perspex.Controls.Control.OnDataContextChanged">OnDataContextChanged()</h4>
               <div class="markdown level1 summary"><p>Called when the <a class="xref" href="Perspex.Controls.Control.html#Perspex_Controls_Control_DataContext">DataContext</a> is changed and all subscribers to that change
@@ -901,16 +950,16 @@ have been notified.</p>
               </div>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_OnDetachedFromLogicalTree_Perspex_Controls_LogicalTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.OnDetachedFromLogicalTree(Perspex.Controls.LogicalTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_OnDetachedFromLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.OnDetachedFromLogicalTree(Perspex.LogicalTree.LogicalTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L451">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L527">View Source</a>
               </span>
-              <h4 id="Perspex_Controls_Control_OnDetachedFromLogicalTree_Perspex_Controls_LogicalTreeAttachmentEventArgs_" data-uid="Perspex.Controls.Control.OnDetachedFromLogicalTree(Perspex.Controls.LogicalTreeAttachmentEventArgs)">OnDetachedFromLogicalTree(LogicalTreeAttachmentEventArgs)</h4>
+              <h4 id="Perspex_Controls_Control_OnDetachedFromLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs_" data-uid="Perspex.Controls.Control.OnDetachedFromLogicalTree(Perspex.LogicalTree.LogicalTreeAttachmentEventArgs)">OnDetachedFromLogicalTree(LogicalTreeAttachmentEventArgs)</h4>
               <div class="markdown level1 summary"><p>Called when the control is removed from a logical tree.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Perspex_Controls_Control_OnDetachedFromLogicalTree_Perspex_Controls_LogicalTreeAttachmentEventArgs__remarks">Remarks</h5>
+              <h5 id="Perspex_Controls_Control_OnDetachedFromLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>It is vital that if you override this method you call the base implementation;
 failing to do so will cause numerous features to not work as expected.</p>
 </div>
@@ -929,7 +978,7 @@ failing to do so will cause numerous features to not work as expected.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.Controls.LogicalTreeAttachmentEventArgs.html#Perspex_Controls_LogicalTreeAttachmentEventArgs">LogicalTreeAttachmentEventArgs</a></td>
+                    <td><a class="xref" href="Perspex.LogicalTree.LogicalTreeAttachmentEventArgs.html#Perspex_LogicalTree_LogicalTreeAttachmentEventArgs">LogicalTreeAttachmentEventArgs</a></td>
                     <td><em>e</em></td>
                     <td><p>The event args.</p>
 </td>
@@ -941,7 +990,7 @@ failing to do so will cause numerous features to not work as expected.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_OnGotFocus_Perspex_Input_GotFocusEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.OnGotFocus(Perspex.Input.GotFocusEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L475">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L556">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_OnGotFocus_Perspex_Input_GotFocusEventArgs_" data-uid="Perspex.Controls.Control.OnGotFocus(Perspex.Input.GotFocusEventArgs)">OnGotFocus(GotFocusEventArgs)</h4>
               <div class="markdown level1 summary"></div>
@@ -972,7 +1021,7 @@ failing to do so will cause numerous features to not work as expected.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_OnLostFocus_Perspex_Interactivity_RoutedEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.OnLostFocus(Perspex.Interactivity.RoutedEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L512">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L593">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_OnLostFocus_Perspex_Interactivity_RoutedEventArgs_" data-uid="Perspex.Controls.Control.OnLostFocus(Perspex.Interactivity.RoutedEventArgs)">OnLostFocus(RoutedEventArgs)</h4>
               <div class="markdown level1 summary"></div>
@@ -1000,12 +1049,12 @@ failing to do so will cause numerous features to not work as expected.</p>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Perspex_Controls_ISetLogicalParent_SetParent_Perspex_ILogical_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Perspex%23Controls%23ISetLogicalParent%23SetParent(Perspex.ILogical)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Perspex_Controls_ISetLogicalParent_SetParent_Perspex_LogicalTree_ILogical_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Perspex%23Controls%23ISetLogicalParent%23SetParent(Perspex.LogicalTree.ILogical)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L315">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L384">View Source</a>
               </span>
-              <h4 id="Perspex_Controls_Control_Perspex_Controls_ISetLogicalParent_SetParent_Perspex_ILogical_" data-uid="Perspex.Controls.Control.Perspex#Controls#ISetLogicalParent#SetParent(Perspex.ILogical)">ISetLogicalParent.SetParent(ILogical)</h4>
+              <h4 id="Perspex_Controls_Control_Perspex_Controls_ISetLogicalParent_SetParent_Perspex_LogicalTree_ILogical_" data-uid="Perspex.Controls.Control.Perspex#Controls#ISetLogicalParent#SetParent(Perspex.LogicalTree.ILogical)">ISetLogicalParent.SetParent(ILogical)</h4>
               <div class="markdown level1 summary"><p>Sets the control&#39;s logical parent.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -1024,7 +1073,7 @@ failing to do so will cause numerous features to not work as expected.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.ILogical.html#Perspex_ILogical">ILogical</a></td>
+                    <td><a class="xref" href="Perspex.LogicalTree.ILogical.html#Perspex_LogicalTree_ILogical">ILogical</a></td>
                     <td><em>parent</em></td>
                     <td><p>The parent.</p>
 </td>
@@ -1033,10 +1082,69 @@ failing to do so will cause numerous features to not work as expected.</p>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Perspex_ISupportInitialize_BeginInit.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Perspex%23ISupportInitialize%23BeginInit%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L323">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Control_Perspex_ISupportInitialize_BeginInit" data-uid="Perspex.Controls.Control.Perspex#ISupportInitialize#BeginInit">ISupportInitialize.BeginInit()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void ISupportInitialize.BeginInit()</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Perspex_ISupportInitialize_EndInit.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Perspex%23ISupportInitialize%23EndInit%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L329">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Control_Perspex_ISupportInitialize_EndInit" data-uid="Perspex.Controls.Control.Perspex#ISupportInitialize#EndInit">ISupportInitialize.EndInit()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void ISupportInitialize.EndInit()</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_Perspex_LogicalTree_ILogical_NotifyDetachedFromLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.Perspex%23LogicalTree%23ILogical%23NotifyDetachedFromLogicalTree(Perspex.LogicalTree.LogicalTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L317">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Control_Perspex_LogicalTree_ILogical_NotifyDetachedFromLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs_" data-uid="Perspex.Controls.Control.Perspex#LogicalTree#ILogical#NotifyDetachedFromLogicalTree(Perspex.LogicalTree.LogicalTreeAttachmentEventArgs)">ILogical.NotifyDetachedFromLogicalTree(LogicalTreeAttachmentEventArgs)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void ILogical.NotifyDetachedFromLogicalTree(LogicalTreeAttachmentEventArgs e)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.LogicalTree.LogicalTreeAttachmentEventArgs.html#Perspex_LogicalTree_LogicalTreeAttachmentEventArgs">LogicalTreeAttachmentEventArgs</a></td>
+                    <td><em>e</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_PseudoClass_Perspex_PerspexProperty_System_Boolean__System_String_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.PseudoClass(Perspex.PerspexProperty%7BSystem.Boolean%7D%2CSystem.String)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L354">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L433">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_PseudoClass_Perspex_PerspexProperty_System_Boolean__System_String_" data-uid="Perspex.Controls.Control.PseudoClass(Perspex.PerspexProperty{System.Boolean},System.String)">PseudoClass(PerspexProperty&lt;Boolean&gt;, String)</h4>
               <div class="markdown level1 summary"><p>Adds a pseudo-class to be set when a property is true.</p>
@@ -1075,7 +1183,7 @@ failing to do so will cause numerous features to not work as expected.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_PseudoClass__1_Perspex_PerspexProperty___0__System_Func___0_System_Boolean__System_String_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.PseudoClass%60%601(Perspex.PerspexProperty%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Boolean%7D%2CSystem.String)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L366">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L445">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_PseudoClass__1_Perspex_PerspexProperty___0__System_Func___0_System_Boolean__System_String_" data-uid="Perspex.Controls.Control.PseudoClass``1(Perspex.PerspexProperty{``0},System.Func{``0,System.Boolean},System.String)">PseudoClass&lt;T&gt;(PerspexProperty&lt;T&gt;, Func&lt;T, Boolean&gt;, String)</h4>
               <div class="markdown level1 summary"><p>Adds a pseudo-class to be set when a property equals a certain value.</p>
@@ -1121,7 +1229,7 @@ failing to do so will cause numerous features to not work as expected.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_AttachedToLogicalTree.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.AttachedToLogicalTree%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L112">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L123">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_AttachedToLogicalTree" data-uid="Perspex.Controls.Control.AttachedToLogicalTree">AttachedToLogicalTree</h4>
               <div class="markdown level1 summary"><p>Raised when the control is attached to a rooted logical tree.</p>
@@ -1136,7 +1244,7 @@ failing to do so will cause numerous features to not work as expected.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_DataContextChanged.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.DataContextChanged%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L126">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L137">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_DataContextChanged" data-uid="Perspex.Controls.Control.DataContextChanged">DataContextChanged</h4>
               <div class="markdown level1 summary"><p>Occurs when the <a class="xref" href="Perspex.Controls.Control.html#Perspex_Controls_Control_DataContext">DataContext</a> property changes.</p>
@@ -1155,7 +1263,7 @@ all subscribers to that change have been notified.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Control_DetachedFromLogicalTree.md&amp;value=---%0Auid%3A%20Perspex.Controls.Control.DetachedFromLogicalTree%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L117">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Control.cs/#L128">View Source</a>
               </span>
               <h4 id="Perspex_Controls_Control_DetachedFromLogicalTree" data-uid="Perspex.Controls.Control.DetachedFromLogicalTree">DetachedFromLogicalTree</h4>
               <div class="markdown level1 summary"><p>Raised when the control is detached from a rooted logical tree.</p>
@@ -1183,7 +1291,7 @@ all subscribers to that change have been notified.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+            <span>Copyright © 2016 The Perspex Project<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>

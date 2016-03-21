@@ -260,57 +260,17 @@
               <h3 id="methods">Methods</h3>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Markup_Xaml_Data_MultiBinding_Bind_Perspex_IPerspexObject_Perspex_PerspexProperty_.md&amp;value=---%0Auid%3A%20Perspex.Markup.Xaml.Data.MultiBinding.Bind(Perspex.IPerspexObject%2CPerspex.PerspexProperty)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Markup_Xaml_Data_MultiBinding_Initiate_Perspex_IPerspexObject_Perspex_PerspexProperty_System_Object_.md&amp;value=---%0Auid%3A%20Perspex.Markup.Xaml.Data.MultiBinding.Initiate(Perspex.IPerspexObject%2CPerspex.PerspexProperty%2CSystem.Object)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Markup/Perspex.Markup.Xaml/Data/MultiBinding.cs/#L57">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Markup/Perspex.Markup.Xaml/Data/MultiBinding.cs/#L53">View Source</a>
               </span>
-              <h4 id="Perspex_Markup_Xaml_Data_MultiBinding_Bind_Perspex_IPerspexObject_Perspex_PerspexProperty_" data-uid="Perspex.Markup.Xaml.Data.MultiBinding.Bind(Perspex.IPerspexObject,Perspex.PerspexProperty)">Bind(IPerspexObject, PerspexProperty)</h4>
-              <div class="markdown level1 summary"><p>Applies the binding to a property on an instance.</p>
-</div>
+              <h4 id="Perspex_Markup_Xaml_Data_MultiBinding_Initiate_Perspex_IPerspexObject_Perspex_PerspexProperty_System_Object_" data-uid="Perspex.Markup.Xaml.Data.MultiBinding.Initiate(Perspex.IPerspexObject,Perspex.PerspexProperty,System.Object)">Initiate(IPerspexObject, PerspexProperty, Object)</h4>
+              <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void Bind(IPerspexObject instance, PerspexProperty property)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Perspex.IPerspexObject.html#Perspex_IPerspexObject">IPerspexObject</a></td>
-                    <td><em>instance</em></td>
-                    <td><p>The target instance.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Perspex.PerspexProperty.html#Perspex_PerspexProperty">PerspexProperty</a></td>
-                    <td><em>property</em></td>
-                    <td><p>The target property.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Markup_Xaml_Data_MultiBinding_CreateSubject_Perspex_IPerspexObject_Perspex_PerspexProperty_.md&amp;value=---%0Auid%3A%20Perspex.Markup.Xaml.Data.MultiBinding.CreateSubject(Perspex.IPerspexObject%2CPerspex.PerspexProperty)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Markup/Perspex.Markup.Xaml/Data/MultiBinding.cs/#L73">View Source</a>
-              </span>
-              <h4 id="Perspex_Markup_Xaml_Data_MultiBinding_CreateSubject_Perspex_IPerspexObject_Perspex_PerspexProperty_" data-uid="Perspex.Markup.Xaml.Data.MultiBinding.CreateSubject(Perspex.IPerspexObject,Perspex.PerspexProperty)">CreateSubject(IPerspexObject, PerspexProperty)</h4>
-              <div class="markdown level1 summary"><p>Creates a subject that can be used to get and set the value of the binding.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ISubject&lt;object&gt; CreateSubject(IPerspexObject target, PerspexProperty targetProperty)</code></pre>
+                <pre><code class="lang-csharp hljs">public InstancedBinding Initiate(IPerspexObject target, PerspexProperty targetProperty, object anchor = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -325,14 +285,17 @@
                   <tr>
                     <td><a class="xref" href="Perspex.IPerspexObject.html#Perspex_IPerspexObject">IPerspexObject</a></td>
                     <td><em>target</em></td>
-                    <td><p>The target instance.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Perspex.PerspexProperty.html#Perspex_PerspexProperty">PerspexProperty</a></td>
                     <td><em>targetProperty</em></td>
-                    <td><p>The target property.</p>
-</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>anchor</em></td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -346,9 +309,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Reactive.Subjects.ISubject</span>&lt;<span class="xref">System.Object</span>&gt;</td>
-                    <td><p>An <span class="xref">System.Reactive.Subjects.ISubject`1</span>.</p>
-</td>
+                    <td><a class="xref" href="Perspex.Data.InstancedBinding.html#Perspex_Data_InstancedBinding">InstancedBinding</a></td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -370,7 +332,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+            <span>Copyright © 2016 The Perspex Project<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>

@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Perspex for WPF Developers | Perspex Website</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Perspex for WPF Developers | Perspex Website">
+    <meta name="generator" content="docfx 1.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content">
+        
+        <div class="sidenav">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/Perspex/Perspex/blob/master/docs/tutorial/from-wpf.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h1 id="perspex-for-wpf-developers">Perspex for WPF Developers</h1>
+              
+<p>Perspex is in general very similar to WPF, but you will find differences. Here
+are the most common:</p>
+<h2 id="styling">Styling</h2>
+<p>The most obvious difference from other XAML frameworks is that Perspex uses a
+<a href="../spec/styles.html">CSS-like styling system</a>. Styles aren&#39;t stored in a
+<code>Resources</code> collection as in WPF, they are stored in a separate <code>Styles</code>
+collection:</p>
+<pre><code>&lt;UserControl&gt;
+    &lt;UserControl.Styles&gt;
+        &lt;!-- Make TextBlocks with the h1 style class have a font size of 24 points --&gt;
+        &lt;Style Selector=&quot;TextBlock.h1&quot;&gt;
+            &lt;Setter Property=&quot;FontSize&quot; Value=&quot;24&quot;/&gt;
+        &lt;/Style&gt;
+    &lt;/UserControl.Styles&gt;
+    &lt;TextBlock Classes=&quot;h1&quot;&gt;Header&lt;/TextBlock&gt;
+&lt;UserControl&gt;    
+</code></pre><h2 id="datatemplates">DataTemplates</h2>
+<p>As styles aren&#39;t stored  in <code>Resources</code>, neither are <code>DataTemplates</code> (<a href="#resources">in fact
+there is no <code>Resources</code> collection</a>). Instead, <code>DataTemplates</code> are
+placed in a <code>DataTemplates</code> collection on each control (and on <code>Application</code>):</p>
+<pre><code>&lt;UserControl xmlns:viewmodels=&quot;clr-namespace:MyApp.ViewModels;assembly=MyApp&quot;&gt;
+    &lt;UserControl.DataTemplates&gt;
+        &lt;DataTemplate DataType=&quot;viewmodels:FooViewModel&quot;&gt;
+            &lt;Border Background=&quot;Red&quot; CornerRadius=&quot;8&quot;&gt;
+                &lt;TextBox Text=&quot;{Binding Name}&quot;/&gt;
+            &lt;/Border&gt;
+        &lt;/DataTemplate&gt;
+    &lt;/UserControl.Styles&gt;
+    &lt;!-- Assuming that DataContext.Foo is an object of type
+         MyApp.ViewModels.FooViewModel then a red border with a corner
+         radius of 8 containing a TextBox will be displayed here --&gt;
+    &lt;ContentControl Content=&quot;{Binding Foo}&quot;/&gt;
+&lt;UserControl&gt;    
+</code></pre><p><code>ItemsControl</code>s don&#39;t currently have an <code>ItemTemplate</code> property: instead just
+place the template for your items into the control&#39;s <code>DataTemplates</code>, e.g.</p>
+<pre><code>&lt;ListBox Items=&quot;ItemsSource&quot;&gt;
+    &lt;ListBox.DataTemplates&gt;
+        &lt;DataTemplate&gt;
+            &lt;TextBlock Text=&quot;{Binding Caption}&quot;/&gt;
+        &lt;/DataTemplate&gt;
+    &lt;/ListBox.DataTemplates&gt;
+&lt;/ListBox&gt;
+</code></pre><p>Data templates in Perspex can also target interfaces and derived classes (which
+cannot be done in WPF) and so the order of <code>DataTemplate</code>s can be important:
+<code>DataTemplate</code>s  within the same collection are evaluated in declaration order
+so you need to place them from most-specific to least-specific as you would in
+code.</p>
+<h2 id="hierachicaldatatemplate">HierachicalDataTemplate</h2>
+<p>WPF&#39;s <code>HierarchicalDataTemplate</code> is called <code>TreeDataTemplate</code> in Perspex (as the
+former is difficult to type!). The two are almost entirely equivalent except
+that the <code>ItemTemplate</code> property is not present in Perspex.</p>
+<h2 id="uielement-frameworkelement-and-control">UIElement, FrameworkElement and Control</h2>
+<p>WPF&#39;s <code>UIElement</code> and <code>FrameworkElement</code> are non-templated control base classes,
+which roughly equate to the Perspex <code>Control</code> class. WPF&#39;s <code>Control</code> class on
+the other hand is a templated control - Perspex&#39;s equivalent of this is
+<code>TemplatedControl</code>.</p>
+<p>So to recap:</p>
+<ul>
+<li><code>UIElement</code>: <code>Control</code></li>
+<li><code>FrameworkElement</code>: <code>Control</code></li>
+<li><code>Control</code>: <code>TemplatedControl</code></li>
+</ul>
+<h2 id="dependencyproperty">DependencyProperty</h2>
+<p>The Perspex equivalent of <code>DependencyProperty</code> is <code>StyledProperty</code>, however
+Perspex <a href="../spec/defining-properties.html">has a richer property system than WPF</a>,
+and includes <code>DirectProperty</code> for turning standard CLR properties into Perspex
+properties. The common base class of <code>StyledProperty</code> and <code>DirectProperty</code>
+is <code>PerspexProperty</code>.</p>
+<h1 id="resources">Resources</h1>
+<p>There is no <code>Resources</code> collection on controls in Perspex, however <code>Style</code>s
+do have a <code>Resources</code> collection for style-related resources. These can be
+referred to using the <code>{StyleResource}</code> markup extension both inside and outside
+styles.</p>
+<p>For non-style-related resources, we suggest defining them in code and referring
+to them in markup using the <code>{Static}</code> markup extension. There are <a href="http://www.codemag.com/article/1501091">various
+reasons</a> for this, but briefly:</p>
+<ul>
+<li>Resources have to be parsed</li>
+<li>The tree has to be traversed to find them</li>
+<li>XAML doesn&#39;t handle immutable objects</li>
+<li>XAML syntax can be long-winded compared to C#</li>
+</ul>
+<h2 id="grid">Grid</h2>
+<p>Column and row definitions can be specified in Perspex using strings, avoiding
+the clunky syntax in WPF:</p>
+<pre><code>&lt;Grid ColumnDefinitions=&quot;Auto,*,32&quot; RowDefinitions=&quot;*,Auto&quot;&gt;
+</code></pre><p>A common use of <code>Grid</code> in WPF is to stack two controls on top of each other.
+For this purpose in Perspex you can just use a <code>Panel</code> which is more lightweight
+than <code>Grid</code>.</p>
+<p>We don&#39;t yet support <code>SharedSizeScope</code> in <code>Grid</code>.</p>
+<h2 id="itemscontrol">ItemsControl</h2>
+<p>In WPF, <code>ItemsControl</code> and derived classes such as <code>ListBox</code> have two separate
+items properties: <code>Items</code> and <code>ItemsSource</code>. Perspex however just has a single
+one: <code>Items</code>.</p>
+<h2 id="tunnelling-events">Tunnelling Events</h2>
+<p>Perspex has tunnelling events (unlike UWP!) but they&#39;re not exposed via
+separate <code>Preview</code> CLR event handlers. To subscribe to a tunnelling event you
+must call <code>AddHandler</code> with <code>RoutingStrategies.Tunnel</code>:</p>
+<pre><code>target.AddHandler(InputElement.KeyDownEvent, OnPreviewKeyDown, RoutingStrategies.Tunnel);
+
+void OnPreviewKeyDown(object sender, KeyEventArgs e)
+{
+    // Handler code
+}
+</code></pre><h2 id="class-handlers">Class Handlers</h2>
+<p>In WPF, class handlers for events can be added by calling
+<a href="https://msdn.microsoft.com/en-us/library/ms597875.aspx">EventManager.RegisterClassHandler</a>.
+An example of registering a class handler in WPF might be:</p>
+<pre><code>static MyControl()
+{
+  EventManager.RegisterClassHandler(typeof(MyControl), MyEvent, HandleMyEvent));
+}
+
+private static void HandleMyEvent(object sender, RoutedEventArgs e)
+{
+}
+</code></pre><p>The equivalent of this in Perspex would be:</p>
+<pre><code>static MyControl()
+{
+    MyEvent.AddClassHandler&lt;MyControl&gt;(x =&gt; x.HandleMyEvent);
+}
+
+private void HandleMyEvent(object sender, RoutedEventArgs e)
+{
+}
+</code></pre><p>Notice that in WPF you have to add the class handler as a static method, whereas
+in Perspex the class handler is not static: the notification is automatically
+directed to the correct instance.</p>
+<h2 id="propertychangedcallback">PropertyChangedCallback</h2>
+<p>Listening to changes on DependencyProperties in WPF can be complex. When you
+register a <code>DependencyProperty</code> you can supply a static <code>PropertyChangedCallback</code>
+but if you want to listen to changes from elsewhere <a href="http://stackoverflow.com/questions/23682232">things can get complicated
+and error-prone</a>.</p>
+<p>In Perspex, there is no <code>PropertyChangedCallback</code> at the time of registration,
+instead a class listener is <a href="../spec/working-with-properties.html#subscribing-to-a-property-on-any-object">added to the control&#39;s static constructor in much
+the same way that event class listeners are added</a>.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2016 The Perspex Project<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

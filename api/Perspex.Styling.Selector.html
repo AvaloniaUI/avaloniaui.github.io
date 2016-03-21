@@ -60,7 +60,7 @@
             <article class="content wrap" id="_content">
               
               <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Styling_Selector.md&amp;value=---%0Auid%3A%20Perspex.Styling.Selector%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
-              <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Styling/Styling/Selector.cs/#L37" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Styling/Styling/Selector.cs/#L12" class="btn btn-primary pull-right mobile-hide">View Source</a>
               <h1 id="Perspex_Styling_Selector" data-uid="Perspex.Styling.Selector">Class Selector</h1>
               <div class="markdown level0 summary"><p>A selector in a <a class="xref" href="Perspex.Styling.Style.html#Perspex_Styling_Style">Style</a>.</p>
 </div>
@@ -74,113 +74,24 @@
               <h6><strong>Assembly</strong>:Perspex.Styling.dll</h6>
               <h5 id="Perspex_Styling_Selector_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class Selector</code></pre>
+                <pre><code class="lang-csharp hljs">public abstract class Selector</code></pre>
               </div>
-              <h5 id="Perspex_Styling_Selector_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p>Selectors represented in markup using a CSS-like syntax, e.g. &quot;Button &gt; .dark&quot; which
-means &quot;A child of a Button with the &#39;dark&#39; class applied. The preceeding example would be
-stored in 3 <a class="xref" href="Perspex.Styling.Selector.html#Perspex_Styling_Selector">Selector</a> objects, linked by the <a class="xref" href="Perspex.Styling.Selector.html#Perspex_Styling_Selector_Previous">Previous</a> property:</p>
-<list type="number"><item><term>.dark</term><description>
-A selector that selects a control with the &#39;dark&#39; class applied.
-</description></item><item><term>&gt;</term><description>
-A selector that selects a child of the previous selector.
-</description></item><item><term>Button</term><description>
-A selector that selects a Button type.
-</description></item></list></div>
-              <h3 id="constructors">Constructors</h3>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Styling_Selector__ctor.md&amp;value=---%0Auid%3A%20Perspex.Styling.Selector.%23ctor%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Styling/Styling/Selector.cs/#L48">View Source</a>
-              </span>
-              <h4 id="Perspex_Styling_Selector__ctor" data-uid="Perspex.Styling.Selector.#ctor">Selector()</h4>
-              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Perspex.Styling.Selector.html#Perspex_Styling_Selector">Selector</a> class.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Selector()</code></pre>
-              </div>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Styling_Selector__ctor_Perspex_Styling_Selector_System_Func_Perspex_Styling_IStyleable_Perspex_Styling_SelectorMatch__System_String_System_Type_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Perspex.Styling.Selector.%23ctor(Perspex.Styling.Selector%2CSystem.Func%7BPerspex.Styling.IStyleable%2CPerspex.Styling.SelectorMatch%7D%2CSystem.String%2CSystem.Type%2CSystem.Boolean%2CSystem.Boolean)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Styling/Styling/Selector.cs/#L62">View Source</a>
-              </span>
-              <h4 id="Perspex_Styling_Selector__ctor_Perspex_Styling_Selector_System_Func_Perspex_Styling_IStyleable_Perspex_Styling_SelectorMatch__System_String_System_Type_System_Boolean_System_Boolean_" data-uid="Perspex.Styling.Selector.#ctor(Perspex.Styling.Selector,System.Func{Perspex.Styling.IStyleable,Perspex.Styling.SelectorMatch},System.String,System.Type,System.Boolean,System.Boolean)">Selector(Selector, Func&lt;IStyleable, SelectorMatch&gt;, String, Type, Boolean, Boolean)</h4>
-              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Perspex.Styling.Selector.html#Perspex_Styling_Selector">Selector</a> class.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Selector(Selector previous, Func&lt;IStyleable, SelectorMatch&gt; evaluate, string selectorString, Type targetType = null, bool inTemplate = false, bool stopTraversal = false)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Perspex.Styling.Selector.html#Perspex_Styling_Selector">Selector</a></td>
-                    <td><em>previous</em></td>
-                    <td><p>The previous selector.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Func</span>&lt;<a class="xref" href="Perspex.Styling.IStyleable.html#Perspex_Styling_IStyleable">IStyleable</a>, <a class="xref" href="Perspex.Styling.SelectorMatch.html#Perspex_Styling_SelectorMatch">SelectorMatch</a>&gt;</td>
-                    <td><em>evaluate</em></td>
-                    <td><p>The evaluator function.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>selectorString</em></td>
-                    <td><p>The string representation of the selector.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Type</span></td>
-                    <td><em>targetType</em></td>
-                    <td><p>The target type, if available.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Boolean</span></td>
-                    <td><em>inTemplate</em></td>
-                    <td><p>Whether to match in a control template.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Boolean</span></td>
-                    <td><em>stopTraversal</em></td>
-                    <td><p>Whether to stop traversal at this point.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
               <h3 id="properties">Properties</h3>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Styling_Selector_Previous.md&amp;value=---%0Auid%3A%20Perspex.Styling.Selector.Previous%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Styling_Selector_InTemplate.md&amp;value=---%0Auid%3A%20Perspex.Styling.Selector.InTemplate%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Styling/Styling/Selector.cs/#L84">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Styling/Styling/Selector.cs/#L18">View Source</a>
               </span>
-              <h4 id="Perspex_Styling_Selector_Previous" data-uid="Perspex.Styling.Selector.Previous">Previous</h4>
-              <div class="markdown level1 summary"><p>Gets the previous selector.</p>
+              <h4 id="Perspex_Styling_Selector_InTemplate" data-uid="Perspex.Styling.Selector.InTemplate">InTemplate</h4>
+              <div class="markdown level1 summary"><p>Gets a value indicating whether either this selector or a previous selector has moved
+into a template.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Selector Previous { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">public abstract bool InTemplate { get; }</code></pre>
               </div>
               <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -192,37 +103,7 @@ A selector that selects a Button type.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.Styling.Selector.html#Perspex_Styling_Selector">Selector</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Styling_Selector_SelectorString.md&amp;value=---%0Auid%3A%20Perspex.Styling.Selector.SelectorString%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Styling/Styling/Selector.cs/#L92">View Source</a>
-              </span>
-              <h4 id="Perspex_Styling_Selector_SelectorString" data-uid="Perspex.Styling.Selector.SelectorString">SelectorString</h4>
-              <div class="markdown level1 summary"><p>Gets a string representation of the selector.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string SelectorString { get; }</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><span class="xref">System.Boolean</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -232,7 +113,7 @@ A selector that selects a Button type.
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Styling_Selector_TargetType.md&amp;value=---%0Auid%3A%20Perspex.Styling.Selector.TargetType%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Styling/Styling/Selector.cs/#L100">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Styling/Styling/Selector.cs/#L23">View Source</a>
               </span>
               <h4 id="Perspex_Styling_Selector_TargetType" data-uid="Perspex.Styling.Selector.TargetType">TargetType</h4>
               <div class="markdown level1 summary"><p>Gets the target type of the selector, if available.</p>
@@ -240,7 +121,7 @@ A selector that selects a Button type.
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Type TargetType { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">public abstract Type TargetType { get; }</code></pre>
               </div>
               <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -260,18 +141,18 @@ A selector that selects a Button type.
               <h3 id="methods">Methods</h3>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Styling_Selector_Match_Perspex_Styling_IStyleable_.md&amp;value=---%0Auid%3A%20Perspex.Styling.Selector.Match(Perspex.Styling.IStyleable)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Styling_Selector_Evaluate_Perspex_Styling_IStyleable_System_Boolean_.md&amp;value=---%0Auid%3A%20Perspex.Styling.Selector.Evaluate(Perspex.Styling.IStyleable%2CSystem.Boolean)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Styling/Styling/Selector.cs/#L116">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Styling/Styling/Selector.cs/#L79">View Source</a>
               </span>
-              <h4 id="Perspex_Styling_Selector_Match_Perspex_Styling_IStyleable_" data-uid="Perspex.Styling.Selector.Match(Perspex.Styling.IStyleable)">Match(IStyleable)</h4>
-              <div class="markdown level1 summary"><p>Tries to match the selector with a control.</p>
+              <h4 id="Perspex_Styling_Selector_Evaluate_Perspex_Styling_IStyleable_System_Boolean_" data-uid="Perspex.Styling.Selector.Evaluate(Perspex.Styling.IStyleable,System.Boolean)">Evaluate(IStyleable, Boolean)</h4>
+              <div class="markdown level1 summary"><p>Evaluates the selector for a match.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public SelectorMatch Match(IStyleable control)</code></pre>
+                <pre><code class="lang-csharp hljs">protected abstract SelectorMatch Evaluate(IStyleable control, bool subscribe)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -287,6 +168,69 @@ A selector that selects a Button type.
                     <td><a class="xref" href="Perspex.Styling.IStyleable.html#Perspex_Styling_IStyleable">IStyleable</a></td>
                     <td><em>control</em></td>
                     <td><p>The control.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><em>subscribe</em></td>
+                    <td><p>Whether the match should subscribe to changes in order to track the match over time,
+or simply return an immediate result.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Styling.SelectorMatch.html#Perspex_Styling_SelectorMatch">SelectorMatch</a></td>
+                    <td><p>A <a class="xref" href="Perspex.Styling.SelectorMatch.html#Perspex_Styling_SelectorMatch">SelectorMatch</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Styling_Selector_Match_Perspex_Styling_IStyleable_System_Boolean_.md&amp;value=---%0Auid%3A%20Perspex.Styling.Selector.Match(Perspex.Styling.IStyleable%2CSystem.Boolean)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Styling/Styling/Selector.cs/#L34">View Source</a>
+              </span>
+              <h4 id="Perspex_Styling_Selector_Match_Perspex_Styling_IStyleable_System_Boolean_" data-uid="Perspex.Styling.Selector.Match(Perspex.Styling.IStyleable,System.Boolean)">Match(IStyleable, Boolean)</h4>
+              <div class="markdown level1 summary"><p>Tries to match the selector with a control.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public SelectorMatch Match(IStyleable control, bool subscribe = true)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Styling.IStyleable.html#Perspex_Styling_IStyleable">IStyleable</a></td>
+                    <td><em>control</em></td>
+                    <td><p>The control.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><em>subscribe</em></td>
+                    <td><p>Whether the match should subscribe to changes in order to track the match over time,
+or simply return an immediate result.</p>
 </td>
                   </tr>
                 </tbody>
@@ -312,15 +256,15 @@ A selector that selects a Button type.
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Styling_Selector_MovePrevious.md&amp;value=---%0Auid%3A%20Perspex.Styling.Selector.MovePrevious%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Styling/Styling/Selector.cs/#L106">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Styling/Styling/Selector.cs/#L84">View Source</a>
               </span>
               <h4 id="Perspex_Styling_Selector_MovePrevious" data-uid="Perspex.Styling.Selector.MovePrevious">MovePrevious()</h4>
-              <div class="markdown level1 summary"><p>Returns the previous selector if traversal is not stopped.</p>
+              <div class="markdown level1 summary"><p>Moves to the previous selector.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Selector MovePrevious()</code></pre>
+                <pre><code class="lang-csharp hljs">protected abstract Selector MovePrevious()</code></pre>
               </div>
               <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -333,39 +277,7 @@ A selector that selects a Button type.
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Perspex.Styling.Selector.html#Perspex_Styling_Selector">Selector</a></td>
-                    <td><p>The previous selector.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Styling_Selector_ToString.md&amp;value=---%0Auid%3A%20Perspex.Styling.Selector.ToString%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Styling/Styling/Selector.cs/#L156">View Source</a>
-              </span>
-              <h4 id="Perspex_Styling_Selector_ToString" data-uid="Perspex.Styling.Selector.ToString">ToString()</h4>
-              <div class="markdown level1 summary"><p>Gets a string representation of the selector.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><p>The string representation of the selector.</p>
-</td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -387,7 +299,7 @@ A selector that selects a Button type.
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+            <span>Copyright © 2016 The Perspex Project<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>

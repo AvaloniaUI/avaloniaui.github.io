@@ -60,7 +60,7 @@
             <article class="content wrap" id="_content">
               
               <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=OmniXaml_ObjectAssembler_Commands_ITopDownValueContext.md&amp;value=---%0Auid%3A%20OmniXaml.ObjectAssembler.Commands.ITopDownValueContext%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
-              <a href="https://github.com/Perspex/Perspex/blob/master/src/Markup/Perspex.Markup.Xaml/OmniXAML/Source/OmniXaml/ObjectAssembler/Commands/ITopDownValueContext.cs/#L5" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <a href="https://github.com/Perspex/Perspex/blob/master/src/Markup/Perspex.Markup.Xaml/OmniXAML/Source/OmniXaml/ObjectAssembler/Commands/ITopDownValueContext.cs/#L6" class="btn btn-primary pull-right mobile-hide">View Source</a>
               <h1 id="OmniXaml_ObjectAssembler_Commands_ITopDownValueContext" data-uid="OmniXaml.ObjectAssembler.Commands.ITopDownValueContext">Interface ITopDownValueContext</h1>
               <div class="markdown level0 summary"></div>
               <div class="markdown level0 conceptual"></div>
@@ -70,13 +70,79 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public interface ITopDownValueContext</code></pre>
               </div>
+              <h3 id="properties">Properties</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=OmniXaml_ObjectAssembler_Commands_ITopDownValueContext_StoredInstances.md&amp;value=---%0Auid%3A%20OmniXaml.ObjectAssembler.Commands.ITopDownValueContext.StoredInstances%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Markup/Perspex.Markup.Xaml/OmniXAML/Source/OmniXaml/ObjectAssembler/Commands/ITopDownValueContext.cs/#L10">View Source</a>
+              </span>
+              <h4 id="OmniXaml_ObjectAssembler_Commands_ITopDownValueContext_StoredInstances" data-uid="OmniXaml.ObjectAssembler.Commands.ITopDownValueContext.StoredInstances">StoredInstances</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;StoredInstance&gt; StoredInstances { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="OmniXaml.ObjectAssembler.StoredInstance.html#OmniXaml_ObjectAssembler_StoredInstance">StoredInstance</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="methods">Methods</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=OmniXaml_ObjectAssembler_Commands_ITopDownValueContext_Add_System_Object_OmniXaml_Typing_XamlType_.md&amp;value=---%0Auid%3A%20OmniXaml.ObjectAssembler.Commands.ITopDownValueContext.Add(System.Object%2COmniXaml.Typing.XamlType)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Markup/Perspex.Markup.Xaml/OmniXAML/Source/OmniXaml/ObjectAssembler/Commands/ITopDownValueContext.cs/#L8">View Source</a>
+              </span>
+              <h4 id="OmniXaml_ObjectAssembler_Commands_ITopDownValueContext_Add_System_Object_OmniXaml_Typing_XamlType_" data-uid="OmniXaml.ObjectAssembler.Commands.ITopDownValueContext.Add(System.Object,OmniXaml.Typing.XamlType)">Add(Object, XamlType)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void Add(object instance, XamlType xamlType)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>instance</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="OmniXaml.Typing.XamlType.html#OmniXaml_Typing_XamlType">XamlType</a></td>
+                    <td><em>xamlType</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=OmniXaml_ObjectAssembler_Commands_ITopDownValueContext_GetLastInstance_OmniXaml_Typing_XamlType_.md&amp;value=---%0Auid%3A%20OmniXaml.ObjectAssembler.Commands.ITopDownValueContext.GetLastInstance(OmniXaml.Typing.XamlType)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Markup/Perspex.Markup.Xaml/OmniXAML/Source/OmniXaml/ObjectAssembler/Commands/ITopDownValueContext.cs/#L8">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Markup/Perspex.Markup.Xaml/OmniXAML/Source/OmniXaml/ObjectAssembler/Commands/ITopDownValueContext.cs/#L9">View Source</a>
               </span>
               <h4 id="OmniXaml_ObjectAssembler_Commands_ITopDownValueContext_GetLastInstance_OmniXaml_Typing_XamlType_" data-uid="OmniXaml.ObjectAssembler.Commands.ITopDownValueContext.GetLastInstance(OmniXaml.Typing.XamlType)">GetLastInstance(XamlType)</h4>
               <div class="markdown level1 summary"></div>
@@ -117,42 +183,6 @@
                   </tr>
                 </tbody>
               </table>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=OmniXaml_ObjectAssembler_Commands_ITopDownValueContext_SetInstanceValue_OmniXaml_Typing_XamlType_System_Object_.md&amp;value=---%0Auid%3A%20OmniXaml.ObjectAssembler.Commands.ITopDownValueContext.SetInstanceValue(OmniXaml.Typing.XamlType%2CSystem.Object)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Markup/Perspex.Markup.Xaml/OmniXAML/Source/OmniXaml/ObjectAssembler/Commands/ITopDownValueContext.cs/#L7">View Source</a>
-              </span>
-              <h4 id="OmniXaml_ObjectAssembler_Commands_ITopDownValueContext_SetInstanceValue_OmniXaml_Typing_XamlType_System_Object_" data-uid="OmniXaml.ObjectAssembler.Commands.ITopDownValueContext.SetInstanceValue(OmniXaml.Typing.XamlType,System.Object)">SetInstanceValue(XamlType, Object)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">void SetInstanceValue(XamlType xamlType, object instance)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="OmniXaml.Typing.XamlType.html#OmniXaml_Typing_XamlType">XamlType</a></td>
-                    <td><em>xamlType</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Object</span></td>
-                    <td><em>instance</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
             </article>
           </div>
           
@@ -171,7 +201,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+            <span>Copyright © 2016 The Perspex Project<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>

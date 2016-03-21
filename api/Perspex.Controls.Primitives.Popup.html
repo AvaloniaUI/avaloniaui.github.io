@@ -81,7 +81,7 @@
               <h6><strong>Assembly</strong>:Perspex.Controls.dll</h6>
               <h5 id="Perspex_Controls_Primitives_Popup_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class Popup : Control, INotifyPropertyChanged, IControl, ILogical, ILayoutable, IInputElement, IInteractive, IVisual, IStyleable, IPerspexObject, INamed, IStyleHost, ISetLogicalParent, IVisualTreeHost</code></pre>
+                <pre><code class="lang-csharp hljs">public class Popup : Control, IPerspexObjectDebug, INotifyPropertyChanged, IControl, ILogical, ILayoutable, IInputElement, IInteractive, IVisual, IStyleable, IPerspexObject, IStyleHost, INamed, ISetLogicalParent, ISupportInitialize, IVisualTreeHost</code></pre>
               </div>
               <h3 id="fields">Fields</h3>
               <span class="small pull-right mobile-hide">
@@ -279,7 +279,7 @@ a specialized dependency resolver into the <a class="xref" href="Perspex.Control
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.IVisual.html#Perspex_IVisual">IVisual</a></td>
+                    <td><a class="xref" href="Perspex.VisualTree.IVisual.html#Perspex_VisualTree_IVisual">IVisual</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -423,6 +423,37 @@ pressed or loses focus.</p>
               </div>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Primitives_Popup_GetPosition.md&amp;value=---%0Auid%3A%20Perspex.Controls.Primitives.Popup.GetPosition%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Primitives/Popup.cs/#L276">View Source</a>
+              </span>
+              <h4 id="Perspex_Controls_Primitives_Popup_GetPosition" data-uid="Perspex.Controls.Primitives.Popup.GetPosition">GetPosition()</h4>
+              <div class="markdown level1 summary"><p>Gets the position for the popup based on the placement properties.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual Point GetPosition()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Point.html#Perspex_Point">Point</a></td>
+                    <td><p>The popup&#39;s position in screen coordinates.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Primitives_Popup_MeasureCore_Perspex_Size_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Primitives.Popup.MeasureCore(Perspex.Size)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
@@ -472,12 +503,12 @@ pressed or loses focus.</p>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Primitives_Popup_OnAttachedToLogicalTree_Perspex_Controls_LogicalTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Primitives.Popup.OnAttachedToLogicalTree(Perspex.Controls.LogicalTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Primitives_Popup_OnAttachedToLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Primitives.Popup.OnAttachedToLogicalTree(Perspex.LogicalTree.LogicalTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Primitives/Popup.cs/#L224">View Source</a>
               </span>
-              <h4 id="Perspex_Controls_Primitives_Popup_OnAttachedToLogicalTree_Perspex_Controls_LogicalTreeAttachmentEventArgs_" data-uid="Perspex.Controls.Primitives.Popup.OnAttachedToLogicalTree(Perspex.Controls.LogicalTreeAttachmentEventArgs)">OnAttachedToLogicalTree(LogicalTreeAttachmentEventArgs)</h4>
+              <h4 id="Perspex_Controls_Primitives_Popup_OnAttachedToLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs_" data-uid="Perspex.Controls.Primitives.Popup.OnAttachedToLogicalTree(Perspex.LogicalTree.LogicalTreeAttachmentEventArgs)">OnAttachedToLogicalTree(LogicalTreeAttachmentEventArgs)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -495,7 +526,7 @@ pressed or loses focus.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.Controls.LogicalTreeAttachmentEventArgs.html#Perspex_Controls_LogicalTreeAttachmentEventArgs">LogicalTreeAttachmentEventArgs</a></td>
+                    <td><a class="xref" href="Perspex.LogicalTree.LogicalTreeAttachmentEventArgs.html#Perspex_LogicalTree_LogicalTreeAttachmentEventArgs">LogicalTreeAttachmentEventArgs</a></td>
                     <td><em>e</em></td>
                     <td></td>
                   </tr>
@@ -503,12 +534,12 @@ pressed or loses focus.</p>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Primitives_Popup_OnDetachedFromLogicalTree_Perspex_Controls_LogicalTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Primitives.Popup.OnDetachedFromLogicalTree(Perspex.Controls.LogicalTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_Primitives_Popup_OnDetachedFromLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.Primitives.Popup.OnDetachedFromLogicalTree(Perspex.LogicalTree.LogicalTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/Primitives/Popup.cs/#L231">View Source</a>
               </span>
-              <h4 id="Perspex_Controls_Primitives_Popup_OnDetachedFromLogicalTree_Perspex_Controls_LogicalTreeAttachmentEventArgs_" data-uid="Perspex.Controls.Primitives.Popup.OnDetachedFromLogicalTree(Perspex.Controls.LogicalTreeAttachmentEventArgs)">OnDetachedFromLogicalTree(LogicalTreeAttachmentEventArgs)</h4>
+              <h4 id="Perspex_Controls_Primitives_Popup_OnDetachedFromLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs_" data-uid="Perspex.Controls.Primitives.Popup.OnDetachedFromLogicalTree(Perspex.LogicalTree.LogicalTreeAttachmentEventArgs)">OnDetachedFromLogicalTree(LogicalTreeAttachmentEventArgs)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -526,7 +557,7 @@ pressed or loses focus.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.Controls.LogicalTreeAttachmentEventArgs.html#Perspex_Controls_LogicalTreeAttachmentEventArgs">LogicalTreeAttachmentEventArgs</a></td>
+                    <td><a class="xref" href="Perspex.LogicalTree.LogicalTreeAttachmentEventArgs.html#Perspex_LogicalTree_LogicalTreeAttachmentEventArgs">LogicalTreeAttachmentEventArgs</a></td>
                     <td><em>e</em></td>
                     <td></td>
                   </tr>
@@ -611,7 +642,7 @@ pressed or loses focus.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+            <span>Copyright © 2016 The Perspex Project<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>

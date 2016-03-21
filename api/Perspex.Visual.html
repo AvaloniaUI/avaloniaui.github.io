@@ -76,7 +76,7 @@
               <h6><strong>Assembly</strong>:Perspex.SceneGraph.dll</h6>
               <h5 id="Perspex_Visual_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class Visual : Animatable, IPerspexObject, INotifyPropertyChanged, IVisual, INamed</code></pre>
+                <pre><code class="lang-csharp hljs">public class Visual : Animatable, IPerspexObject, IPerspexObjectDebug, INotifyPropertyChanged, IVisual</code></pre>
               </div>
               <h5 id="Perspex_Visual_remarks"><strong>Remarks</strong></h5>
               <div class="markdown level0 remarks"><p>The <a class="xref" href="Perspex.Visual.html#Perspex_Visual">Visual</a> class acts as a node in the Perspex scene graph and holds
@@ -90,7 +90,7 @@ in <a class="xref" href="Perspex.VisualExtensions.html#Perspex_VisualExtensions"
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual__ctor.md&amp;value=---%0Auid%3A%20Perspex.Visual.%23ctor%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L118">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L96">View Source</a>
               </span>
               <h4 id="Perspex_Visual__ctor" data-uid="Perspex.Visual.#ctor">Visual()</h4>
               <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Perspex.Visual.html#Perspex_Visual">Visual</a> class.</p>
@@ -148,25 +148,10 @@ in <a class="xref" href="Perspex.VisualExtensions.html#Perspex_VisualExtensions"
               </div>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_NameProperty.md&amp;value=---%0Auid%3A%20Perspex.Visual.NameProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L53">View Source</a>
-              </span>
-              <h4 id="Perspex_Visual_NameProperty" data-uid="Perspex.Visual.NameProperty">NameProperty</h4>
-              <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Visual.html#Perspex_Visual_Name">Name</a> property.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static readonly DirectProperty&lt;Visual, string&gt; NameProperty</code></pre>
-              </div>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_OpacityProperty.md&amp;value=---%0Auid%3A%20Perspex.Visual.OpacityProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L59">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L53">View Source</a>
               </span>
               <h4 id="Perspex_Visual_OpacityProperty" data-uid="Perspex.Visual.OpacityProperty">OpacityProperty</h4>
               <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Visual.html#Perspex_Visual_Opacity">Opacity</a> property.</p>
@@ -181,7 +166,7 @@ in <a class="xref" href="Perspex.VisualExtensions.html#Perspex_VisualExtensions"
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_RenderTransformProperty.md&amp;value=---%0Auid%3A%20Perspex.Visual.RenderTransformProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L65">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L59">View Source</a>
               </span>
               <h4 id="Perspex_Visual_RenderTransformProperty" data-uid="Perspex.Visual.RenderTransformProperty">RenderTransformProperty</h4>
               <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Visual.html#Perspex_Visual_RenderTransform">RenderTransform</a> property.</p>
@@ -196,7 +181,7 @@ in <a class="xref" href="Perspex.VisualExtensions.html#Perspex_VisualExtensions"
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_TransformOriginProperty.md&amp;value=---%0Auid%3A%20Perspex.Visual.TransformOriginProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L71">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L65">View Source</a>
               </span>
               <h4 id="Perspex_Visual_TransformOriginProperty" data-uid="Perspex.Visual.TransformOriginProperty">TransformOriginProperty</h4>
               <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Visual.html#Perspex_Visual_TransformOrigin">TransformOrigin</a> property.</p>
@@ -211,10 +196,10 @@ in <a class="xref" href="Perspex.VisualExtensions.html#Perspex_VisualExtensions"
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_VisualParentProperty.md&amp;value=---%0Auid%3A%20Perspex.Visual.VisualParentProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L77">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L71">View Source</a>
               </span>
               <h4 id="Perspex_Visual_VisualParentProperty" data-uid="Perspex.Visual.VisualParentProperty">VisualParentProperty</h4>
-              <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.IVisual.html#Perspex_IVisual_VisualParent">VisualParent</a> property.</p>
+              <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.VisualTree.IVisual.html#Perspex_VisualTree_IVisual_VisualParent">VisualParent</a> property.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -226,7 +211,7 @@ in <a class="xref" href="Perspex.VisualExtensions.html#Perspex_VisualExtensions"
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_ZIndexProperty.md&amp;value=---%0Auid%3A%20Perspex.Visual.ZIndexProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L83">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L77">View Source</a>
               </span>
               <h4 id="Perspex_Visual_ZIndexProperty" data-uid="Perspex.Visual.ZIndexProperty">ZIndexProperty</h4>
               <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Visual.html#Perspex_Visual_ZIndex">ZIndex</a> property.</p>
@@ -242,7 +227,7 @@ in <a class="xref" href="Perspex.VisualExtensions.html#Perspex_VisualExtensions"
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_Bounds.md&amp;value=---%0Auid%3A%20Perspex.Visual.Bounds%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L147">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L125">View Source</a>
               </span>
               <h4 id="Perspex_Visual_Bounds" data-uid="Perspex.Visual.Bounds">Bounds</h4>
               <div class="markdown level1 summary"><p>Gets the bounds of the scene graph node relative to its parent.</p>
@@ -272,7 +257,7 @@ in <a class="xref" href="Perspex.VisualExtensions.html#Perspex_VisualExtensions"
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_ClipToBounds.md&amp;value=---%0Auid%3A%20Perspex.Visual.ClipToBounds%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L156">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L134">View Source</a>
               </span>
               <h4 id="Perspex_Visual_ClipToBounds" data-uid="Perspex.Visual.ClipToBounds">ClipToBounds</h4>
               <div class="markdown level1 summary"><p>Gets a value indicating whether the scene graph node should be clipped to its bounds.</p>
@@ -302,7 +287,7 @@ in <a class="xref" href="Perspex.VisualExtensions.html#Perspex_VisualExtensions"
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_IsEffectivelyVisible.md&amp;value=---%0Auid%3A%20Perspex.Visual.IsEffectivelyVisible%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L165">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L143">View Source</a>
               </span>
               <h4 id="Perspex_Visual_IsEffectivelyVisible" data-uid="Perspex.Visual.IsEffectivelyVisible">IsEffectivelyVisible</h4>
               <div class="markdown level1 summary"><p>Gets a value indicating whether this scene graph node and all its parents are visible.</p>
@@ -332,7 +317,7 @@ in <a class="xref" href="Perspex.VisualExtensions.html#Perspex_VisualExtensions"
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_IsVisible.md&amp;value=---%0Auid%3A%20Perspex.Visual.IsVisible%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L173">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L151">View Source</a>
               </span>
               <h4 id="Perspex_Visual_IsVisible" data-uid="Perspex.Visual.IsVisible">IsVisible</h4>
               <div class="markdown level1 summary"><p>Gets a value indicating whether this scene graph node is visible.</p>
@@ -359,44 +344,10 @@ in <a class="xref" href="Perspex.VisualExtensions.html#Perspex_VisualExtensions"
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_Name.md&amp;value=---%0Auid%3A%20Perspex.Visual.Name%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L186">View Source</a>
-              </span>
-              <h4 id="Perspex_Visual_Name" data-uid="Perspex.Visual.Name">Name</h4>
-              <div class="markdown level1 summary"><p>Gets or sets the name of the visual.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 id="Perspex_Visual_Name_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>An element&#39;s name is used to uniquely identify a control within the control&#39;s name
-scope. Once the element is added to a visual tree, its name cannot be changed.</p>
-</div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_Opacity.md&amp;value=---%0Auid%3A%20Perspex.Visual.Opacity%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L212">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L160">View Source</a>
               </span>
               <h4 id="Perspex_Visual_Opacity" data-uid="Perspex.Visual.Opacity">Opacity</h4>
               <div class="markdown level1 summary"><p>Gets the opacity of the scene graph node.</p>
@@ -423,12 +374,12 @@ scope. Once the element is added to a visual tree, its name cannot be changed.</
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_Perspex_IVisual_IsAttachedToVisualTree.md&amp;value=---%0Auid%3A%20Perspex.Visual.Perspex%23IVisual%23IsAttachedToVisualTree%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_Perspex_VisualTree_IVisual_IsAttachedToVisualTree.md&amp;value=---%0Auid%3A%20Perspex.Visual.Perspex%23VisualTree%23IVisual%23IsAttachedToVisualTree%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L271">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L219">View Source</a>
               </span>
-              <h4 id="Perspex_Visual_Perspex_IVisual_IsAttachedToVisualTree" data-uid="Perspex.Visual.Perspex#IVisual#IsAttachedToVisualTree">IVisual.IsAttachedToVisualTree</h4>
+              <h4 id="Perspex_Visual_Perspex_VisualTree_IVisual_IsAttachedToVisualTree" data-uid="Perspex.Visual.Perspex#VisualTree#IVisual#IsAttachedToVisualTree">IVisual.IsAttachedToVisualTree</h4>
               <div class="markdown level1 summary"><p>Gets a value indicating whether this scene graph node is attached to a visual root.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -453,12 +404,12 @@ scope. Once the element is added to a visual tree, its name cannot be changed.</
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_Perspex_IVisual_VisualChildren.md&amp;value=---%0Auid%3A%20Perspex.Visual.Perspex%23IVisual%23VisualChildren%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_Perspex_VisualTree_IVisual_VisualChildren.md&amp;value=---%0Auid%3A%20Perspex.Visual.Perspex%23VisualTree%23IVisual%23VisualChildren%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L276">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L224">View Source</a>
               </span>
-              <h4 id="Perspex_Visual_Perspex_IVisual_VisualChildren" data-uid="Perspex.Visual.Perspex#IVisual#VisualChildren">IVisual.VisualChildren</h4>
+              <h4 id="Perspex_Visual_Perspex_VisualTree_IVisual_VisualChildren" data-uid="Perspex.Visual.Perspex#VisualTree#IVisual#VisualChildren">IVisual.VisualChildren</h4>
               <div class="markdown level1 summary"><p>Gets the scene graph node&#39;s child nodes.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -476,19 +427,19 @@ scope. Once the element is added to a visual tree, its name cannot be changed.</
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.Collections.IPerspexReadOnlyList`1.html#Perspex_Collections_IPerspexReadOnlyList_1">IPerspexReadOnlyList</a>&lt;<a class="xref" href="Perspex.IVisual.html#Perspex_IVisual">IVisual</a>&gt;</td>
+                    <td><a class="xref" href="Perspex.Collections.IPerspexReadOnlyList`1.html#Perspex_Collections_IPerspexReadOnlyList_1">IPerspexReadOnlyList</a>&lt;<a class="xref" href="Perspex.VisualTree.IVisual.html#Perspex_VisualTree_IVisual">IVisual</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_Perspex_IVisual_VisualParent.md&amp;value=---%0Auid%3A%20Perspex.Visual.Perspex%23IVisual%23VisualParent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_Perspex_VisualTree_IVisual_VisualParent.md&amp;value=---%0Auid%3A%20Perspex.Visual.Perspex%23VisualTree%23IVisual%23VisualParent%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L281">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L229">View Source</a>
               </span>
-              <h4 id="Perspex_Visual_Perspex_IVisual_VisualParent" data-uid="Perspex.Visual.Perspex#IVisual#VisualParent">IVisual.VisualParent</h4>
+              <h4 id="Perspex_Visual_Perspex_VisualTree_IVisual_VisualParent" data-uid="Perspex.Visual.Perspex#VisualTree#IVisual#VisualParent">IVisual.VisualParent</h4>
               <div class="markdown level1 summary"><p>Gets the scene graph node&#39;s parent node.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -506,7 +457,37 @@ scope. Once the element is added to a visual tree, its name cannot be changed.</
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.IVisual.html#Perspex_IVisual">IVisual</a></td>
+                    <td><a class="xref" href="Perspex.VisualTree.IVisual.html#Perspex_VisualTree_IVisual">IVisual</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_Perspex_VisualTree_IVisual_VisualRoot.md&amp;value=---%0Auid%3A%20Perspex.Visual.Perspex%23VisualTree%23IVisual%23VisualRoot%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L234">View Source</a>
+              </span>
+              <h4 id="Perspex_Visual_Perspex_VisualTree_IVisual_VisualRoot" data-uid="Perspex.Visual.Perspex#VisualTree#IVisual#VisualRoot">IVisual.VisualRoot</h4>
+              <div class="markdown level1 summary"><p>Gets the root of the visual tree, if the control is attached to a visual tree.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IRenderRoot IVisual.VisualRoot { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Rendering.IRenderRoot.html#Perspex_Rendering_IRenderRoot">IRenderRoot</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -516,7 +497,7 @@ scope. Once the element is added to a visual tree, its name cannot be changed.</
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_RenderTransform.md&amp;value=---%0Auid%3A%20Perspex.Visual.RenderTransform%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L221">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L169">View Source</a>
               </span>
               <h4 id="Perspex_Visual_RenderTransform" data-uid="Perspex.Visual.RenderTransform">RenderTransform</h4>
               <div class="markdown level1 summary"><p>Gets the render transform of the scene graph node.</p>
@@ -546,7 +527,7 @@ scope. Once the element is added to a visual tree, its name cannot be changed.</
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_TransformOrigin.md&amp;value=---%0Auid%3A%20Perspex.Visual.TransformOrigin%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L230">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L178">View Source</a>
               </span>
               <h4 id="Perspex_Visual_TransformOrigin" data-uid="Perspex.Visual.TransformOrigin">TransformOrigin</h4>
               <div class="markdown level1 summary"><p>Gets the transform origin of the scene graph node.</p>
@@ -576,7 +557,7 @@ scope. Once the element is added to a visual tree, its name cannot be changed.</
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_VisualChildren.md&amp;value=---%0Auid%3A%20Perspex.Visual.VisualChildren%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L253">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L201">View Source</a>
               </span>
               <h4 id="Perspex_Visual_VisualChildren" data-uid="Perspex.Visual.VisualChildren">VisualChildren</h4>
               <div class="markdown level1 summary"><p>Gets the control&#39;s visual children.</p>
@@ -596,7 +577,7 @@ scope. Once the element is added to a visual tree, its name cannot be changed.</
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.Collections.IPerspexList`1.html#Perspex_Collections_IPerspexList_1">IPerspexList</a>&lt;<a class="xref" href="Perspex.IVisual.html#Perspex_IVisual">IVisual</a>&gt;</td>
+                    <td><a class="xref" href="Perspex.Collections.IPerspexList`1.html#Perspex_Collections_IPerspexList_1">IPerspexList</a>&lt;<a class="xref" href="Perspex.VisualTree.IVisual.html#Perspex_VisualTree_IVisual">IVisual</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -606,7 +587,7 @@ scope. Once the element is added to a visual tree, its name cannot be changed.</
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_VisualRoot.md&amp;value=---%0Auid%3A%20Perspex.Visual.VisualRoot%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L262">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L210">View Source</a>
               </span>
               <h4 id="Perspex_Visual_VisualRoot" data-uid="Perspex.Visual.VisualRoot">VisualRoot</h4>
               <div class="markdown level1 summary"><p>Gets the root of the visual tree, if the control is attached to a visual tree.</p>
@@ -636,7 +617,7 @@ scope. Once the element is added to a visual tree, its name cannot be changed.</
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_ZIndex.md&amp;value=---%0Auid%3A%20Perspex.Visual.ZIndex%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L244">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L192">View Source</a>
               </span>
               <h4 id="Perspex_Visual_ZIndex" data-uid="Perspex.Visual.ZIndex">ZIndex</h4>
               <div class="markdown level1 summary"><p>Gets the Z index of the node.</p>
@@ -672,7 +653,7 @@ later in the containing element&#39;s children collection will appear on top.</p
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_AffectsRender_Perspex_PerspexProperty___.md&amp;value=---%0Auid%3A%20Perspex.Visual.AffectsRender(Perspex.PerspexProperty%5B%5D)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L333">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L286">View Source</a>
               </span>
               <h4 id="Perspex_Visual_AffectsRender_Perspex_PerspexProperty___" data-uid="Perspex.Visual.AffectsRender(Perspex.PerspexProperty[])">AffectsRender(PerspexProperty[])</h4>
               <div class="markdown level1 summary"><p>Indicates that a property change should cause <a class="xref" href="Perspex.Visual.html#Perspex_Visual_InvalidateVisual">InvalidateVisual()</a> to be
@@ -711,7 +692,7 @@ FrameworkPropertyMetadata.AffectsRender flag.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_InvalidateVisual.md&amp;value=---%0Auid%3A%20Perspex.Visual.InvalidateVisual%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L286">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L239">View Source</a>
               </span>
               <h4 id="Perspex_Visual_InvalidateVisual" data-uid="Perspex.Visual.InvalidateVisual">InvalidateVisual()</h4>
               <div class="markdown level1 summary"><p>Invalidates the visual and queues a repaint.</p>
@@ -726,7 +707,7 @@ FrameworkPropertyMetadata.AffectsRender flag.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_OnAttachedToVisualTree_Perspex_VisualTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Visual.OnAttachedToVisualTree(Perspex.VisualTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L349">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L302">View Source</a>
               </span>
               <h4 id="Perspex_Visual_OnAttachedToVisualTree_Perspex_VisualTreeAttachmentEventArgs_" data-uid="Perspex.Visual.OnAttachedToVisualTree(Perspex.VisualTreeAttachmentEventArgs)">OnAttachedToVisualTree(VisualTreeAttachmentEventArgs)</h4>
               <div class="markdown level1 summary"><p>Called when the control is added to a visual tree.</p>
@@ -763,7 +744,7 @@ failing to do so will cause numerous features to not work as expected.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_OnDetachedFromVisualTree_Perspex_VisualTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Visual.OnDetachedFromVisualTree(Perspex.VisualTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L367">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L320">View Source</a>
               </span>
               <h4 id="Perspex_Visual_OnDetachedFromVisualTree_Perspex_VisualTreeAttachmentEventArgs_" data-uid="Perspex.Visual.OnDetachedFromVisualTree(Perspex.VisualTreeAttachmentEventArgs)">OnDetachedFromVisualTree(VisualTreeAttachmentEventArgs)</h4>
               <div class="markdown level1 summary"><p>Called when the control is removed from a visual tree.</p>
@@ -800,7 +781,7 @@ failing to do so will cause numerous features to not work as expected.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_Render_Perspex_Media_DrawingContext_.md&amp;value=---%0Auid%3A%20Perspex.Visual.Render(Perspex.Media.DrawingContext)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L295">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L248">View Source</a>
               </span>
               <h4 id="Perspex_Visual_Render_Perspex_Media_DrawingContext_" data-uid="Perspex.Visual.Render(Perspex.Media.DrawingContext)">Render(DrawingContext)</h4>
               <div class="markdown level1 summary"><p>Renders the visual to a <a class="xref" href="Perspex.Media.DrawingContext.html#Perspex_Media_DrawingContext">DrawingContext</a>.</p>
@@ -830,12 +811,12 @@ failing to do so will cause numerous features to not work as expected.</p>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_TransformToVisual_Perspex_IVisual_.md&amp;value=---%0Auid%3A%20Perspex.Visual.TransformToVisual(Perspex.IVisual)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_TransformToVisual_Perspex_VisualTree_IVisual_.md&amp;value=---%0Auid%3A%20Perspex.Visual.TransformToVisual(Perspex.VisualTree.IVisual)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L309">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L262">View Source</a>
               </span>
-              <h4 id="Perspex_Visual_TransformToVisual_Perspex_IVisual_" data-uid="Perspex.Visual.TransformToVisual(Perspex.IVisual)">TransformToVisual(IVisual)</h4>
+              <h4 id="Perspex_Visual_TransformToVisual_Perspex_VisualTree_IVisual_" data-uid="Perspex.Visual.TransformToVisual(Perspex.VisualTree.IVisual)">TransformToVisual(IVisual)</h4>
               <div class="markdown level1 summary"><p>Returns a transform that transforms the visual&#39;s coordinates into the coordinates
 of the specified <em>visual</em>.</p>
 </div>
@@ -855,7 +836,7 @@ of the specified <em>visual</em>.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.IVisual.html#Perspex_IVisual">IVisual</a></td>
+                    <td><a class="xref" href="Perspex.VisualTree.IVisual.html#Perspex_VisualTree_IVisual">IVisual</a></td>
                     <td><em>visual</em></td>
                     <td><p>The visual to translate the coordinates to.</p>
 </td>
@@ -885,7 +866,7 @@ common ancestor.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_AttachedToVisualTree.md&amp;value=---%0Auid%3A%20Perspex.Visual.AttachedToVisualTree%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L137">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L115">View Source</a>
               </span>
               <h4 id="Perspex_Visual_AttachedToVisualTree" data-uid="Perspex.Visual.AttachedToVisualTree">AttachedToVisualTree</h4>
               <div class="markdown level1 summary"><p>Raised when the control is attached to a rooted visual tree.</p>
@@ -900,7 +881,7 @@ common ancestor.</p>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Visual_DetachedFromVisualTree.md&amp;value=---%0Auid%3A%20Perspex.Visual.DetachedFromVisualTree%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L142">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.SceneGraph/Visual.cs/#L120">View Source</a>
               </span>
               <h4 id="Perspex_Visual_DetachedFromVisualTree" data-uid="Perspex.Visual.DetachedFromVisualTree">DetachedFromVisualTree</h4>
               <div class="markdown level1 summary"><p>Raised when the control is detached from a rooted visual tree.</p>
@@ -928,7 +909,7 @@ common ancestor.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+            <span>Copyright © 2016 The Perspex Project<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>

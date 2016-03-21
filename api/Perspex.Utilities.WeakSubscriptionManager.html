@@ -60,9 +60,10 @@
             <article class="content wrap" id="_content">
               
               <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Utilities_WeakSubscriptionManager.md&amp;value=---%0Auid%3A%20Perspex.Utilities.WeakSubscriptionManager%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
-              <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Base/Utilities/WeakSubscriptionManager.cs/#L11" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Base/Utilities/WeakSubscriptionManager.cs/#L15" class="btn btn-primary pull-right mobile-hide">View Source</a>
               <h1 id="Perspex_Utilities_WeakSubscriptionManager" data-uid="Perspex.Utilities.WeakSubscriptionManager">Class WeakSubscriptionManager</h1>
-              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 summary"><p>Manages subscriptions to events using weak listeners.</p>
+</div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
@@ -81,14 +82,15 @@
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Utilities_WeakSubscriptionManager_Subscribe__1_System_Object_System_String_Perspex_Utilities_IWeakSubscriber___0__.md&amp;value=---%0Auid%3A%20Perspex.Utilities.WeakSubscriptionManager.Subscribe%60%601(System.Object%2CSystem.String%2CPerspex.Utilities.IWeakSubscriber%7B%60%600%7D)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Base/Utilities/WeakSubscriptionManager.cs/#L115">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Base/Utilities/WeakSubscriptionManager.cs/#L24">View Source</a>
               </span>
               <h4 id="Perspex_Utilities_WeakSubscriptionManager_Subscribe__1_System_Object_System_String_Perspex_Utilities_IWeakSubscriber___0__" data-uid="Perspex.Utilities.WeakSubscriptionManager.Subscribe``1(System.Object,System.String,Perspex.Utilities.IWeakSubscriber{``0})">Subscribe&lt;T&gt;(Object, String, IWeakSubscriber&lt;T&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Subscribes to an event on an object using a weak subscription.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void Subscribe&lt;T&gt;(object target, string eventName, IWeakSubscriber&lt;T&gt; subscriber)</code></pre>
+                <pre><code class="lang-csharp hljs">public static void Subscribe&lt;T&gt;(object target, string eventName, IWeakSubscriber&lt;T&gt; subscriber)where T : EventArgs</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -103,17 +105,65 @@
                   <tr>
                     <td><span class="xref">System.Object</span></td>
                     <td><em>target</em></td>
-                    <td></td>
+                    <td><p>The event source.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>eventName</em></td>
-                    <td></td>
+                    <td><p>The name of the event.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Perspex.Utilities.IWeakSubscriber`1.html#Perspex_Utilities_IWeakSubscriber_1">IWeakSubscriber</a>&lt;T&gt;</td>
                     <td><em>subscriber</em></td>
-                    <td></td>
+                    <td><p>The subscriber.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Utilities_WeakSubscriptionManager_Unsubscribe__1_System_Object_System_String_Perspex_Utilities_IWeakSubscriber___0__.md&amp;value=---%0Auid%3A%20Perspex.Utilities.WeakSubscriptionManager.Unsubscribe%60%601(System.Object%2CSystem.String%2CPerspex.Utilities.IWeakSubscriber%7B%60%600%7D)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Base/Utilities/WeakSubscriptionManager.cs/#L45">View Source</a>
+              </span>
+              <h4 id="Perspex_Utilities_WeakSubscriptionManager_Unsubscribe__1_System_Object_System_String_Perspex_Utilities_IWeakSubscriber___0__" data-uid="Perspex.Utilities.WeakSubscriptionManager.Unsubscribe``1(System.Object,System.String,Perspex.Utilities.IWeakSubscriber{``0})">Unsubscribe&lt;T&gt;(Object, String, IWeakSubscriber&lt;T&gt;)</h4>
+              <div class="markdown level1 summary"><p>Unsubscribes from an event.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static void Unsubscribe&lt;T&gt;(object target, string eventName, IWeakSubscriber&lt;T&gt; subscriber)where T : EventArgs</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>target</em></td>
+                    <td><p>The event source.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>eventName</em></td>
+                    <td><p>The name of the event.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Utilities.IWeakSubscriber`1.html#Perspex_Utilities_IWeakSubscriber_1">IWeakSubscriber</a>&lt;T&gt;</td>
+                    <td><em>subscriber</em></td>
+                    <td><p>The subscriber.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -135,7 +185,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+            <span>Copyright © 2016 The Perspex Project<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>

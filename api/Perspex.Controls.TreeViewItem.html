@@ -84,7 +84,7 @@
               <h6><strong>Assembly</strong>:Perspex.Controls.dll</h6>
               <h5 id="Perspex_Controls_TreeViewItem_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class TreeViewItem : HeaderedItemsControl, INotifyPropertyChanged, IControl, ILogical, ILayoutable, IInputElement, IInteractive, IVisual, IStyleable, INamed, IStyleHost, ISetLogicalParent, IItemsPresenterHost, ITemplatedControl, IPerspexObject, ISelectable</code></pre>
+                <pre><code class="lang-csharp hljs">public class TreeViewItem : HeaderedItemsControl, IPerspexObjectDebug, INotifyPropertyChanged, IControl, ILogical, ILayoutable, IInputElement, IInteractive, IVisual, IStyleable, IStyleHost, INamed, ISetLogicalParent, ISupportInitialize, IItemsPresenterHost, ITemplatedControl, IPerspexObject, ISelectable</code></pre>
               </div>
               <h3 id="fields">Fields</h3>
               <span class="small pull-right mobile-hide">
@@ -100,14 +100,14 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static readonly StyledProperty&lt;bool&gt; IsExpandedProperty</code></pre>
+                <pre><code class="lang-csharp hljs">public static readonly DirectProperty&lt;TreeViewItem, bool&gt; IsExpandedProperty</code></pre>
               </div>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_TreeViewItem_IsSelectedProperty.md&amp;value=---%0Auid%3A%20Perspex.Controls.TreeViewItem.IsSelectedProperty%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L28">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L31">View Source</a>
               </span>
               <h4 id="Perspex_Controls_TreeViewItem_IsSelectedProperty" data-uid="Perspex.Controls.TreeViewItem.IsSelectedProperty">IsSelectedProperty</h4>
               <div class="markdown level1 summary"><p>Defines the <a class="xref" href="Perspex.Controls.TreeViewItem.html#Perspex_Controls_TreeViewItem_IsSelected">IsSelected</a> property.</p>
@@ -123,7 +123,7 @@
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_TreeViewItem_IsExpanded.md&amp;value=---%0Auid%3A%20Perspex.Controls.TreeViewItem.IsExpanded%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L52">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L56">View Source</a>
               </span>
               <h4 id="Perspex_Controls_TreeViewItem_IsExpanded" data-uid="Perspex.Controls.TreeViewItem.IsExpanded">IsExpanded</h4>
               <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the item is expanded to show its children.</p>
@@ -153,7 +153,7 @@
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_TreeViewItem_IsSelected.md&amp;value=---%0Auid%3A%20Perspex.Controls.TreeViewItem.IsSelected%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L61">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L65">View Source</a>
               </span>
               <h4 id="Perspex_Controls_TreeViewItem_IsSelected" data-uid="Perspex.Controls.TreeViewItem.IsSelected">IsSelected</h4>
               <div class="markdown level1 summary"><p>Gets or sets the selection state of the item.</p>
@@ -183,7 +183,7 @@
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_TreeViewItem_ItemContainerGenerator.md&amp;value=---%0Auid%3A%20Perspex.Controls.TreeViewItem.ItemContainerGenerator%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L70">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L74">View Source</a>
               </span>
               <h4 id="Perspex_Controls_TreeViewItem_ItemContainerGenerator" data-uid="Perspex.Controls.TreeViewItem.ItemContainerGenerator">ItemContainerGenerator</h4>
               <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Perspex.Controls.Generators.ITreeItemContainerGenerator.html#Perspex_Controls_Generators_ITreeItemContainerGenerator">ITreeItemContainerGenerator</a> for the tree view.</p>
@@ -214,7 +214,7 @@
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_TreeViewItem_CreateItemContainerGenerator.md&amp;value=---%0Auid%3A%20Perspex.Controls.TreeViewItem.CreateItemContainerGenerator%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L74">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L78">View Source</a>
               </span>
               <h4 id="Perspex_Controls_TreeViewItem_CreateItemContainerGenerator" data-uid="Perspex.Controls.TreeViewItem.CreateItemContainerGenerator">CreateItemContainerGenerator()</h4>
               <div class="markdown level1 summary"></div>
@@ -240,12 +240,12 @@
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_TreeViewItem_OnAttachedToLogicalTree_Perspex_Controls_LogicalTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.TreeViewItem.OnAttachedToLogicalTree(Perspex.Controls.LogicalTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_TreeViewItem_OnAttachedToLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.TreeViewItem.OnAttachedToLogicalTree(Perspex.LogicalTree.LogicalTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L85">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L89">View Source</a>
               </span>
-              <h4 id="Perspex_Controls_TreeViewItem_OnAttachedToLogicalTree_Perspex_Controls_LogicalTreeAttachmentEventArgs_" data-uid="Perspex.Controls.TreeViewItem.OnAttachedToLogicalTree(Perspex.Controls.LogicalTreeAttachmentEventArgs)">OnAttachedToLogicalTree(LogicalTreeAttachmentEventArgs)</h4>
+              <h4 id="Perspex_Controls_TreeViewItem_OnAttachedToLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs_" data-uid="Perspex.Controls.TreeViewItem.OnAttachedToLogicalTree(Perspex.LogicalTree.LogicalTreeAttachmentEventArgs)">OnAttachedToLogicalTree(LogicalTreeAttachmentEventArgs)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -263,7 +263,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.Controls.LogicalTreeAttachmentEventArgs.html#Perspex_Controls_LogicalTreeAttachmentEventArgs">LogicalTreeAttachmentEventArgs</a></td>
+                    <td><a class="xref" href="Perspex.LogicalTree.LogicalTreeAttachmentEventArgs.html#Perspex_LogicalTree_LogicalTreeAttachmentEventArgs">LogicalTreeAttachmentEventArgs</a></td>
                     <td><em>e</em></td>
                     <td></td>
                   </tr>
@@ -271,12 +271,12 @@
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_TreeViewItem_OnDetachedFromLogicalTree_Perspex_Controls_LogicalTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.TreeViewItem.OnDetachedFromLogicalTree(Perspex.Controls.LogicalTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_TreeViewItem_OnDetachedFromLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.TreeViewItem.OnDetachedFromLogicalTree(Perspex.LogicalTree.LogicalTreeAttachmentEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L91">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L95">View Source</a>
               </span>
-              <h4 id="Perspex_Controls_TreeViewItem_OnDetachedFromLogicalTree_Perspex_Controls_LogicalTreeAttachmentEventArgs_" data-uid="Perspex.Controls.TreeViewItem.OnDetachedFromLogicalTree(Perspex.Controls.LogicalTreeAttachmentEventArgs)">OnDetachedFromLogicalTree(LogicalTreeAttachmentEventArgs)</h4>
+              <h4 id="Perspex_Controls_TreeViewItem_OnDetachedFromLogicalTree_Perspex_LogicalTree_LogicalTreeAttachmentEventArgs_" data-uid="Perspex.Controls.TreeViewItem.OnDetachedFromLogicalTree(Perspex.LogicalTree.LogicalTreeAttachmentEventArgs)">OnDetachedFromLogicalTree(LogicalTreeAttachmentEventArgs)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -294,7 +294,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Perspex.Controls.LogicalTreeAttachmentEventArgs.html#Perspex_Controls_LogicalTreeAttachmentEventArgs">LogicalTreeAttachmentEventArgs</a></td>
+                    <td><a class="xref" href="Perspex.LogicalTree.LogicalTreeAttachmentEventArgs.html#Perspex_LogicalTree_LogicalTreeAttachmentEventArgs">LogicalTreeAttachmentEventArgs</a></td>
                     <td><em>e</em></td>
                     <td></td>
                   </tr>
@@ -305,7 +305,7 @@
                 <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Controls_TreeViewItem_OnKeyDown_Perspex_Input_KeyEventArgs_.md&amp;value=---%0Auid%3A%20Perspex.Controls.TreeViewItem.OnKeyDown(Perspex.Input.KeyEventArgs)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L98">View Source</a>
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Controls/TreeViewItem.cs/#L102">View Source</a>
               </span>
               <h4 id="Perspex_Controls_TreeViewItem_OnKeyDown_Perspex_Input_KeyEventArgs_" data-uid="Perspex.Controls.TreeViewItem.OnKeyDown(Perspex.Input.KeyEventArgs)">OnKeyDown(KeyEventArgs)</h4>
               <div class="markdown level1 summary"></div>
@@ -349,7 +349,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+            <span>Copyright © 2016 The Perspex Project<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>

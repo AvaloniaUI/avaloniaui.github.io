@@ -62,7 +62,7 @@
               <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Markup_Data_Plugins_IPropertyAccessorPlugin.md&amp;value=---%0Auid%3A%20Perspex.Markup.Data.Plugins.IPropertyAccessorPlugin%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
               <a href="https://github.com/Perspex/Perspex/blob/master/src/Markup/Perspex.Markup/Data/Plugins/IPropertyAccessorPlugin.cs/#L12" class="btn btn-primary pull-right mobile-hide">View Source</a>
               <h1 id="Perspex_Markup_Data_Plugins_IPropertyAccessorPlugin" data-uid="Perspex.Markup.Data.Plugins.IPropertyAccessorPlugin">Interface IPropertyAccessorPlugin</h1>
-              <div class="markdown level0 summary"><p>Defines how a member is read, written and observed by a</p>
+              <div class="markdown level0 summary"><p>Defines how a member is read, written and observed by an</p>
 <p><a class="xref" href="Perspex.Markup.Data.ExpressionObserver.html#Perspex_Markup_Data_ExpressionObserver">ExpressionObserver</a>.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -75,18 +75,18 @@
               <h3 id="methods">Methods</h3>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Markup_Data_Plugins_IPropertyAccessorPlugin_Match_System_Object_.md&amp;value=---%0Auid%3A%20Perspex.Markup.Data.Plugins.IPropertyAccessorPlugin.Match(System.Object)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Markup_Data_Plugins_IPropertyAccessorPlugin_Match_System_WeakReference_.md&amp;value=---%0Auid%3A%20Perspex.Markup.Data.Plugins.IPropertyAccessorPlugin.Match(System.WeakReference)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/Perspex/Perspex/blob/master/src/Markup/Perspex.Markup/Data/Plugins/IPropertyAccessorPlugin.cs/#L19">View Source</a>
               </span>
-              <h4 id="Perspex_Markup_Data_Plugins_IPropertyAccessorPlugin_Match_System_Object_" data-uid="Perspex.Markup.Data.Plugins.IPropertyAccessorPlugin.Match(System.Object)">Match(Object)</h4>
+              <h4 id="Perspex_Markup_Data_Plugins_IPropertyAccessorPlugin_Match_System_WeakReference_" data-uid="Perspex.Markup.Data.Plugins.IPropertyAccessorPlugin.Match(System.WeakReference)">Match(WeakReference)</h4>
               <div class="markdown level1 summary"><p>Checks whether this plugin can handle accessing the properties of the specified object.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">bool Match(object instance)</code></pre>
+                <pre><code class="lang-csharp hljs">bool Match(WeakReference reference)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -99,9 +99,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Object</span></td>
-                    <td><em>instance</em></td>
-                    <td><p>The object.</p>
+                    <td><span class="xref">System.WeakReference</span></td>
+                    <td><em>reference</em></td>
+                    <td><p>A weak reference to the object.</p>
 </td>
                   </tr>
                 </tbody>
@@ -124,18 +124,18 @@
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Markup_Data_Plugins_IPropertyAccessorPlugin_Start_System_Object_System_String_System_Action_System_Object__.md&amp;value=---%0Auid%3A%20Perspex.Markup.Data.Plugins.IPropertyAccessorPlugin.Start(System.Object%2CSystem.String%2CSystem.Action%7BSystem.Object%7D)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Markup_Data_Plugins_IPropertyAccessorPlugin_Start_System_WeakReference_System_String_System_Action_System_Object__.md&amp;value=---%0Auid%3A%20Perspex.Markup.Data.Plugins.IPropertyAccessorPlugin.Start(System.WeakReference%2CSystem.String%2CSystem.Action%7BSystem.Object%7D)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/Perspex/Perspex/blob/master/src/Markup/Perspex.Markup/Data/Plugins/IPropertyAccessorPlugin.cs/#L31">View Source</a>
               </span>
-              <h4 id="Perspex_Markup_Data_Plugins_IPropertyAccessorPlugin_Start_System_Object_System_String_System_Action_System_Object__" data-uid="Perspex.Markup.Data.Plugins.IPropertyAccessorPlugin.Start(System.Object,System.String,System.Action{System.Object})">Start(Object, String, Action&lt;Object&gt;)</h4>
+              <h4 id="Perspex_Markup_Data_Plugins_IPropertyAccessorPlugin_Start_System_WeakReference_System_String_System_Action_System_Object__" data-uid="Perspex.Markup.Data.Plugins.IPropertyAccessorPlugin.Start(System.WeakReference,System.String,System.Action{System.Object})">Start(WeakReference, String, Action&lt;Object&gt;)</h4>
               <div class="markdown level1 summary"><p>Starts monitoring the value of a property on an object.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">IPropertyAccessor Start(object instance, string propertyName, Action&lt;object&gt; changed)</code></pre>
+                <pre><code class="lang-csharp hljs">IPropertyAccessor Start(WeakReference reference, string propertyName, Action&lt;object&gt; changed)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -148,9 +148,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Object</span></td>
-                    <td><em>instance</em></td>
-                    <td><p>The object.</p>
+                    <td><span class="xref">System.WeakReference</span></td>
+                    <td><em>reference</em></td>
+                    <td><p>A weak reference to the object.</p>
 </td>
                   </tr>
                   <tr>
@@ -202,7 +202,7 @@ property will be made, or null if the property was not found.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>docfx</strong></span>
+            <span>Copyright © 2016 The Perspex Project<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>

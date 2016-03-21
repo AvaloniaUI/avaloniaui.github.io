@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>InstancedBinding Class | Perspex Website</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="InstancedBinding Class | Perspex Website">
+    <meta name="generator" content="docfx 1.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content">
+        
+        <div class="sidenav">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Data_InstancedBinding.md&amp;value=---%0Auid%3A%20Perspex.Data.InstancedBinding%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Base/Data/InstancedBinding.cs/#L24" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <h1 id="Perspex_Data_InstancedBinding" data-uid="Perspex.Data.InstancedBinding">Class InstancedBinding</h1>
+              <div class="markdown level0 summary"><p>Holds the result of calling <a class="xref" href="Perspex.Data.IBinding.html#Perspex_Data_IBinding_Initiate_Perspex_IPerspexObject_Perspex_PerspexProperty_System_Object_">Initiate(IPerspexObject, PerspexProperty, Object)</a>.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">InstancedBinding</span></div>
+              </div>
+              <h6><strong>Namespace</strong>:Perspex.Data</h6>
+              <h6><strong>Assembly</strong>:Perspex.Base.dll</h6>
+              <h5 id="Perspex_Data_InstancedBinding_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class InstancedBinding</code></pre>
+              </div>
+              <h5 id="Perspex_Data_InstancedBinding_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>Whereas an <a class="xref" href="Perspex.Data.IBinding.html#Perspex_Data_IBinding">IBinding</a> holds a description of a binding such as &quot;Bind to the X
+property on a control&#39;s DataContext&quot;; this class represents a binding that has been
+<em>instanced</em> by calling <a class="xref" href="Perspex.Data.IBinding.html#Perspex_Data_IBinding_Initiate_Perspex_IPerspexObject_Perspex_PerspexProperty_System_Object_">Initiate(IPerspexObject, PerspexProperty, Object)</a>
+on a target object.</p>
+<p>When a binding is initiated, it can return one of 3 possible sources for the binding:</p>
+<ul>
+<li>An <span class="xref">System.Reactive.Subjects.ISubject`1</span> which can be used for any type of binding.</li>
+<li>An <span class="xref">System.IObservable`1</span> which can be used for all types of bindings except
+<a class="xref" href="Perspex.Data.BindingMode.html#Perspex_Data_BindingMode_OneWayToSource">OneWayToSource</a> and <a class="xref" href="Perspex.Data.BindingMode.html#Perspex_Data_BindingMode_TwoWay">TwoWay</a>.</li>
+<li>A plain object, which can only represent a <a class="xref" href="Perspex.Data.BindingMode.html#Perspex_Data_BindingMode_OneTime">OneTime</a> binding.</li>
+</ul>
+</div>
+              <h3 id="constructors">Constructors</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Data_InstancedBinding__ctor_System_IObservable_System_Object__Perspex_Data_BindingMode_Perspex_Data_BindingPriority_.md&amp;value=---%0Auid%3A%20Perspex.Data.InstancedBinding.%23ctor(System.IObservable%7BSystem.Object%7D%2CPerspex.Data.BindingMode%2CPerspex.Data.BindingPriority)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Base/Data/InstancedBinding.cs/#L46">View Source</a>
+              </span>
+              <h4 id="Perspex_Data_InstancedBinding__ctor_System_IObservable_System_Object__Perspex_Data_BindingMode_Perspex_Data_BindingPriority_" data-uid="Perspex.Data.InstancedBinding.#ctor(System.IObservable{System.Object},Perspex.Data.BindingMode,Perspex.Data.BindingPriority)">InstancedBinding(IObservable&lt;Object&gt;, BindingMode, BindingPriority)</h4>
+              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Perspex.Data.InstancedBinding.html#Perspex_Data_InstancedBinding">InstancedBinding</a> class.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public InstancedBinding(IObservable&lt;object&gt; observable, BindingMode mode = 1, BindingPriority priority = 0)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+                    <td><em>observable</em></td>
+                    <td><p>The observable for a one-way binding.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Data.BindingMode.html#Perspex_Data_BindingMode">BindingMode</a></td>
+                    <td><em>mode</em></td>
+                    <td><p>The binding mode.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Data.BindingPriority.html#Perspex_Data_BindingPriority">BindingPriority</a></td>
+                    <td><em>priority</em></td>
+                    <td><p>The binding priority.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Data_InstancedBinding__ctor_System_Object_Perspex_Data_BindingPriority_.md&amp;value=---%0Auid%3A%20Perspex.Data.InstancedBinding.%23ctor(System.Object%2CPerspex.Data.BindingPriority)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Base/Data/InstancedBinding.cs/#L33">View Source</a>
+              </span>
+              <h4 id="Perspex_Data_InstancedBinding__ctor_System_Object_Perspex_Data_BindingPriority_" data-uid="Perspex.Data.InstancedBinding.#ctor(System.Object,Perspex.Data.BindingPriority)">InstancedBinding(Object, BindingPriority)</h4>
+              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Perspex.Data.InstancedBinding.html#Perspex_Data_InstancedBinding">InstancedBinding</a> class.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public InstancedBinding(object value, BindingPriority priority = 0)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>value</em></td>
+                    <td><p>The value used for the <a class="xref" href="Perspex.Data.BindingMode.html#Perspex_Data_BindingMode_OneTime">OneTime</a> binding.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Data.BindingPriority.html#Perspex_Data_BindingPriority">BindingPriority</a></td>
+                    <td><em>priority</em></td>
+                    <td><p>The binding priority.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Data_InstancedBinding__ctor_System_Reactive_Subjects_ISubject_System_Object__Perspex_Data_BindingMode_Perspex_Data_BindingPriority_.md&amp;value=---%0Auid%3A%20Perspex.Data.InstancedBinding.%23ctor(System.Reactive.Subjects.ISubject%7BSystem.Object%7D%2CPerspex.Data.BindingMode%2CPerspex.Data.BindingPriority)%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Base/Data/InstancedBinding.cs/#L71">View Source</a>
+              </span>
+              <h4 id="Perspex_Data_InstancedBinding__ctor_System_Reactive_Subjects_ISubject_System_Object__Perspex_Data_BindingMode_Perspex_Data_BindingPriority_" data-uid="Perspex.Data.InstancedBinding.#ctor(System.Reactive.Subjects.ISubject{System.Object},Perspex.Data.BindingMode,Perspex.Data.BindingPriority)">InstancedBinding(ISubject&lt;Object&gt;, BindingMode, BindingPriority)</h4>
+              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Perspex.Data.InstancedBinding.html#Perspex_Data_InstancedBinding">InstancedBinding</a> class.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public InstancedBinding(ISubject&lt;object&gt; subject, BindingMode mode = 1, BindingPriority priority = 0)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reactive.Subjects.ISubject</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+                    <td><em>subject</em></td>
+                    <td><p>The subject for a two-way binding.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Data.BindingMode.html#Perspex_Data_BindingMode">BindingMode</a></td>
+                    <td><em>mode</em></td>
+                    <td><p>The binding mode.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Data.BindingPriority.html#Perspex_Data_BindingPriority">BindingPriority</a></td>
+                    <td><em>priority</em></td>
+                    <td><p>The binding priority.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties</h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Data_InstancedBinding_Mode.md&amp;value=---%0Auid%3A%20Perspex.Data.InstancedBinding.Mode%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Base/Data/InstancedBinding.cs/#L86">View Source</a>
+              </span>
+              <h4 id="Perspex_Data_InstancedBinding_Mode" data-uid="Perspex.Data.InstancedBinding.Mode">Mode</h4>
+              <div class="markdown level1 summary"><p>Gets the binding mode with which the binding was initiated.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public BindingMode Mode { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Data.BindingMode.html#Perspex_Data_BindingMode">BindingMode</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Data_InstancedBinding_Observable.md&amp;value=---%0Auid%3A%20Perspex.Data.InstancedBinding.Observable%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Base/Data/InstancedBinding.cs/#L101">View Source</a>
+              </span>
+              <h4 id="Perspex_Data_InstancedBinding_Observable" data-uid="Perspex.Data.InstancedBinding.Observable">Observable</h4>
+              <div class="markdown level1 summary"><p>Gets the observable for a one-way binding.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IObservable&lt;object&gt; Observable { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IObservable</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Data_InstancedBinding_Priority.md&amp;value=---%0Auid%3A%20Perspex.Data.InstancedBinding.Priority%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Base/Data/InstancedBinding.cs/#L91">View Source</a>
+              </span>
+              <h4 id="Perspex_Data_InstancedBinding_Priority" data-uid="Perspex.Data.InstancedBinding.Priority">Priority</h4>
+              <div class="markdown level1 summary"><p>Gets the binding priority.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public BindingPriority Priority { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Perspex.Data.BindingPriority.html#Perspex_Data_BindingPriority">BindingPriority</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Data_InstancedBinding_Subject.md&amp;value=---%0Auid%3A%20Perspex.Data.InstancedBinding.Subject%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Base/Data/InstancedBinding.cs/#L106">View Source</a>
+              </span>
+              <h4 id="Perspex_Data_InstancedBinding_Subject" data-uid="Perspex.Data.InstancedBinding.Subject">Subject</h4>
+              <div class="markdown level1 summary"><p>Gets the subject for a two-way binding.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ISubject&lt;object&gt; Subject { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reactive.Subjects.ISubject</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/Perspex/Perspex/new/master/docs/apispec/new?filename=Perspex_Data_InstancedBinding_Value.md&amp;value=---%0Auid%3A%20Perspex.Data.InstancedBinding.Value%0Aremarks%3A%20'*THIS*%20is%20remarks%20overriden%20in%20*MARKDOWN*%20file'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/Perspex/Perspex/blob/master/src/Perspex.Base/Data/InstancedBinding.cs/#L96">View Source</a>
+              </span>
+              <h4 id="Perspex_Data_InstancedBinding_Value" data-uid="Perspex.Data.InstancedBinding.Value">Value</h4>
+              <div class="markdown level1 summary"><p>Gets the value used for a <a class="xref" href="Perspex.Data.BindingMode.html#Perspex_Data_BindingMode_OneTime">OneTime</a> binding.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public object Value { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2016 The Perspex Project<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
